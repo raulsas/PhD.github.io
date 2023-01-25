@@ -1,3 +1,0 @@
-# Mi nombre
-## Curriculum
-### Artículos
