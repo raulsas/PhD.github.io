@@ -1,3 +1,3 @@
-# PhD.github.io
-Personal Web Page
-## Hola
+# Mi nombre
+## Curriculum
+### Artículos
