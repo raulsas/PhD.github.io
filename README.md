@@ -6,7 +6,7 @@
 
 [raul.sastriques@uv.es](mailto: raul.sastriques@uv.es)
 
-[Currículum CVN](https://github.com/raulsas/PhD.github.io/blob/main/CVN%20-%20Raul%20-%202-23.pdf)
+[Currículum CVN 02/23](https://cvn.fecyt.es/0000-0002-1756-4692)
 
 ### Articles
 [Arxiv](https://arxiv.org/search/?searchtype=author&query=Guardiola%2C+R+S)
