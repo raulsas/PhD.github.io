@@ -9,6 +9,7 @@
 [Currículum CVN](https://github.com/raulsas/PhD.github.io/blob/main/CVN%20-%20Raul%20-%202-23.pdf)
 
 ### Articles
+[Arxiv](https://arxiv.org/search/?searchtype=author&query=Guardiola%2C+R+S)
 
 [A Criterion for Decomposabilty in QYBE ](https://academic.oup.com/imrn/advance-article/doi/10.1093/imrn/rnab357/6474504?guestAccessKey=3a3f55ba-643b-4fda-a0ea-294dd8dea8a2)
 
