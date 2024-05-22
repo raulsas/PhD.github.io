@@ -1,0 +1,147 @@
+\begin{theindex}
+
+  \item \textbf  {adjoint group}, \hyperpage{48}
+  \item \textbf  {affine solutions}, \hyperpage{50}
+  \item \textbf  {amalgamated free product}, \hyperpage{34}
+  \item \textbf  {Artin–Tits group}, \hyperpage{25}
+  \item \textbf  {atom}, \hyperpage{26}
+  \item \textbf  {atomic monoid}, \hyperpage{26}
+
+  \indexspace
+
+  \item \textbf  {balanced}, \hyperpage{27}
+  \item \textbf  {block system}, \hyperpage{63}
+  \item \textbf  {Braid group}, \hyperpage{25}
+  \item \textbf  {braided solution}, \hyperpage{43}
+
+  \indexspace
+
+  \item \textbf  {cancellative}, \hyperpage{26}
+  \item \textbf  {chain of ideals}, \hyperpage{48}
+  \item \textbf  {commensurable}, \hyperpage{28}
+  \item \textbf  {conical}, \hyperpage{26}
+  \item \textbf  {Coxeter group}, \hyperpage{26}
+  \item \textbf  {Coxeter-like quotient}, \hyperpage{57}
+  \item \textbf  {cyclic amalgamated free product}, \hyperpage{35}
+  \item \textbf  {cyclic solution}, \hyperpage{45}
+
+  \indexspace
+
+  \item \textbf  {decomposable solution}, \hyperpage{44}
+  \item \textbf  {Dehornoy class}, \hyperpage{56}
+  \item \textbf  {diagonal map}, \hyperpage{44}
+
+  \indexspace
+
+  \item \textbf  {exponent} \textbf  {of the monoid}, \hyperpage{28}
+
+  \indexspace
+
+  \item \textbf  {foldable}, \hyperpage{55}
+  \item \textbf  {frozen elements}, \hyperpage{54}
+  \item \textbf{frozen pairs}, \hyperpage{54}
+
+  \indexspace
+
+  \item \textbf  {Garside element}, \hyperpage{27}
+  \item \textbf  {Garside group}, \hyperpage{27}
+  \item \textbf  {Garside monoid}, \hyperpage{27}
+  \item \textbf  {Garside subgroup}, \hyperpage{29}
+  \item \textbf  {Gaussian monoids}, \hyperpage{27}
+  \item \textbf  {generalized twisted union}, \hyperpage{50}
+  \item \textbf  {greatest common divisor}, \hyperpage{27}
+
+  \indexspace
+
+  \item \textbf  {HNN extension}, \hyperpage{35}
+
+  \indexspace
+
+  \item \textbf  {indecomposable} \textbf  {Garside} \textbf  {monoid}, 
+		\hyperpage{33}
+  \item \textbf  {indecomposable solution}, \hyperpage{44}
+  \item \textbf  {invariant subset}, \hyperpage{44}
+  \item \textbf  {involutive solution}, \hyperpage{43}
+  \item \textbf  {irreducible Garside monoid}, \hyperpage{32}
+  \item \textbf  {irretractable solution}, \hyperpage{46}
+  \item \textbf  {isomorphic}, \hyperpage{44}
+  \item \textbf  {IYB group}, \hyperpage{46}
+
+  \indexspace
+
+  \item \textbf  {least common multiple}, \hyperpage{27}
+  \item \textbf  {left brace}, \hyperpage{47}
+  \item \textbf  {left cancellative}, \hyperpage{26}
+  \item \textbf  {left divisor}, \hyperpage{27}
+  \item \textbf  {left multiple}, \hyperpage{27}
+  \item \textbf  {left powers}, \hyperpage{48}
+
+  \indexspace
+
+  \item \textbf  {maximal normal abelian}, \hyperpage{56}
+  \item \textbf  {minimal} \textbf  {Garside element}, \hyperpage{38}
+  \item \textbf  {multipermutation level}, \hyperpage{46}
+  \item \textbf  {multipermutation solution}, \hyperpage{46}
+
+  \indexspace
+
+  \item \textbf  {non-degenerate solution}, \hyperpage{43}
+  \item \textbf  {non-degenerate subset}, \hyperpage{44}
+  \item \textbf  {norm of an element}, \hyperpage{26}
+
+  \indexspace
+
+  \item \textbf  {parabolic subgroup}, \hyperpage{30}
+  \item \textbf  {parabolic submonoid}, \hyperpage{30}
+  \item \textbf  {permutation group}, \hyperpage{44}
+  \item \textbf  {permutation map}, \hyperpage{43}
+  \item \textbf  {permutation solution}, \hyperpage{50}
+  \item \textbf  {primitive level k}, \hyperpage{51}
+  \item \textbf  {proper partition}, \hyperpage{54}
+
+  \indexspace
+
+  \item \textbf  {quasi-center}, \hyperpage{32}
+  \item \textbf  {quasi-central decomposition}, \hyperpage{40}
+  \item \textbf  {quasi-centralizer}, \hyperpage{32}
+  \item \textbf  {QYBE}, \hyperpage{43}
+
+  \indexspace
+
+  \item \textbf  {retractable} \textbf  {solution}, \hyperpage{46}
+  \item \textbf  {retracted solution}, \hyperpage{46}
+  \item \textbf  {right brace}, \hyperpage{48}
+  \item \textbf  {right cancellative}, \hyperpage{26}
+  \item \textbf  {right divisor}, \hyperpage{27}
+  \item \textbf  {right multiple}, \hyperpage{27}
+  \item \textbf  {right powers}, \hyperpage{48}
+
+  \indexspace
+
+  \item \textbf  {set of divisors}, \hyperpage{27}
+  \item \textbf  {set-theoretic solution}, \hyperpage{43}
+  \item \textbf  {simple solution}, \hyperpage{51}
+  \item \textbf  {solution}, \hyperpage{43}
+  \item \textcolor {red}{solution}, \hyperpage{44}
+  \item \textbf  {square-free cardinality}, \hyperpage{49}
+  \item \textbf  {square-free solution}, \hyperpage{45}
+  \item \textbf  {standard parabolic subgroup}, \hyperpage{30}
+  \item \textbf  {strongly foldable}, \hyperpage{55}
+  \item \textbf  {structure group of a solution}, \hyperpage{44}
+  \item \textbf  {support}, \hyperpage{29}
+
+  \indexspace
+
+  \item \textbf  {trivial solution}, \hyperpage{43}
+  \item \textbf  {twisted union}, \hyperpage{50}
+
+  \indexspace
+
+  \item \textbf  {YBE}, \hyperpage{43}
+
+  \indexspace
+
+  \item \textbf  {Zappa-Szép Garside structure}, \hyperpage{37}
+  \item \textbf  {Zappa-Szép product}, \hyperpage{33}
+
+\end{theindex}
