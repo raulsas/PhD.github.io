@@ -11,9 +11,9 @@
 [A Criterion for Decomposabilty in QYBE ](https://academic.oup.com/imrn/advance-article/doi/10.1093/imrn/rnab357/6474504?guestAccessKey=3a3f55ba-643b-4fda-a0ea-294dd8dea8a2)
 
 ### PhD Thesis
-[Tesis Doctoral.pdf](https://github.com/raulsas/PhD.github.io/tree/main/Tesis%20Doctoral)        [Tesis Doctoral.tex](https://github.com/raulsas/PhD.github.io/blob/main/Tesis%20Doctoral/Tesis%20Doctoral.tex)
+[Tesis Doctoral.pdf](https://github.com/raulsas/PhD.github.io/blob/main/Tesis%20Doctoral/Tesis%20Doctoral_final.pdf)*Tabspace**Tabspace**Tabspace**Tabspace*[Tesis Doctoral.tex](https://github.com/raulsas/PhD.github.io/blob/main/Tesis%20Doctoral/Tesis%20Doctoral.tex)
 
 
 
 ### Beca Colaboración
-[Beca Colaboración.pdf](https://github.com/raulsas/PhD.github.io/blob/main/Beca%20Colaboraci%C3%B3n/Beca%20de%20Colaboracion.pdf)        [Beca Colaboración.tex](https://github.com/raulsas/PhD.github.io/blob/main/Beca%20Colaboraci%C3%B3n/Beca%20de%20Colaboracion.tex)
+[Beca Colaboración.pdf](https://github.com/raulsas/PhD.github.io/blob/main/Beca%20Colaboraci%C3%B3n/Beca%20de%20Colaboracion.pdf)*Tabspace**Tabspace**Tabspace**Tabspace*[Beca Colaboración.tex](https://github.com/raulsas/PhD.github.io/blob/main/Beca%20Colaboraci%C3%B3n/Beca%20de%20Colaboracion.tex)
