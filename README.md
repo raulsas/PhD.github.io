@@ -13,11 +13,11 @@
 ### PhD Thesis
 [Tesis Doctoral.pdf](https://github.com/raulsas/PhD.github.io/blob/main/Tesis%20Doctoral/Tesis%20Doctoral.pdf)&nbsp;&nbsp;&nbsp;&nbsp;[Tesis Doctoral.tex](https://github.com/raulsas/PhD.github.io/blob/main/Tesis%20Doctoral/Tesis%20Doctoral.tex)
 
+### Trabajo Fin de Máster
+[TFM.pdf](https://github.com/raulsas/PhD.github.io/blob/main/TFM/TFM-final.pdf)&nbsp;&nbsp;&nbsp;&nbsp;[TFM.tex](https://github.com/raulsas/PhD.github.io/blob/main/TFM/TFM-final.tex)
 
+### Trabajo Fin de Grado
+[TFG.tex](https://github.com/raulsas/PhD.github.io/blob/main/TFG/TFG%20final.pdf)&nbsp;&nbsp;&nbsp;&nbsp;[TFG.pdf](https://github.com/raulsas/PhD.github.io/blob/main/TFG/TFG%20final.tex)
 
 ### Beca Colaboración
 [Beca Colaboración.pdf](https://github.com/raulsas/PhD.github.io/blob/main/Beca%20Colaboraci%C3%B3n/Beca%20de%20Colaboracion.pdf)&nbsp;&nbsp;&nbsp;&nbsp;[Beca Colaboración.tex](https://github.com/raulsas/PhD.github.io/blob/main/Beca%20Colaboraci%C3%B3n/Beca%20de%20Colaboracion.tex)
-
-
-### Beca Colaboración
-[TFM.pdf](https://github.com/raulsas/PhD.github.io/blob/main/TFM-final.pdf)
