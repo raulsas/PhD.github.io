@@ -1,0 +1,4038 @@
+%% LyX 2.3.6 created this file.  For more info, see http://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass[12pt,spanish]{amsbook}
+\usepackage[T1]{fontenc}
+\usepackage[latin9]{inputenc}
+\usepackage[active]{srcltx}
+\usepackage{color}
+\definecolor{page_backgroundcolor}{rgb}{1, 1, 1}
+\pagecolor{page_backgroundcolor}
+\usepackage{mathrsfs}
+\usepackage{amstext}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{stmaryrd}
+\usepackage{graphicx}
+\usepackage{xargs}[2008/03/08]
+\usepackage{bbm}
+\usepackage{geometry}
+
+\usepackage[unicode=true]
+{hyperref}
+
+\usepackage{cleveref}
+
+\makeatletter
+\newcommand{\myref}[2][]{%
+	\def\@tempa{#1}%
+	\ifx\@tempa\@empty%
+	\hyperref[#2]{\ref*{#2}}%
+	\else%
+	\hyperref[#2]{#1 \ref*{#2}}%
+	\fi%
+}
+\makeatother
+
+\usepackage{csquotes}
+\usepackage[english,spanish]{babel}
+
+\usepackage[
+backend=bibtex,
+giveninits=true,
+backref=true,
+hyperref=true, 
+block=none,
+]{biblatex}
+
+
+
+\addbibresource{TFG.bib}
+%\addbibresource{/home/raul/Dropbox/Doctorado/Lyx/Auxiliares-Lyx/Biblatex-Doctorado.bib}
+
+\usepackage{xcolor}
+\definecolor{myorange}{RGB}{250,140,40}
+\definecolor{mygreen}{RGB}{0,204,102}
+\definecolor{mytitle}{RGB}{0,142,255}
+
+%\definecolor{myorange}{RGB}{250,140,40}
+%\definecolor{mygreen}{RGB}{40, 250, 140}
+%\definecolor{myblue}{RGB}{140, 40, 250}
+%\definecolor{myviolet}{RGB}{245,40,250}
+
+
+\hypersetup{
+	colorlinks=true, % false: boxed links; true: colored links
+	linkcolor=myorange, % color of internal links
+	citecolor=mygreen, % color of links to bibliography
+	urlcolor=blue % color of external links
+}
+
+\DefineBibliographyStrings{english}{%
+	backrefpage  = {\lowercase{v}er p.}, % for single page number
+	backrefpages = {\lowercase{v}er pp.} % for multiple page numbers
+}
+\DeclareFieldFormat{postnote}{#1}
+
+
+
+%\DeclareFieldFormat[article]{title}{\href{\thefield{url}}{#1}}
+\DeclareFieldFormat[article]{title}{\textcolor{black}{#1}}
+%\DeclareFieldFormat[article]{url}{}
+% Redefine the bibliography driver to suppress certain fields
+\AtEveryBibitem{
+	\clearfield{doi} % Suppress DOI
+	\clearfield{issn} % Suppress ISSN	
+	\clearfield{eprint} % Suppress ISSN
+}
+
+
+\makeatletter
+
+\def\eqdeclaration#1{, ver ecuación\nobreakspace(#1)}
+\def\pagedeclaration#1{, página \nobreakspace#1}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% LyX specific LaTeX commands.
+%% Because html converters don't know tabularnewline
+\providecommand{\tabularnewline}{\\}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Textclass specific LaTeX commands.
+\numberwithin{section}{chapter}
+\numberwithin{equation}{section}
+\numberwithin{figure}{section}
+\theoremstyle{plain}
+\newtheorem{thm}{\protect\theoremname}
+\theoremstyle{definition}
+\newtheorem{defn}[thm]{\protect\definitionname}
+\theoremstyle{plain}
+\newtheorem{cor}[thm]{\protect\subsetorollaryname}
+\theoremstyle{remark}
+\newtheorem*{rem*}{\protect\remarkname}
+\theoremstyle{plain}
+\newtheorem{lem}[thm]{\protect\lemmaname}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
+
+
+\usepackage[spanish]{babel}
+
+\usepackage{latexsym}
+
+\usepackage{chngcntr}
+\counterwithin*{section}{part}
+\usepackage{mathtools}
+
+%\documentclass[12pt]{article}  %% no se usa en lyx
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\fontfamily{pcr}
+\usepackage{a4}
+\usepackage{caption}
+\usepackage{graphicx} %%si se escribe [dvips] no aparecen los .eps
+\usepackage{epstopdf}
+%\usepackage[utf8]{inputenc}   %% no se usa en lyx
+%\usepackage{t1enc}    %% no se usa en lyx
+
+\usepackage{times}
+\usepackage{here}
+\usepackage{subfig}
+\usepackage{relsize}
+
+
+%%\addto\captionsspanish{\renewcommand{\chaptername}{ }}
+
+%\usepackage{ntheorem}   % si no se usa amssymb
+\theoremstyle{plain}
+\usepackage{lipsum}
+\newtheoremstyle{mystyle}%                % Name
+{5pt}%                                     % Space above
+{5pt}%                                     % Space below
+{\it}%                                  % Body font
+{}%                                     % Indent amount
+{\bfseries}%                            % Theorem head font
+{.}%                                    % Punctuation after theorem head
+{ }%                                    % Space after theorem head, ' ', or \newline
+{}%                                     % Theorem head spec (can be left empty, meaning `normal')
+
+\theoremstyle{mystyle}
+
+
+%% ##########################################
+
+\newtheorem{teo}{Teorema}[chapter]
+
+\newtheorem{obs}{Observación}[chapter]
+
+\newtheorem{lema}[teo]{Lema}
+
+
+\newtheorem{coro}[teo]{Corolario}
+\newtheorem{caso}[teo]{Caso}
+\newtheorem{prop}[teo]{Proposición}
+
+
+\newtheorem{ejem}{Ejemplo}[chapter]
+\newtheorem{ejer}{Ejercicio}[chapter]
+\newtheorem{hehco}{Hecho}[chapter]
+
+
+
+%########     \newtheorem*{dem}{Demostración}    % *para no enumerar
+
+
+%\newenvironment{demi}[1][Demostración]{\begin{trivlist}\item[\hskip \labelsep { \it(#1) }]}{\end{trivlist}}
+
+\newenvironment{demo}[1][\cupnskip]{   \noindent  Demostración #1.}
+
+\newenvironment{nota}[1][Nota :]{\begin{trivlist}
+		\item[\hskip \labelsep {\emph\bfseries #1}]}{\end{trivlist}}
+
+\newenvironment{defi}[1][Definición]{\begin{trivlist}
+		\item[\hskip \labelsep {\bfseries #1:}]}{\end{trivlist}}
+
+
+
+\renewenvironment{thm}{\begin{teo}}{\end{teo}}
+\renewenvironment{defn}{\begin{defi}}{\end{defi}}
+\renewenvironment{cor}{\begin{coro}}{\end{coro}}
+\renewenvironment{lem}{\begin{lema}}{\end{lema}}
+
+%\renewenvironment{proof}{\begin{demo}}{\qed \end{demo}}
+\newcommand{\asn}{\operatorname{asn}}
+\newcommand{\core}{\operatorname{core}}
+\newcommand{\Syl}{\operatorname{Syl}}
+\newcommand{\Aut}{\operatorname{Aut}}
+\newcommand{\Ker}{\operatorname{Ker}}
+\newcommand{\Imm}{\operatorname{Im}}
+\newcommand{\PSL}{\operatorname{PSL}}
+\newcommand{\subsetore}{\operatorname{core}}
+\newcommand{\n}{\operatorname{n}}
+\newcommand{\ord}{\operatorname{ord}}
+\newcommand{\Sym}{\operatorname{Sym}}
+\newcommandx\por[2][usedefault, addprefix=\global, 1=H, 2=K]{|#1#2|=\frac{|#1||#2|}{|#1\cap#2|}}%
+\newcommandx\indice[2][usedefault, addprefix=\global, 1=G, 2=H]{[#1:#2]}%
+\global\long\def\N#1#2{N_{#1}(#2)}%
+\newcommandx\C[2][usedefault, addprefix=\global, 1=H, 2=G]{C_{#2}(#1)}%
+\newcommandx\orbita[3][usedefault, addprefix=\global, 1=\alpha, 2=G, 3=\mathcal{O}]{|#3|=[#2:#2{}_{#1}]}%
+\newcommandx\equivalente[2][usedefault, addprefix=\global, 1=p, 2=1]{\equiv#2\,mod\,#1}%
+\newcommandx\fijos[1][usedefault, addprefix=\global, 1=p]{|\Omega|\equiv|\Omega_{0}|\,mod\,#1}%
+\newcommandx\torre[3][usedefault, addprefix=\global, 1=G, 2=K, 3=H]{[#1:#3]=[#1:#2][#2:#3]}%
+\global\long\def\normal{\,\mbox{\ensuremath{\trianglelefteq\,}}}%
+\global\long\def\nilpotentecadena{1=G_{0}\normal G_{1}\normal\ldots\normal G_{n-1}\normal G_{n}=G}%
+\global\long\def\resoluble{1=G_{0}\subseteq G_{1}\subseteq\ldots\subset G_{n-1}\subseteq G_{n}=G}%
+\newcommandx\nilpotentecociente[1][usedefault, addprefix=\global, 1=N]{#1_{i+1}/#1_{i}\leq Z(G/#1_{i})}%
+\newcommandx\soluble[1][usedefault, addprefix=\global, 1=N]{#1_{i+1}/#1_{i}\mbox{ abeliano}}%
+\newcommandx\psubgrupo[1][usedefault, addprefix=\global, 1=p]{#1\mbox{-subgrupo}}%
+\newcommandx\psubgrupos[1][usedefault, addprefix=\global, 1=p]{#1\mbox{-subgrupos}}%
+\newcommandx\psylow[1][usedefault, addprefix=\global, 1=p]{#1\mbox{-subgrupo de Sylow}}%
+\newcommandx\psylows[1][usedefault, addprefix=\global, 1=p]{#1\mbox{-subgrupos de Sylow}}%
+\newcommandx\sylow[3][usedefault, addprefix=\global, 1=P, 2=p, 3=G]{#1\in\Syl_{#2}(#3)}%
+\newcommandx\hall[1][usedefault, addprefix=\global, 1=\pi]{#1\mbox{-subgrupo de Hall}}%
+\newcommandx\halls[1][usedefault, addprefix=\global, 1=\pi]{#1\mbox{-subgrupos de Hall}}%
+\global\long\def\pig{\pi\mbox{-grupo}}%
+\global\long\def\pin{\pi\mbox{-número}}%
+\global\long\def\pea{p\mbox{-elemental abeliano}}%
+\global\long\def\pe{p\mbox{-elemental }}%
+\global\long\def\nm{\mbox{normal minimal}}%
+\global\long\def\normalestricto{\mbox{\,\ensuremath{\triangleleft\,}}}%
+\newcommandx\subnormal[2][usedefault, addprefix=\global, 1=H, 2=G]{#1\triangleleft\triangleleft\,\,#2}%
+\newcommandx\coprimos[2][usedefault, addprefix=\global, 1=H, 2=K]{(|#1|,|#2|)=1}%
+\global\long\def\x{\times}%
+\global\long\def\isomorfo{\cong}%
+\global\long\def\caso#1{\mbox{CASO }#1:}%
+\newcommandx\generado[1][usedefault, addprefix=\global, 1=x]{\langle#1\rangle}%
+\global\long\def\dividido{\mbox{ divide }}%
+\global\long\def\nodivide{\mbox{no divide}}%
+\global\long\def\Orbita{\mathcal{O}}%
+\global\long\def\absurdo{\sharp}%
+\global\long\def\sii{\mbox{si y solamente si}}%
+\newcommandx\caligrafica[1][usedefault, addprefix=\global, 1=P]{\mathcal{#1}}%
+\global\long\def\P{\caligrafica[P]_{i}}%
+\global\long\def\I#1{|#1|}%
+\global\long\def\rel{\sim}%
+\global\long\def\gotica#1{\mathscr{#1}}%
+\newcommandx\numeroHalls[1][usedefault, addprefix=\global, 1=G]{\nu_{\pi}(#1)}%
+\global\long\def\nnormal{\,\triangleleft\,}%
+\newcommandx\numeros[2][usedefault, addprefix=\global, 1=p, 2=G]{\nu_{#1}(#2)}%
+\newcommandx\orden[3][usedefault, addprefix=\global, 1=p, 2=e, 3=n]{#1_{1}^{#2_{1}}#1_{2}^{#2_{2}}...#1_{#3}^{#2_{#3}}}%
+
+%% si se coloca [teo] entre   {corollary}--{Corollary}
+%% la numeración es conunta entre theorem y corollary
+%si no se pone la numeración es independiente
+
+
+%% las deostaraciones no se enumeran
+
+%\newenvironment{defi}[1][\cupnskip]{%           
+	%\par
+	%\noindent
+	%\textbf{Definición #1:}
+	%\noindent}
+%{}
+
+%%   el anterior codigo permite \begin{defi}[Algo]
+	
+	\makeatother
+	
+	\providecommand{\subsetorollaryname}{Corolario}
+	\providecommand{\definitionname}{Definición}
+	\providecommand{\lemmaname}{Lema}
+	\providecommand{\remarkname}{Observación}
+	\providecommand{\theoremname}{Teorema}
+	
+	
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	
+	
+	\begin{document}
+		
+		
+		\begin{center} 
+			
+			\begin{figure}
+				\centering
+				\includegraphics[width=0.35\linewidth]{logo_UV}
+				\label{fig:logouv}
+			\end{figure}
+			
+			\vspace*{0.8cm}
+			
+			{\fontsize{30}{60}\selectfont   \textbf{TRABAJO FIN DE GRADO } }
+			\\
+			\vspace*{0.75cm}
+			\textbf{\LARGE Facultad de Matemáticas} 
+			
+			\vspace*{1cm}
+			\rule{16cm}{0.1mm}\\
+			\begin{Huge} NOTAS EN TEORÍA DE SYLOW Y HALL\\
+			\end{Huge} \rule{16cm}{0.1mm}\\
+			\textcompwordmark\\
+			\begin{flushright} \textbf{\LARGE Autor: Raúl Sastriques Guardiola}\\
+				\textbf{\textcompwordmark}\\
+				\textbf{\textcompwordmark}
+				
+				\global\long\def\arraystretch{1.5}%
+				%
+				\begin{tabular}{ll}
+					\textbf{\Large{}Director:}{\Large{} } & {\Large{}Dr.   Alexander Moretó Quintana}\tabularnewline
+					\textbf{\Large{}Realizado en:}{\Large{} } & {\Large{}Departamento de Álgebra}\tabularnewline
+					& \tabularnewline
+					\textbf{\Large{}Valencia, }{\Large{} } & {\Large{}6 de julio de 2016 }\tabularnewline
+		\end{tabular}\end{flushright}\end{center} 
+		
+		\mbox{%
+			%
+		} \thispagestyle{empty} 
+		
+		\tableofcontents{}
+		
+		
+		
+		\chapter*{Introducción}
+		
+		\textcompwordmark{}
+		
+		En el presente documento nos introduciremos brevemente en el estudio
+		de los grupos finitos,  en particular,  en el estudio de la Teoría
+		de Hall y Teoría de Sylow.  El documento se divide en cuatro partes:
+		
+		\textcompwordmark{}
+		
+		La primera parte está dividida en tres capítulos. En el primer capítulo
+		se exponen resultados básicos de carácter general de la teoría de
+		grupos. Este capítulo está dividido en dos secciones, en la primera
+		sección se encuentran los resultados vistos en la carrera mientras
+		que en la segunda sección exponemos resultados algo más específicos
+		los cuales requeriremos en capítulos posteriores. En los siguientes
+		capítulos introducimos los resultados básicos más importantes de la
+		teoría de Sylow,  Capítulo $2$,  y de la teoría de Hall, Capítulo
+		$3$.  
+		
+		\textcompwordmark{}
+		
+		En la segunda parte empezamos a ver como la teoría de Hall puede ser
+		utilizada para el estudio de los grupos finitos,  en particular, de
+		los grupos resolubles  los cuales llegaremos a caracterizar en términos
+		de la teoría de Hall de dos formas distintas.   En el Capítulo $4$
+		presentamos la caracterización de los grupos resolubles en base a
+		la existencia $p'$-subgrupos de Hall viendo en ambas secciones de
+		este capítulo una demostración diferente.  En el Capítulo $5$ vemos
+		otra caracterización de la resolubilidad,  basada en la anterior,
+		la cual hace uso tanto de la teoría de Hall como de la teoría de
+		Sylow.  
+		
+		\textcompwordmark{}
+		
+		Con esto, nos introducimos en la segunda mitad del documento en la
+		cual presentamos resultados más modernos de la teoría de grupos. Mientras
+		que en las dos primeras partes se encuentran resultados clásicos que
+		pueden encontrarse con facilidad en casi cualquier libro de teoría
+		de grupos, los resultados de los siguientes capítulos son artículos
+		de investigación contemporáneos, o bien, resultados más específicos
+		que suelen omitirse al hablar de la teoría de Hall y de Sylow en líneas
+		generales.
+		
+		\textcompwordmark{}
+		
+		En la tercera parte del documento ampliamos la teoría de Hall vista
+		con anterioridad.   En el Capítulo $6$ vemos como la nilpotencia
+		de un subgrupo de Hall nos permite concluir la conjugación de tales
+		subgrupos.   En el Capítulo $7$ damos una caracterización de la existencia
+		de subgrupos de Hall nilpotentes.   Por otra parte,  este resultado
+		no solo está relacionado con el capítulo anterior,  sino que resulta
+		clave para el desarrollo de los dos últimos capítulos del presente
+		documento.  
+		
+		\textcompwordmark{} 
+		
+		Finalmente,  en la cuarta parte nos centramos en una parte concreta
+		de la teoría de Hall: el número de $\pi$-subgrupos de Hall de un
+		grupo $G$,  $\nu_{\pi}(G)$.   En el Capítulo $8$,  estudiamos cual
+		es la forma de $\nu_{\pi}(G)$ en grupos resolubles resultando ser
+		producto de potencias de primos congruentes a $1$ módulo un primo
+		de $\pi$.  Visto esto,  ampliamos en el Capítulo $9$ este resultado
+		para el número de subgrupos de Sylow en grupos finitos.   En el Capítulo
+		$10$,  vemos una relación de divisibilidad del número de $\pi$-subgrupos
+		de Hall de un grupo $G$ $\pi$-separable y el número de $\pi$-subgrupos
+		de Hall de un subgrupo $H$ de $G$,  i.e., $\nu_{\pi}(H)\mbox{ divide a }\nu_{\pi}(G)$.
+		Finalmente, en los dos últimos capítulos vemos dos condiciones suficientes
+		para la resolubilidad de un grupo basadas en el número de subgrupos
+		de Sylow de un grupo dando a ver de nuevo la importancia de la Teoría
+		de Sylow y de Hall aquí presentada.
+		
+		\part{Prerrequisitos}
+		
+		\chapter*{Introducción a Parte 1}
+		
+		\textcompwordmark{}
+		
+		En esta parte recordamos algunos resultados que utilizaremos a lo
+		largo de este trabajo y que en su mayor parte han sido vistos en el
+		grado. En el Capítulo $1$ enunciamos sin demostración resultados
+		que no hacen referencia ni a la Teoría de Sylow, ni a la de Hall,
+		siendo por tanto resultados generales de la teoría de grupos finitos.
+		En la primera sección de este capítulo encontramos resultados sencillos
+		vistos en el grado mientras que en la segunda sección exponemos resultados
+		básicos, aunque algo más concretos, los cuales serán requeridos en
+		capítulos posteriores.
+		
+		\textcompwordmark{}
+		
+		En el Capítulo $2$ vemos los resultados más simples acerca de la
+		teoría de Sylow viendo dos pruebas diferentes de la existencia de
+		subgrupos de Sylow. Al mismo tiempo que nos introducimos esta teoría,
+		comentaremos como los resultados expuestos permiten determinar en
+		qué casos es posible afirmar la existencia de un subgrupo con un orden
+		dado, nos referiremos a este hecho como al recíproco de Teorema de
+		Lagrange. Finalmente, veremos un caso en el que el recíproco del Teorema
+		de Lagrange falla, dando a entender la importancia de la Teoría de
+		Sylow. En el último capítulo, Capítulo $3$, presentamos la teoría
+		de Hall en el contexto de grupos resolubles, viendo dos demostraciones
+		del teorema de Philip Hall acerca la existencia conjugación y dominancia
+		de los $\pi$-subgrupos de Hall. 
+		
+		\chapter{Resultados básicos}
+		
+		\section{Resultados generales}
+		
+		\textcompwordmark{}
+		
+		\textcompwordmark\\
+		Empezaremos esta sección con algunas definiciones básicas la cuales
+		nos permitirán más adelante definir los conceptos de subgrupo de Sylow
+		y de Hall.  
+		
+		\textcompwordmark{}
+		\begin{defn}
+			Dado un conjunto de primos $\pi=\{p_{1},..,p_{n}\}$,  decimos que
+			un número natural es un $\pi$-número si todos los primos que lo dividen
+			están en $\pi$.  Decimos que un número natural es un $\pi'$-número
+			si ninguno de sus divisores están en $\pi$.   En el caso el que $\pi$
+			consta de un único primo $p$,  escribimos $p$-número y $p'$-número.
+			
+			
+			\textcompwordmark{}
+			
+			Por otra parte,  dado un número natural $n$,  designamos por $n_{\pi}$
+			a la $\pi$-parte de $n$,  esto es,  al mayor $\pi$-número que divide
+			a $n$.   En el caso en el que $\pi=\{p\}$ escribimos $n_{p}$ y
+			claramente no es más que la máxima potencia de $p$ que divide a $n$.
+			
+			
+			\textcompwordmark{}
+		\end{defn}
+		
+		\begin{defn}
+			Se dice que un grupo $G$ es un $\pi$-grupo si su orden es un $\pi$-número.
+			En el caso en el que $\pi=\{p\}$ decimos que $G$ es un $p$-grupo,
+			en tal caso $\left|G\right|=p^{a},\,\,a\geq1$.   
+			
+			\textcompwordmark{}
+		\end{defn}
+		
+		El primer resultado que presentamos resulta de gran utilidad por tal
+		de manipular la expresión de un grupo, en particular, es frecuentemente
+		usado junto a los teoremas de isomorfía por tal de probar relaciones
+		entre grupos cocientes.
+		
+		\textcompwordmark{}
+		\begin{thm}[Identidad de Dedekind] Sean $H,K,L\leq G$ con $H\leq K$,  entonces
+			
+			\textcompwordmark
+			\[
+			K\cap HL=H(K\cap L)
+			\]
+			
+			\textcompwordmark{}
+		\end{thm}
+		
+		Remarcamos que el orden del producto de dos subgrupos, no es el producto
+		de los órdenes, en general. En particular, tenemos el siguiente resultado.
+		
+		\textcompwordmark{}
+		\begin{thm}
+			[Fórmula del producto] Si $H,K$ son dos conjuntos, entonces $|HK|=\frac{|H||K|}{|H\cap K|}$.
+			
+			\textcompwordmark{}
+		\end{thm}
+		
+		Presentamos ahora una de las primeras herramientas,  en sentido histórico,
+		para el estudio de los grupos: Acciones de grupos sobre conjuntos.
+		
+		
+		\textcompwordmark{}
+		\begin{defn}
+			Sea $\Omega$ un conjunto y $G$ grupo,  decimos que $G$ actúa sobre
+			$\Omega$ si para todo $g\in G,\,\,\alpha\in\Omega$ hay definida
+			una operación $\alpha\text{·}g\in\Omega$ tal que
+			
+			\textcompwordmark{}
+			
+			\item[(i)] $\alpha\text{·}1=\alpha$
+			
+			\item[(ii)] $(\alpha\text{·}g)\text{·}h=\alpha\text{·}(gh)\,\,\mbox{para todo }g,h\in G,\,\alpha\in\Omega$
+		\end{defn}
+		
+		\textcompwordmark\\
+		Notamos que esto es equivalente a que $G$ se representa por permutaciones
+		sobre $\Omega$,  i.e.,  la aplicación $\rho:G\rightarrow\Sigma_{|\Omega|}$
+		dada por $\rho(g)=\varrho_{g}:\Omega\rightarrow\Omega\,\,\varrho_{g}(\alpha)=\alpha\text{·}g$
+		es homomorfismo de grupos.   La terna $(G,\Omega,\rho)$ se le denomina acción y una vez definida la aplicación $\rho$, tenemos que $G$ actúa sobre $\Omega$ mediante la ley establecida por dicha aplicación.
+		
+		
+		Abusando de notación a menudo omitiremos $\varrho_{g}$ identificándola
+		directamente con la operación $\text{·}$ mediante el siguiente esquema
+		
+		\begin{eqnarray*}
+			\rho: & G\rightarrow & \Sigma_{|\Omega|}\\
+			& g\rightarrowtriangle & \alpha\text{·}g
+		\end{eqnarray*}
+		
+		
+		\textcompwordmark{}
+		\begin{defn}
+			Dada la acción $(G,\Omega,\rho)$, se define el estabilizador de $\alpha\in\Omega$
+			como $G_{\alpha}=\{g\in G\,\mid\,\rho_{g}(\alpha)=\alpha\text{·}g=\alpha\}$.
+			Decimos que el conjunto $\mathcal{O}_{\alpha}=\{\beta\in\Omega\,\mid\,\mbox{existe }g\in G\mbox{ con}\,\alpha\text{·}g=\beta\}$
+			es la órbita de $\alpha$.  
+		\end{defn}
+		
+		\textcompwordmark{}
+		
+		En cuanto a la teoría de representación por permutaciones,  uno de
+		los resultados más elementales es el conocido como principio fundamental
+		del conteo,  o también llamado Teorema de la órbita.  
+		
+		\textcompwordmark{}
+		\begin{thm}
+			[Teorema de la órbita] Si $G$ actúa sobre $\Omega$ y $\alpha\in\Omega$,
+			entonces $G_{\alpha}$ es un subgrupo de $G$ tal que $[G:G_{\alpha}]=|\mathcal{O}_{\alpha}|$.
+			
+			
+			\textcompwordmark{}
+		\end{thm}
+		
+		\begin{cor}
+			[Ecuación de Clases] \label{cor:Ecuacion de clases}Si $G$ es un
+			grupo finito y $\{C_{1},C_{2},...,C_{k}\}$ es el conjunto de las
+			clases de conjugación de $G$ con más de un elemento,  entonces,  si
+			$x_{i}\in C_{i}\,i=1,...,k$ se tiene 
+			
+			\textcompwordmark
+			\[
+			|G|=|Z(G)|+\sum_{i=1}^{k}|G:C_{G}(x_{i})|.
+			\]
+			
+			\textcompwordmark{}
+		\end{cor}
+		
+		\begin{defn}
+			Dado un grupo $G$,  si $x,y\in G$ se define el conmutador entre
+			$x$ e $y$ como $[x,y]=(yx)^{-1}(xy)=x^{-1}y^{-1}xy$; claramente
+			$[x,y]=1$ si y solamente si $x$ e $y$ conmutan.   Así mismo,  dado
+			dos conjuntos $H$ y $K$ se define $[H,K]$ como el grupo generado
+			por $\{h^{-1}k^{-1}hk\,\mid\,h\in H,\,k\in K\}$.  
+		\end{defn}
+		
+		\begin{rem*}
+			Si $X,Y\mbox{ son subgrupos normales de }G$ con  $X\cap Y=1$,  se
+			tiene para todo $x\in X,y\in Y$ que el conmutador $[x,y]=xyx^{-1}y^{-1}$
+			pertenece a $Y$ por ser $xyx^{-1}y^{-1}=(y)^{x^{-1}}y^{-1}$; análogamente
+			$xyx^{-1}y^{-1}=x(x^{-1})^{y^{-1}}$  pertenece a $X$.   Tenemos
+			así que $xyx^{-1}y^{-1}\in X\cap Y=1$,  esto es,  $xy=yx$.   Así
+			$X$ centraliza a Y y recíprocamente.  
+			
+			\textcompwordmark{}
+		\end{rem*}
+		Dado que $x$ e $y$ conmutan si y solamente si $[x,y]=1$,  podemos
+		en cierta forma medir cuan abeliano es un grupo por medio de el conmutador
+		de cada uno de los elementos del grupo.   Esta idea motiva la siguiente
+		definición.  
+		
+		\textcompwordmark{}
+		\begin{defn}
+			Dado un grupo $G$,  se define el grupo derivado de $G$ como $G':=[G,G]$.
+			Con esto, dado un número natural $n$, definimos $G^{(n)}=[G^{(n-1)},G]$.
+			Remarcamos que de la definición $G'$ es equivalente a ser el menor
+			normal en $G$ con la propiedad $G/G'$ es abeliano.  
+			
+			\textcompwordmark{}
+		\end{defn}
+		
+		Exponemos a continuación algunos resultados básicos acerca de grupos
+		resolubles.  
+		
+		\textcompwordmark{}
+		\begin{defn}
+			Se dice que un grupo $G$ es resoluble si existe un número natural
+			$k$ tal que $G^{(k)}=1$.
+			
+			\textcompwordmark{}
+		\end{defn}
+		
+		Con esto vemos que la resolubilidad mantiene de alguna forma las buenas
+		características de los grupos abelianos.   Si denotamos por $dl(G)$
+		al  menor valor $n$ para el cual $G^{(n)}=1$,  tenemos que
+		$dl(G)$ es un indicador de cuan cerca está el grupo de ser abeliano,
+		estando más cerca cuanto menor es el valor $n$.  
+		
+		\textcompwordmark{}
+		
+		El siguiente teorema nos permite concluir la resolubilidad de un grupo
+		a partir de otros.  
+		
+		\textcompwordmark{}
+		\begin{thm}
+			\label{thm:N,G/N resol. -> G resol} Se verifica:
+			
+			\textcompwordmark{}
+			
+			\item[(i)] Si $G$ es resoluble y $H\leq G$,  entonces $H$ es resoluble.
+			
+			
+			\item[(ii)] Si $G$ es resoluble y $N\normal G$,  entonces $G/N$
+			es resoluble.  
+			
+			\item[(iii)] Si $N$ y $G/N$ son resolubles,  entonces $G$ es resoluble.
+			
+		\end{thm}
+		
+		\textcompwordmark{}
+		
+		\begin{defn}
+			Se dice que $N\normal G$ es normal minimal de $G$ si no existe $1\neq H<N$
+			tal que $H\normal G$.  
+			
+			\textcompwordmark\\
+			Dentro del estudio de los grupos resolubles la anterior definición
+			resulta de gran importancia siendo tales subgrupos un recurso esencial
+			en las demostraciones de resultados relacionados con la resolubilidad.
+		\end{defn}
+		
+		\begin{thm}
+			Si $N$ es normal minimal de un grupo finito $G$,  entonces $N\cong S_{1}\times S_{2}\times...\times S_{n}$
+			con $S_{i}$ grupos simples $i=1,...,n$.  
+		\end{thm}
+		
+		\textcompwordmark{}
+		\begin{defn}
+			Se dice que un grupo $G$ es $p$-elemental abeliano con $p$ primo
+			si $G$ es abeliano y todo elemento es de orden $p$.  
+			
+			\textcompwordmark{}
+			
+			Uno de los recursos más usados en las demostraciones en grupos resolubles
+			finitos consiste en considerar un subgrupo normal minimal.   El siguiente
+			corolario es así unos de los resultados más usados en este contexto.
+			
+			
+			\textcompwordmark{}
+		\end{defn}
+		
+		\begin{cor}
+			\label{cor:N elemenplt abeliano} Si $G$ es un grupo resoluble y
+			$N$ es normal minimal de $G$,  entonteces $N\cong C_{p}\times C_{p}\times...\times C_{p}$
+			con $p$ primo, así$N$ es $p$-elemental abeliano.  
+		\end{cor}
+		
+		\textcompwordmark\\
+		Introducimos a continuación el concepto de grupo nilpotente. Definimos
+		antes una familia de subgrupos de $G$ la cual nos permitirá definir
+		este concepto.
+		
+		\textcompwordmark{}
+		\begin{defn}
+			Dado un upo finito $G$, definimos $G^{1}=G$ y recursivamente, $G^{n}=[G^{n-1},G]$.
+		\end{defn}
+		
+		\textcompwordmark{}
+		\begin{defn}
+			Se dice que un grupo $G$ es nilpotente si  existe un $n$ tal
+			que $G^{n}=1$.
+			
+			\textcompwordmark{}
+		\end{defn}
+		
+		Notar que si $G$ es nilpotente, entonces $G$ es resoluble siendo
+		falso el recíproco.  Presentamos a continuación algunos resultados
+		sobre nilpotencia en grupos finitos.  
+		
+		\textcompwordmark{}
+		\begin{thm}
+			Si $G$ es $p$-grupo entonces $G$ es nilpotente.  
+			
+			\textcompwordmark{}
+		\end{thm}
+		
+		Anticipándonos al siguiente capítulo, introducimos ahora la definición
+		de subgrupo de Sylow, dada la importancia de estos subgrupos para
+		los grupos nilpotentes. Además, dichos subgrupos existen siempre en
+		grupos finitos, como veremos en el siguiente capítulo.
+		
+		\textcompwordmark{}
+		\begin{defn}
+			Sea $G$ grupo finito y $p$ un primo divisor de su orden,  decimos
+			que un subgrupo $P$ es un $p$-subgrupo de Sylow si el orden de $P$
+			es $p$-número y $[G:P]$ es $p'$-número.   
+			
+			\textcompwordmark{}
+			
+			\textcompwordmark{}
+		\end{defn}
+		
+		\begin{thm}
+			Sea $G$ grupo finito.   Son equivalentes:
+			
+			\textcompwordmark{}
+			
+			\item[(i)] $G$ es nilpotente.  
+			
+			\item[(ii)] Si $H<G$ entonces $H<\N GH$. 
+			
+			\item[(iii)] Si $P$ es un $p$-subgrupo de Sylow de $G$,  $P\normal G$.
+			
+			
+			\item[(iv)] $G\cong P_{1}\times P_{2}\times...\times P_{k}$ con
+			$P$ un $p_{i}$-subgrupo de Sylow de $G$.
+		\end{thm}
+		
+		\textcompwordmark{}
+		
+		Cabe pensar que al estudiar un grupo a partir de sus subgrupos no
+		todo subgrupo juega el mismo papel.   Presentamos a continuación el
+		concepto de subgrupo característico, los cuales son de gran relevancia
+		para este fin. 
+		
+		\textcompwordmark{}
+		\begin{defn}
+			Sea $G$ un grupo, decimos que un subgrupo $H$ característico de
+			$G$,  $H\,char\,G$,  si $\alpha(H)=H\,\mbox{para todo }\alpha\in\Aut(G)$,
+			i.e.,  $H$ es fijado por todo automorfismo de $G$.   En particular,
+			si $H$ es característico entonces $H\normal G$.  
+			
+			\textcompwordmark{}
+			
+			Notamos que si $M\normal N\normal K$ no es cierto en general que
+			$M\normal K$.   El siguiente resultado nos da una condición suficiente
+			para lo anterior.  
+			
+			\textcompwordmark{}
+		\end{defn}
+		
+		\begin{thm}
+			Si $H\,char\,K\normal G$ entonces $H\normal G$.   
+			
+			\textcompwordmark{}
+		\end{thm}
+		
+		Sin entrar en detalle observamos que el grupo derivado $G'$ es característico
+		de $G$.
+		
+		\textcompwordmark{}
+		\begin{defn}
+			Si $G$ es grupo finito y $p$ un primo,  se define $O_{p}(G)$ como
+			el mayor subgrupo normal de $G$ de orden potencia $p$.  
+			
+			\textcompwordmark{}
+		\end{defn}
+		
+		\begin{defn}
+			Sea $G$ grupo finito,  se define el subgrupo de Fitting de $G$ como 
+			
+			\textcompwordmark
+			\[
+			F(G)=\prod_{p\,|\,|G|}O_{p}(G).
+			\]
+			
+			\textcompwordmark\\
+			Algunas de las propiedades más destacables de este subgrupo son las
+			siguientes.  
+			
+			\textcompwordmark{}
+		\end{defn}
+		
+		\begin{thm}
+			Se verifica: 
+			
+			\textcompwordmark{}
+			
+			\item[(i)] $F(G)\,char\,G$.  
+			
+			\item[(ii)] $F(G)$ es nilpotente.  
+			
+			\item[(iii)] Si $N\normal G$ es nilpotente,  entonces $N\subseteq F(G)$.
+			
+		\end{thm}
+		
+		\textcompwordmark{}
+		\begin{defn}
+			Se define el subgrupo de Frattini de $G$,  $\Phi(G)$,  como la intersección
+			de todos los subgrupos maximales de $G$.  
+			
+			\textcompwordmark{}
+		\end{defn}
+		
+		\begin{thm}
+			\label{thm:G/frattini es p-etal abel} Se verifica:
+			
+			\textcompwordmark{}
+			
+			\item[(i)] $\Phi(G)\,char\,G$
+			
+			\item[(ii)] $\Phi(G)$ es nilpotente.  
+			
+			\item[(iii)] Si $G$ es $p$-grupo,entonces $G/\Phi(G)$ es $p$-elemental
+			abeliano.   
+		\end{thm}
+		
+		\textcompwordmark{}
+		
+		Introducimos ahora los conceptos de serie de composición y serie principal
+		de un grupo.  
+		
+		\textcompwordmark{}
+		\begin{defn}
+			Se dice que la familia $\{N_{i}\}_{i=0}^{k}$ es una \textit{serie
+				de composición para $G$} si verifican
+			
+			\textcompwordmark
+			\[
+			1=N_{0}\nnormal N_{1}\nnormal...\nnormal N_{k-1}\nnormal N_{k}=G
+			\]
+			
+			\textcompwordmark\\
+			y los \textit{factores de composición} $N_{i+1}/N_{i}$ son grupos
+			simples $i=0,...,n-1$.  
+		\end{defn}
+		
+		\textcompwordmark{}
+		\begin{thm}
+			Si $G$ es un grupo finito,  $G$ posee una serie de composición.
+			
+		\end{thm}
+		
+		\textcompwordmark{}
+		
+		Ahora,  tenemos las siguiente caracterización de los grupos resolubles
+		por medio de series de composición.   
+		
+		\textcompwordmark{}
+		\begin{lem}
+			Si $G$ es un grupo finito y $\{N_{i}\}_{i=0}^{k}$ es una serie de
+			composición de $G$,  $G$ es resoluble si y solo si los factores
+			de composición $N_{i+1}/N_{i}$ tienen orden $p$rimo, $i=0,...,n-1$. 
+		\end{lem}
+		
+		\textcompwordmark{}
+		\begin{defn}
+			Se dice que una familia de subgrupos normales en $G$ $\{N_{i}\}_{i=0}^{k}$,
+			es una \textit{serie principal de $G$} si verifican
+			
+			\textcompwordmark
+			\[
+			1=N_{0}\subseteq N_{1}\subseteq...\subseteq N_{k-1}\subseteq N_{k}=G
+			\]
+			
+			\textcompwordmark\\
+			y cada \textit{factor principal} $N_{i+1}/N_{i}$ es normal minimal
+			de $G/N_{i}$.  
+			
+			\textcompwordmark{}
+		\end{defn}
+		
+		\begin{cor}
+			Los factores principales de un grupo resoluble $G$ son todos $p$-elementales
+			abelianos para diferentes primos divisores del orden de $G$.  
+			
+			\textcompwordmark{}
+		\end{cor}
+		
+		El siguiente resultado permite hablar de factores de composición sin
+		necesidad de dar explícitamente una serie de composición.   
+		
+		\textcompwordmark{}
+		\begin{thm}
+			[Jordan-Hölder] Dadas dos series de composición para $G$,  el multiconjunto
+			formado por sus factores de composición para cada una de las series
+			es el mismo salvo isomorfismo.  
+		\end{thm}
+		
+		\textcompwordmark\\
+		Entendemos por multiconjunto a un conjunto que admite repetición en
+		sus elementos,  así por ejemplo,  en el caso de ser dos factores de
+		composición isomorfos a $C_{2}$ encontraríamos dos veces $C_{2}$
+		es nuestro multiconjunto.  
+		
+		\textcompwordmark{}
+		
+		Remarcamos que los dos siguientes teoremas son, posiblemente, los
+		más avanzados de este capítulo. El primero de ellos es conocido como
+		el Teorema $p^{a}q^{b}$ de Burnside,  o simplemente,  Teorema de
+		Burnside.  
+		
+		\textcompwordmark{}
+		\begin{thm}
+			[Burnside] \label{thm:-Burnside} Si $|G|=p^{a}q^{b}$ con $p,q$
+			primos distintos,  entonces $G$ es resoluble.  
+			
+			\textcompwordmark{}
+		\end{thm}
+		
+		El siguiente teorema es uno de los resultados más generales para la
+		existencia de complementos en un grupo.  
+		
+		\textcompwordmark{}
+		\begin{defn}
+			Si $G$ es un grupo y $N,H$ son subgrupos de $G$,  decimos que $H$
+			es complemento para $N$ si $H=HN$ y $H\cap N=1$.  
+			
+			\textcompwordmark{}
+		\end{defn}
+		
+		\begin{thm}
+			[Schur-Zassenhaus]\label{thm:Schur-Zassenhaus} Sea $G$ un grupo
+			finito y sea $N\normal G$ tal que $(|N|,\,|G:N|)=1$.   Si $N$ o
+			$G/N$ es resoluble,  entonces $N$ es complementado en $G$ y si
+			$K$ es otro complemento para $N$,  $K=H^{g}$ para cierto $g\in G$.
+			
+			
+			\textcompwordmark{}
+		\end{thm}
+		
+		Matizamos que la condición $N$ o $G/N$ es resoluble es un recurso
+		habitual con tal de simplificar la demostración de este teorema.   Si
+		$|G|$ es impar,  por el Teorema de Feit-Thompson $G$ es resoluble
+		y dado que $|N|$ y $[G:N]$ son coprimos tenemos siempre que $N$
+		o $G/N$ es resoluble pudiéndose eliminar esta condición.  
+		
+		\textcompwordmark\newpage
+		
+		\section{Otros resultados utilizados}
+		
+		\textcompwordmark{}
+		
+		En esta sección presentamos resultados que usaremos en el presente
+		texto y que no han sido vistos en el grado.   En el discurso de todo
+		el documento,  uno de los factores más determinantes del contenido
+		que se expone es la clasificación de los grupos simples,  la cual,
+		debido a su complejidad, tratamos de evitar.   Tenemos, pues, que todas
+		las condiciones sobre $G$ como resolubilidad  son formas de estudiar
+		propiedades de los grupos, evitando la clasificación de los grupos
+		simples.  
+		
+		\textcompwordmark{}
+		
+		Presentamos ahora otro concepto con la misma finalidad y que es una
+		generalización de la resolubilidad.  
+		
+		\textcompwordmark{}
+		\begin{defn}
+			Se dice que un grupo finito $G$ se dice \textbf{$\mathbf{\pi}$-}separable
+			si existe una serie de subgrupos normales $G_{0},...,G_{n}$,  tales
+			que
+			
+			\textcompwordmark
+			\[
+			1=G_{0}\subseteq G_{1}\subseteq...\subseteq G_{n-1}\subseteq G_{n}=G
+			\]
+			
+			\textcompwordmark\\
+			y los factores $G_{i+1}/G_{i}$ son $\pi$-grupo o $\pi'$-grupo.
+			
+		\end{defn}
+		
+		\textcompwordmark{}
+		
+		Extendiendo la noción de $O_{p}(G)$,  para un conjunto de primos
+		$\pi$,  tenemos que en la anterior definición podemos exigir a los
+		grupos $G_{i}$ ser característicos de $G$.   \\
+		\textcompwordmark{}
+		
+		\begin{defn}
+			En el caso en el que $\pi$ consta de un único primo $p$,  decimos
+			que el grupo es $p$-resoluble.   
+			
+			\textcompwordmark{}
+		\end{defn}
+		
+		\begin{thm}
+			Un grupo finito es resoluble si y solo si es $\pi$-separable para
+			todo conjunto de primos $\pi$,  divisores del orden de $G$.  En
+			particular,  si $G$ es resoluble, $G$ es $p$-resoluble para todo
+			primo $p$ divisor de su orden.  
+		\end{thm}
+		
+		\textcompwordmark{}
+		
+		Hemos visto ciertas propiedades de los subgrupos normales minimales,
+		así como su importancia en grupos resolubles.   De forma similar,
+		o contraria,  a estos subgrupos tenemos los subgrupos maximales y
+		normales maximales.   Damos a continuación algunos resultados sobre
+		subgrupos tales subgrupos.  
+		
+		\textcompwordmark{}
+		\begin{cor}
+			\label{cor:Maximal p-resoluble} Si $G$ un grupo finito $p$-resoluble,
+			el índice de un subgrupo maximal es $p$-número o bien es $p'$-número.
+			
+			
+			\textcompwordmark{}
+		\end{cor}
+		
+		\begin{lem}
+			Si $G$ es un grupo finito resoluble,  el índice de todo subgrupo
+			maximal es potencia de primo.  
+			
+			\textcompwordmark{}
+		\end{lem}
+		
+		\begin{defn}
+			Decimos que $X$ es normal maximal de $G$ si no existe un subgrupo
+			propio $Y\vartriangleleft G$ con $X\subset Y$,  i.e.,  $G/X$ es simple.
+			
+			
+			\textcompwordmark{}
+			
+			Si $G$ es resoluble así lo es el cociente $G/X$ lo que fuerza a
+			que $G/X$ sea abeliano. Dado que $G/X$ es simple, deducimos que
+			no puede tener subgrupos propios de donde $G/X$ es cíclico de orden
+			primo.   Notamos que si $G$ es finito existen siempre subgrupos maximales
+			normales.  
+		\end{defn}
+		
+		\textcompwordmark{}
+		\begin{lem}
+			\label{lem:p-resoluble maximal indice primo} Si $G$ es un grupo
+			finito resoluble,  $M$ es normal maximal si y solo si $[G:M]$ es
+			primo y $M$ es normal en $G$.  
+		\end{lem}
+		
+		\textcompwordmark{}
+		\begin{lem}
+			Si $H$ es un subgrupo finito de un grupo $G$,  entonces $H^{x}$
+			es isomorfo con $H$ para todo $x\in G$.  
+		\end{lem}
+		
+		\begin{proof}
+			La aplicación $\rho:H\rightarrow H^{x}$ dada por $\rho(h)=h^{x}$
+			es homomorfismo de grupos suprayectivo.   Además,  $|H|=|H^{x}|$
+			es finito y, por tanto, la aplicación es inyectiva,  luego $\rho$ es
+			isomorfismo de grupos.  
+		\end{proof}
+		\textcompwordmark{}
+		
+		Pese a que trataremos de evitar los grupos simples, requeriremos más
+		adelante hacer uso de ciertos resultados, los cuales expondremos sin
+		demostración. Presentamos ahora un resultado elemental acerca del
+		grupo simple $\PSL(2,q)$.
+		\begin{lem}
+			El orden del grupo simple $PSL(2,q)=\frac{SL(2,q)}{Z(SL(2,q))}$ es
+			$|\PSL(2,q)|=\frac{q(q^{2}-1)}{2}$.  
+			
+			\textcompwordmark{}
+		\end{lem}
+		
+		\begin{proof}
+			En primer lugar, hallamos el cardinal de $GL(2,q)$,  el conjunto de
+			las aplicaciones lineales biyectivas entre $\mathbb{Z}_{q}\x\mathbb{Z}_{q}$
+			y $\mathbb{Z}_{q}\x\mathbb{Z}_{q}$.   Dada una base de $\mathbb{Z}_{q}\x\mathbb{Z}_{q}$,
+			$\{v_{1},v_{2}\}$,  tenemos como posible imagen de $v_{1}$ todos
+			los elementos de $\mathbb{Z}_{q}^{2}$ excepto el cero,  esto es,
+			$(q^{2}-1)$.   Por otro lado,  las posibles imágenes de $v_{2}$
+			excluyen tanto el cero como combinaciones lineales de $v_{1}$,  teniendo
+			el cuenta que $\mathbb{Z}_{q}$ tiene $q-1$ unidades obtenemos $q^{2}-(1+q-1)=q^{2}-q$
+			posibles imágenes para $v_{2}$.   En total,  $\left|GL(2,q)\right|=(q^{2}-1)(q^{2}-q)=q(q-1)(q^{2}-1)$.
+			
+			
+			\textcompwordmark{}
+			
+			Ahora,  el especial lineal $SL(2,q)$ son las matrices con determinante
+			$1$; dado que la aplicación $det:GL(2,q)\rightarrow U(\mathbb{Z}_{q})$
+			es un homomorfismo de grupos suprayectivo con $Ker(det)=SL(2,q)$,
+			obtenemos $|SL(2,q)|=q(q^{2}-1)$.   
+			
+			\textcompwordmark{}
+			
+			Finalmente,  el centro del especial lineal son las matrices diagonales
+			$2$ por $2$ (con determinante $1$) con sus entradas iguales; así
+			solo hay dos posibles matrices,  la identidad $I$,  y su inversa
+			$-I$.   Concluimos que $|PSL(2,q)|=\frac{|SL(2,q)|}{|Z(SL(2,q))|}=q(\frac{q^{2}-1}{2})$.
+			
+		\end{proof}
+		\textcompwordmark{}
+		
+		Terminamos la sección introduciendo una notación para el grupo cociente,
+		a la cual nos referiremos como notación o convenio barra.   Si $G$
+		es un grupo y $N$ un subgrupo normal,  escribimos $\bar{G}=G/N$
+		y consideramos el homomorfismo canónico de $G$ en $\bar{G}$ el cual
+		asocia al elemento $g\in G$ el elemento $\bar{g}=Ng\in G/N$; si
+		$H\leq G$ denotamos por $\bar{H}$ a la imagen de $H$ por este homomorfismo.
+		Además,  este homomorfismo establece una biyección entre los subgrupos
+		de $\overline{G}$ y los subgrupos de $G$ conteniendo a $N$.  
+		
+		\chapter{Resultados sobre Sylow }
+		
+		\textcompwordmark{}
+		
+		Posiblemente,  la forma más simple de estudiar un grupo es por medio
+		de sus subgrupos.   Es por ello que estamos interesados en el estudio
+		de los subgrupos de Sylow,  así como de Hall.   
+		
+		\textcompwordmark{}
+		
+		Por un lado, tenemos el Teorema de Lagrange por el cual el orden de
+		todo subgrupo es divisor del orden del grupo.   Nuestro primer objetivo
+		es tratar de probar el recíproco de este resultado.   Para ello requerimos
+		imponer condiciones sobre el orden,  pues en otro caso fallaríamos
+		en nuestro propósito.   Con esto,  puede entenderse el porque de la
+		siguiente definición.  
+		
+		\textcompwordmark{}
+		\begin{defn}
+			Sea $G$ grupo finito y $p$ un primo divisor de su orden,  decimos
+			que un subgrupo $P$ es un $p$-subgrupo de Sylow si el orden de $P$
+			es $p$-número y $[G:P]$ es $p'$-número.   
+			
+			\textcompwordmark{}
+			
+			Si escribimos $\left|G\right|=\orden$ con $p_{i}$ todos primos distintos,
+			un $p_{i}$-grupo de Sylow de $G$ es un subgrupo de $G$ de orden
+			exactamente $p_{i}^{e_{i}}$.  \\
+			\textcompwordmark\\
+			Denotamos por $\Syl_{p}(G)$ al conjunto formado por todos los $p$-subgrupos
+			de Sylow de $G$.   Con esta notación un grupo $P$ pertenece a $\Syl_{p}(G)$
+			equivale a $P$ es $\psylow$.   
+			
+			\textcompwordmark\\
+			Notamos que $\Syl_{p}(G)$ puede ser vacío,  siendo nuestro propósito
+			ver que si $G$ es finito $\Syl_{p}(G)$.   Para ello,  probaremos
+			antes el siguiente resultado.  
+			
+			\textcompwordmark{}
+		\end{defn}
+		
+		\begin{thm}
+			[Cauchy] Sea $G$ finito.   Si $p$ es un primo divisor de su orden
+			entonces $G$ tiene un elemento de orden $p$.  
+		\end{thm}
+		
+		\begin{proof}
+			La demostración se realiza por inducción sobre el orden de $G$,  aunque
+			primero remarcamos que es suficiente probarlo para el caso en el que
+			$G$ es abeliano.   \\
+			\textcompwordmark{} 
+			
+			Esto es consecuencia de la ecuación de clases,  Corolario \ref{cor:Ecuacion de clases};
+			notamos que recurriendo a inducción el teorema sería cierto de existir
+			un subgrupo propio $H<G$ tal que $p$ no divide a $[G:H]$.   Así
+			$[G:\subset[x_{i}]]$ es divisible por $p$ (recordamos que $\subset[x_{i}]$
+			es un subgrupo propio pues $|\Omega_{x_{i}}|>1$ ).  Ahora,  la ecuación
+			de clases expresada módulo $p$ nos da
+			
+			\textcompwordmark
+			\[
+			0\equiv|Z(G)|\,\left(\mbox{mód }p\right),
+			\]
+			
+			\textcompwordmark\\
+			por lo que $Z(G)$ no puede ser un subgrupo propio concluyéndose $Z(G)=G$
+			y $G$ es abeliano. Tomamos $H$ un subgrupo propio de orden lo mayor
+			posible; ahora $H\normal G$ y por la maximalidad de $H$,  $G/H$
+			es simple,  y abeliano.   Además,  de darse $p\,|\,|H|$ por inducción
+			$H$ tendría un elemento de orden $p$ y así lo haría $G$.   Supuesto
+			que $p$ no divide al cardinal de $H$ $p$ deberá dividir al indice
+			de $H$ en $G$ y por tanto $G/H\cong C_{p}$.   En tal caso existe
+			$1\neq x\in G$ tal que $G/H=\generado[xH]$,  y dado que el orden
+			de $x$ es divisor del orden de $xH$,  el cual es primo,  tenemos
+			que $o(x)=p$ pues $x\neq1$.   
+		\end{proof}
+		\textcompwordmark{}
+		
+		Notar que este resultado en sí ya es un resultado acerca de la existencia
+		de subgrupos con un determinado orden ya que el grupo generado por
+		$x$ tiene orden el primo $p$.  \\
+		Veamos ahora como usar este resultado para probar la existencia de
+		subgrupos de Sylow.  
+		
+		\textcompwordmark{}
+		
+		Dado un grupo finito $G$,  expresamos su cardinal de la forma $|G|=p^{a}n$
+		con $p$ primo y $(p,n)=1$.   Notamos que un subgrupo $P$ de $G$
+		es $\psylow$ si y solo si $|P|=p^{a}$.  \\
+		\textcompwordmark\\
+		Abusando de notación diremos que $P$ es un subgrupo de Sylow sin
+		especificar el primo.   Notamos además que todo grupo admite una expresión
+		del tipo $|G|=p^{a}n$ con $p$ primo y $(p,n)=1$ debido al teorema
+		de factorización en números primos.  
+		
+		\textcompwordmark\\
+		Probaremos ahora tres resultados conocidos como Teoremas de Sylow,
+		los cuales reciben los nombres de Existencia,  Conjugación y Dominancia.
+		
+		\begin{thm}
+			[Existencia] Si $G$ es un grupo finito y $p$ un primo divisor de
+			su orden,  $\Syl_{p}(G)\neq\varnothing$.  
+		\end{thm}
+		
+		\begin{proof}
+			[Pimera Demostración] La demostración es similar a la del Teorema
+			de Cauchy,  el cual requerimos ahora.  Procedemos por inducción y
+			escribimos $|G|=p^{a}n$ con $(p,n)=1$.   Es claro que de existir
+			un $H<G$ de forma que $p$ no divida a $|H|$ tendríamos el resultado
+			por hipótesis de inducción.  \\
+			\textcompwordmark{}
+			
+			Tenemos así que $p\dividido\left[G:H\right]\mbox{ para todo }H<G$;
+			además, $p\dividido|Z(G)|$ por la ecuación de clases.   Por el Teorema
+			de Cauchy existe $x\in Z(G)\,\mbox{tal que}\,o(x)=p$ y si  denotamos
+			por $N=\generado$, $N$ está contenido en $Z(G)$, de donde $N$
+			es normal en $G$.   Aplicando la hipótesis de inducción en el grupo
+			cociente $G/N$ tenemos existe $P/N<G/N$ con $|P/N|=p^{a-1}$,  así
+			el subgrupo $P$ verifica $|P|=|P/N||N|=p^{a-1}p=p^{a}$.  
+		\end{proof}
+		\textcompwordmark{}
+		
+		Veremos a continuación otra demostración de este teorema debida a
+		H.  Wielandt\textbf{, } la cual no requiere del Teorema de Cauchy;
+		como contrapartida,  esta demostración requiere del siguiente lema.
+		
+		
+		\textcompwordmark{}
+		\begin{lem}
+			Sean $p,a,m$ números naturales tal que $p$ es primo $a\geq0$ y
+			$m\geq1$.   Entonces
+			
+			\textcompwordmark
+			\[
+			\binom{p^{a}m}{p^{a}}\equiv m\,\left(\mbox{mód }p\right).
+			\]
+			
+			\textcompwordmark{}
+		\end{lem}
+		
+		\begin{proof}
+			Una demostración de este teorema puede encontrarse en \cite{Isaacs-Finite},
+			Lema 1.  8.  
+		\end{proof}
+		\textcompwordmark{}
+		
+		\begin{proof}
+			[Segunda Demostración (Wielandt)] Escribimos $|G|=p^{a}m$ con $(p,m)=1$;
+			claramente $p,a,m$ verifican las condiciones del lema anterior.   Sea
+			$\Omega$ el conjunto de todos los subconjuntos de $G$ de cardinal
+			$p^{a}$.   Sabemos que $G$ actúa bajo multiplicación a derecha sobre
+			$\Omega$ y que bajo esta acción el cardinal de $\Omega$ es la suma
+			del cardinal de las órbitas.  Por el lema anterior
+			
+			\textcompwordmark
+			\[
+			|\Omega|=\binom{p^{a}m}{m}\equiv m\not\equiv0\,\left(\mbox{mód }p\right),
+			\]
+			
+			\textcompwordmark\\
+			de donde se deduce que alguna de las órbitas no es divisible por $p$,
+			sea $\Orbita$ tal órbita.  \\
+			
+			Sea ahora $X\in\Orbita$,  tomamos el estabilizador $G_{X}$,
+			el cual es un subgrupo de $G$, y nos proponemos ver que su cardinal
+			es $p^{a}$, por tanto, es un $\psylow$ de $G$.  Por el teorema
+			de la órbita, $\orbita[X]$ y dado que $p\,\nodivide\,|\Orbita|$ deberá
+			ser $p^{a}\dividido G_{X}$.  \\
+			Por otro lado,  dado $x\in X$ por ser $G_{X}$ el estabilizador de
+			$X$ en $G$ tenemos que $G_{X}x\subseteq X$ y, por tanto, $|G_{X}|=|G_{X}x|\leq|X|=p^{a}$
+			por ser $X\in\Omega$.   Concluimos así que $|G_{X}|=p^{a}$ como
+			deseábamos.   
+		\end{proof}
+		\textcompwordmark{}
+		
+		Antes de continuar con los teoremas de dominancia y conjugación de
+		Sylow remarcamos que pese a que la anterior demostración omita el
+		Teorema de Cauchy,  la conexión entre la existencia $\psylows$ y
+		elementos de orden $p$ es estrecha,  tanto es así que el Teorema
+		de Cauchy puede darse como corolario de la Existencia de Sylow, veámoslo:
+		
+		Dado que el orden de un elemento $x$ de un $p$-subgrupo de Sylow
+		debe ser potencia de $p$,  tenemos el grupo cíclico $\left\langle x\right\rangle $
+		tiene un único subgrupo para cada divisor de su orden, en particular
+		tiene un subgrupo cíclico de orden $p$.  \\
+		\textcompwordmark{}
+		\begin{thm}[Dominancia]\label{thm:Dominancia-Conjugaci=0000F3n} Sea $G$ grupo
+			finito y $L\leq G$ un $\psubgrupo$.   Si $P\in\Syl_{p}(G)$ entonces
+			existe $x\in G$ tal que
+			
+			\textcompwordmark
+			\[
+			L\subseteq P^{x}.
+			\]
+			
+			\textcompwordmark\\
+			En particular, todo $p$-subgrupo está contenido en un $p$-subgrupo
+			de Sylow de $G$.  
+		\end{thm}
+		
+		\begin{proof}
+			Sea $\Omega$ el conjunto de clases a derecha de $P$ en $G$.   Sabemos
+			que $G$ actúa sobre $\Omega$ y, en consecuencia, así lo hace $L$,  además
+			$|\Omega|=[G:P]$ y $|\Omega|$ no es divisible por $p$. Consideramos
+			la acción $(L,\Omega,\rho)$ definida por multiplicación a derecha;
+			tenemos que $\Omega$ se descompone como suma de órbitas bajo esta
+			acción,  y de lo anterior deducimos que existe una órbita $\Orbita$
+			de cardinal no divisible por $p$.   Por el Teorema de la órbita, $\orbita[][L]$
+			con $\alpha\in\Omega$,  luego $|\Orbita|\mbox{ divide a }|L|$ el
+			cual es potencia de $p$; concluimos así que $|\Orbita|=1$ y si denotamos
+			por $Pg$ al único elemento de dicha órbita tenemos que\\
+			\textcompwordmark
+			\[
+			Pgl=Pg\,\mbox{ para todo }l\in L,
+			\]
+			
+			equivalentemente 
+			
+			\[
+			glg^{-1}\in P\,\mbox{ para todo }l\in L,
+			\]
+			
+			\textcompwordmark\\
+			de donde $L\subseteq g^{-1}Pg=P^{g}$. Además, $P^{g}$ es isomorfo con $P$
+			por ser ambos finitos,  así $P^{g}$ es $p$-subgrupo de Sylow conteniendo
+			a $L$.  
+		\end{proof}
+		\textcompwordmark{}
+		\begin{cor}
+			[Conjugación] Si $G$ es un grupo finito y $\sylow[S,L]$,  entonces
+			existe $x\in G$ tal que $S^{x}=L$.  
+		\end{cor}
+		
+		\textcompwordmark{}
+		\begin{defn}
+			Denotamos por $\nu_{p}(G)$ al número de $p$-subgrupos de Sylow de
+			$G$ para un primo $p$.  
+			
+			\textcompwordmark{}
+		\end{defn}
+		
+		Consecuentemente el número de $p$-subgrupos de Sylow de un grupo
+		finito $G$ es $\nu_{p}(G)=[G:N_{G}(P)]$,  dado que forman una única
+		órbita bajo la acción de conjugación sobre el conjunto $\Omega=\Syl_{p}(G)$
+		y $N_{G}(P)$ es el estabilizador de $P\in\Omega$ bajo esta acción.
+		
+		
+		\textcompwordmark{}
+		
+		Con esto $\nu_{p}=|\Syl_{p}(G)|=[G:N_{G}(P)]$ es $p'$-numero.   Además
+		$\nu_{p}(G)=1$ si y solo si tiene un único $p$-subgrupo de Sylow
+		normal.   
+		
+		\textcompwordmark{}
+		\begin{thm}
+			Si $G$ es un grupo finito y $p$ es un número primo,  entonces $\nu_{p}(G)\equiv1\,(m\acute{o}d\,p)$.
+			
+		\end{thm}
+		
+		\begin{proof}
+			Sea $\Omega=\Syl_{p}(G)=\{P_{1},...,P_{\nu_{p}}\}$.   Consideramos
+			la acción $(P_{1},\Omega,\rho)$ donde $\rho_{x}(P_{i})=P_{i}^{x}$,
+			i.e., representamos por conjugación sobre $\Syl_{p}(G)$.   La longitud
+			de la órbita de un elemento $P_{i}\in\Omega$ es un divisor de $|P_{1}|$
+			por el Teorema de la órbita,  así,  la longitud de la órbita es potencia
+			de $p$.   Afirmamos que $\{P_{1}\}$ es la única órbita de longitud,
+			con esto el resultado esta probado sin más que descomponer $\Omega$
+			como suma de órbitas.  
+			
+			\textcompwordmark{}
+			
+			De existir otra órbita $\{P_{i}\}$ de longitud uno distinta de $\{P_{1}\}$,
+			tendríamos que $P_{1}\leq N_{G}(P_{i})$ y dado que $P_{i}$ es normal
+			en $N_{G}(P_{i})$,  $\nu_{p}(N_{G}(P_{i}))=1$, de donde $P_{i}=P_{1}$,
+			contradicción.   
+		\end{proof}
+		\textcompwordmark{}
+		\begin{thm}
+			[Argumento de Frattini]
+			
+			Si $N\normal G$,  $N$ finito y $P\in\Syl_{p}(N)$ entonces $G=N\N GP$.
+			
+			
+			\textcompwordmark{}
+		\end{thm}
+		
+		El resultado de existencia de Sylow nos garantiza la existencia de
+		subgrupos con orden $p^{a}$ con $p^{a}$ la máxima potencia de un
+		primo $p$ dividiendo el orden del grupo.   El siguiente resultado
+		amplía lo anterior, teniéndose la existencia de $p$-subgrupos con
+		orden cualquier potencia de primo dividiendo el orden del grupo.   
+		
+		\textcompwordmark{}
+		\begin{thm}
+			Si $p$ es primo y $P$ es un $p$-grupo,  entonces existen subgrupos
+			para todo divisor de su orden,  en particular, si $\left|P\right|=p^{a},a\geq1$,
+			existe $H\leq P$ con $\left|H\right|=p^{a-1}$ y, por tanto, $H\normal P$.
+			
+			
+			\textcompwordmark{}
+		\end{thm}
+		
+		Dado que no es cierto que para todo divisor del orden de un grupo
+		existe un subgrupo de orden ese divisor,  vemos si $n$ es un número
+		para el cual falla el recíproco del Teorema de Lagrange, debe haber
+		dos primos dividiendo a $n$ por el teorema anterior.   Damos a continuación
+		un ejemplo de este hecho.  \\
+		\textcompwordmark{}
+		
+		Afirmamos que $A_{4}$ no tiene subgrupos de orden $6$.   Para ver
+		esto usaremos que $A_{4}$ no posee elementos de orden $6$; con esto,
+		es suficiente ver que si $H\leq A_{4}$ tiene orden $6$, entonces
+		es cíclico llegando a una contradicción.   
+		
+		Dado que todo subgrupo con índice $2$ es normal,  si denotamos por
+		$C_{3}$ al $3$-subgrupo de Sylow de $H$,  $C_{3}\normal H$.   Sabemos
+		que existe $x,y\in H$ tal que $C_{3}=\generado[x]$,  $o(y)=2$.
+		Será suficiente ver que $x$ e $y$ conmutan,  en cuyo caso el orden
+		de $xy$ resultará ser $3\text{·}2$ y $H=\generado[xy]$.  
+		
+		Por un lado,  $[x,y]=x^{-1}x^{y}\in C_{3}$ ya que $x^{-1},x^{y}\in C_{3}$,
+		el segundo por ser $C_{3}\normal H$, así.   Por otro lado,  teniendo
+		en cuenta que $A_{4}=C_{3}V$ con $V$ $2$-subgrupo de Sylow normal,
+		$[x,y]=(y^{-1})^{x}y\in V$ por la dominancia de Sylow y ser $V\normal A_{4}$.
+		Así $[x,y]\in V\cap C_{3}=1$ y  $x$ e $y$ conmutan.  
+		
+		\textcompwordmark{}
+		
+		Por último,  presentamos sin demostración otra versión de los Teoremas
+		de Existencia,  Conjugación y Dominancia de Sylow en el contexto de
+		las acciones de grupos sobre grupos.  
+		
+		\textcompwordmark{}
+		\begin{defn}
+			Sean $A\mbox{ y }G$ grupos,  decimos que $A$ actúa sobre $G$ por
+			automorfismos si para todo $g\in G,a\in A$ tenemos definido $g^{a}\in G$
+			tal que
+			
+			\textcompwordmark{}
+			
+			$g^{1}=g\,\,\mbox{para todo }g\in G$ 
+			
+			$(g^{a})^{b}=g^{ab}\,\,\mbox{para todo }g\in G,\,a,b\in A$
+			
+			$(gh)^{a}=g^{a}h^{a}\,\,\mbox{para todo }g,h\in G,\,a\in A$ 
+			
+			\textcompwordmark{}
+		\end{defn}
+		
+		\begin{thm}
+			Sea $G$ un grupo finito y suponer  que $A$ actúa coprimamente sobre
+			$G$ por automorfismos.   Si $p$ es un primo divisor del orden de
+			$G$, entonces existe un $\sylow$ tal que
+			
+			\textcompwordmark{}
+			
+			\item[(i)] $P$ es $A$-invariante,  $P^{a}=P\,\mbox{ para todo }a\in A$.
+			
+			\item[(ii)] Si $\sylow[Q]$ es $A$-invariante,  existe $c\in C_{G}(A)$
+			tal que $P^{c}=Q$.  
+			
+			\item[(iii)] Si $S$ en un $p$-subgrupo $A$-invariante de $G$
+			existe $\sylow[R]$ $A$-invariante tal que $S\subseteq R$.  
+			
+			\textcompwordmark{}
+		\end{thm}
+		
+		
+		\chapter{Resultados sobre Hall}
+		
+		\textcompwordmark{}
+		
+		Si $|G|=n$ y denotamos por $n_{p}$ a la $p$-parte de $n$,  hemos
+		visto que si $G$ es finito entonces siempre existen subgrupos de
+		orden $n_{p}$.   Cabe ahora preguntarse si esto es cierto para $n_{\pi}$
+		con $\pi$ un conjunto de primos cualesquiera.   La respuesta es negativa
+		en general y a lo largo de este capítulo expondremos los principales
+		resultados sobre la existencia de tales subgrupos en grupos finitos.
+		
+		
+		\textcompwordmark{}
+		\begin{defn}
+			Sea $G$ grupo finito y $\pi$ un conjunto de primos,  decimos que
+			$H$ es un $\pi$-subgrupo de Hall si el orden de $H$ es $\pi$-número
+			y $[G:P]$ es $\pi'$-número.   Denotamos por $\nu_{\pi}(G)$ al número
+			de $\pi$-subgrupos de Hall de un grupo $G$.   
+			
+			\textcompwordmark{}
+		\end{defn}
+		
+		\begin{thm}
+			[P.  Hall, 1928] \label{thm:E,D,C Hall} Sea $G$ resoluble finito
+			y sea $\pi$ un conjunto de primos divisores del orden de $G$.   Entonces
+			
+			\textcompwordmark{}
+			
+			\item[(i)]$G$ tiene $\pi$-subgrupos de Hall.  
+			
+			\item[(ii)] Dos subgrupos de Hall cualesquiera son conjugados en
+			$G$.  
+			
+			\item[(iii)] Todo $\pi$-subgrupo está contenido en un $\pi$-subgrupo
+			de Hall.  
+		\end{thm}
+		
+		\begin{proof}
+			A lo largo de la demostración hacemos el convenio siguiente
+			
+			\textcompwordmark{}
+			
+			\item[(i)]$L$ denotará un $\pi$-subgrupo de $G$.  
+			
+			\item[(ii)]$H$ denotará un $\pi$-subgrupo de Hall de $G$.  
+			
+			\item[(iii)] $|G|=mn$ con $m\,,n$ coprimos donde los primos que
+			dividen a $m$ son todos los del conjunto $\pi$,  esto es,  $|H|=m$.
+			
+			
+			\textcompwordmark{}
+			
+			Análogamente a las demostraciones de los Teoremas de Sylow,  para
+			probar la conjugación y la dominancia es suficiente ver que todo $\pi$-subgrupo
+			está contenido en un conjugado de un $\pi$-subgrupo de Hall, i.e.,
+			$L\subseteq H^{x}$ con $x$ un elemento de $G$ (relación que definimos
+			como $(ii)'$).  \\
+			Es suficiente notar que la conjugación se daría por tener dos $\hall$
+			el mismo orden,  la dominancia viene de $(ii)$ y $(ii)'$.   \\
+			\textcompwordmark\\
+			La demostración se desarrolla bajo el uso de inducción,  tanto en
+			la existencia como en el caso $(ii)'$.   Como discurso de la demostración
+			mantendremos en todos los casos a discutir el siguiente orden: primero
+			probaremos $(i)$ y a continuación el caso $(ii)'$.  \\
+			\textcompwordmark\\
+			Con tal de evitar los casos triviales suponemos $G>1$ y $m>1$.  \\
+			
+			Sea $M$ normal minimal de $G$. Por el Corolario \ref{cor:N elemenplt abeliano}
+			$M$ es $p$-elemental abeliano para cierto primo.   La demostración
+			prosigue distinguiendo según sea $p\in\pi$ o bien $p\notin\pi$.
+			\\
+			\textcompwordmark\\
+			\textbf{Caso 1: } $M$ es $p$-elemental abeliano con $p\in\pi$.
+			Escribimos $|M|=p^{a}$; así con la notación anterior
+			
+			\textcompwordmark
+			\[
+			|G/M|=\frac{mn}{p^{a}}=m_{1}n,
+			\]
+			
+			\textcompwordmark\\
+			donde $m=m_{1}p^{a}$.   Por hipótesis de inducción $G/M$ tiene un
+			$\pi$-subgrupo de Hall,  $H/M$,  esto es,  existe $H$ subgrupo
+			de $G$ conteniendo a $M$ tal que\\
+			\textcompwordmark{} 
+			\[
+			|H/M|=m_{1},
+			\]
+			
+			\textcompwordmark{}
+			
+			por tanto
+			
+			\textcompwordmark
+			\[
+			|H|=m_{1}|M|=m_{1}p^{a}=m,
+			\]
+			\textcompwordmark\\
+			y $H$ es un $\hall$ de $G$.  \\
+			
+			Probada la existencia probamos ahora la relación $L\subseteq H^{x}$
+			para cierto $x\in G$.   $LM/M$ es de nuevo un $\pi$-subgrupo de
+			$G/M$ y aplicando la hipótesis de inducción
+			
+			\textcompwordmark
+			\[
+			LM/M\subseteq H^{x}/M\,\,x\in G,
+			\]
+			
+			\textcompwordmark\\
+			teniendo en cuenta que $L\subseteq LM$ se tiene el resultado.  \\
+			\textcompwordmark\\
+			\textbf{Caso 2: } Ahora $|M|=q^{b}$ con $q\notin\pi$.   Escribimos
+			
+			\textcompwordmark{}
+			
+			\[
+			|G/M|=\frac{mn}{q^{b}}=mn_{1},
+			\]
+			\\
+			con $n=n_{1}q^{b}$.   Requerimos distinguir ahora según sea $n_{1}$.
+			\\
+			\textcompwordmark\\
+			\textbf{Caso 2A: } $n_{1}\neq1$.  Por inducción $G/M$ tiene un
+			$\hall$ de la forma $K/M$ con
+			
+			\textcompwordmark
+			\[
+			|K/M|=m,
+			\]
+			\[
+			|K|=m|M|=mq^{b}=\frac{mn}{n_{1}}<mn.
+			\]
+			\\
+			Esto es, $K$ contiene la $\pi$-parte de $G$ y es de cardinal menor,
+			por hipótesis de inducción $K$ tiene un $H$ $\hall$.  \\
+			Con respecto a $(ii)'$ $LM/M$ es $\pi$-subgrupo de $G/M$ y por
+			hipótesis inductiva está contenido en un conjugado de $H/M\subseteq K/M$,
+			esto es
+			
+			\textcompwordmark
+			\[
+			LM/M\subseteq K^{x}/M,
+			\]
+			
+			\textcompwordmark\\
+			de donde $L^{x^{-1}}\subset K$; además, $L^{x^{-1}}$ es $\pi$-subgrupo
+			de $K<G$,  luego existe $y\in K$ tal que $(L^{x^{-1}})^{y}\subseteq H$,
+			equivalentemente
+			
+			\textcompwordmark
+			\[
+			L^{z}\subseteq H\mbox{ con }z=x^{-1}y\in G.
+			\]
+			\\
+			\textbf{Caso 2B:} $n_{1}=1$,  $|G|=mq^{b}$.  De la forma de $G$
+			se deduce parte de la argumentación: escribir $G$ como producto de
+			dos grupos, $G=MH$,  donde $M$ es de orden $q^{b}$ y $H$ es de
+			orden $m$ y, por tanto, $H$ será un $\hall$ de $G$.  Dado que $|G/M|=m>1$
+			y $N/M$ es normal minimal de $G/M$,  resoluble,  $N/M$ es $p$-elemental
+			abeliano con $p\in\pi$ por el Corolario \ref{cor:N elemenplt abeliano}.
+			Además $|N/M|=p^{a}$ luego $|N|=p^{a}q^{b}$ y $N\trianglelefteq G$.
+			Aplicando el argumento de Frattini con $P\in\Syl_{p}(N)$ se tiene
+			
+			\textcompwordmark
+			\[
+			G=N_{G}(P)N.
+			\]
+			
+			\textcompwordmark\\
+			Por otra parte queda claro que $N=PM$,  luego $G=N_{G}(P)M$.   Nuestra
+			intención es ver que $N_{G}(P)$ es nuestro Hall.   Veamos primero
+			que es un producto directo.   Sea $J=N_{G}(P)\cap M$,  por ser $M$
+			$q$-elemental abeliano $J\trianglelefteq M$.   Además $J\trianglelefteq N_{G}(P)$
+			ya que $M\normal G$ y $J=N_{G}(P)\cap M$,  así\\
+			
+			\[
+			J\normal N_{G}(P)M=G.
+			\]
+			\\
+			Dado que $J\subseteq M$ es normal minimal de $G$,  tenemos que $J=1$
+			o bien $J=M$; de darse el segundo caso se tendría $M\subset N_{G}(P)$
+			y $G=N_{G}(P)$.   Dado que $P\normal G$ existe un normal minimal
+			$S$ de $G$ contenido en $P$ de donde $S$ es $p$-elemental abeliano
+			pudiéndose aplicar el caso primero para obtener el resultado.   Esto
+			nos lleva al caso $J=1$ y
+			
+			\textcompwordmark
+			\[
+			mq^{b}=|G|=|N_{G}(P)M|=|N_{G}(P)|\,|M|,
+			\]
+			
+			\textcompwordmark\\
+			teniendo en cuenta que $|M|=q^{b}$,  $N_{G}(P)$ es $\hall$ de $G$.
+			\\
+			\textcompwordmark\\
+			Vista la existencia veamos ahora $(ii)'$.  Hemos probado que $G=HM$
+			con $H\cap M=1$ y $H=N_{G}(P)$.   Por otra parte,  haciendo uso
+			de la identidad de Dedekind
+			
+			\textcompwordmark{}
+			
+			\begin{eqnarray*}
+				LM & = & LM\cap G\\
+				& = & LM\cap HM\\
+				& = & (LM\cap H)M.
+			\end{eqnarray*}
+			
+			\textcompwordmark\\
+			Además,  $LM\cap H$ es $\pi$-subgrupo de $H$ y verifica
+			
+			\textcompwordmark{}
+			
+			\[
+			|LM|=|(LM\cap H)M|=\frac{|LM\cap H|\,|M|}{|LM\cap H\cap M|}=|LM\cap H|\,|M|.
+			\]
+			
+			\textcompwordmark\\
+			Puesto que $H\cap M=1$,  $|LM:LM\cap H|=|M|$ y $LM\cap H$ es $\pi$-subgrupo
+			de Hall de $LM$. De ser $LM<G$ terminaríamos la demostración aplicando
+			la hipótesis de inducción.  En caso de ser $LM=G$,  por ser $L,\,M$
+			de orden coprimo $L\cap M=1$ y
+			
+			\textcompwordmark
+			\[
+			|G|=|L|\,|M|.
+			\]
+			\textcompwordmark\\
+			Dado que $|G|=mq^{b}$ y $|M|=q^{b}$ se concluye que $|L|=m$.   Dado
+			que $M\subset N$,  $G=LN$ y
+			
+			\textcompwordmark
+			\[
+			|G|=|LN|=\frac{|L||N|}{|L\cap N|},
+			\]
+			
+			\textcompwordmark
+			\[
+			|L\cap N|=\frac{|L|\,|N|}{|G|}=\frac{m\,p^{a}q^{b}}{mq^{b}}=p^{a}.
+			\]
+			
+			\textcompwordmark\\
+			Así $L\cap N$ es un Sylow de $N$ y por el Teorema de Conjugación
+			de Sylow
+			
+			\textcompwordmark{}
+			
+			\[
+			L\cap N=P^{x}\,\,x\in N.
+			\]
+			
+			\textcompwordmark\\
+			Dado que $N\normal G$,  $L\cap N\normal L$ y
+			
+			\textcompwordmark{}
+			
+			\[
+			L\subseteq N_{G}(L\cap N)=N_{G}(P^{x})=N_{G}(P^{x})=N_{G}(P)^{x}=H^{x}.
+			\]
+			
+			\textcompwordmark{}
+		\end{proof}
+		\textcompwordmark{}
+		
+		Una segunda demostración de este teorema hace uso del Teorema de Schur-Zassenhaus,
+		Teorema \ref{thm:Schur-Zassenhaus}.   Este teorema permite simplificar
+		la anterior demostración,  en particular,  la discusión realizada
+		en el caso Caso 2 de la demostración.  
+		
+		\textcompwordmark{}
+		
+		Antes de probar la existencia en grupos resolubles mediante Schur-Zassenhaus
+		hacemos un inciso sobre este teorema.   Notamos que otra lectura de
+		este teorema en términos de la teoría de Hall es la siguiente: Si
+		$G$ tiene un $\pi$-subgrupo de Hall normal entonces $G$ tiene $\pi'$-subgrupos
+		de Hall y todos estos son conjugados.   
+		
+		\textcompwordmark{}
+		\begin{proof}
+			[Existencia de Hall] Procedemos por inducción y suponemos que $G>1$.
+			Sea $M$ normal minimal de $G$ y $H/M$ un $\pi$-subgrupo de Hall
+			de $G/M$, $[H:M]$ $\pi$-número y $[G:H]=[G/M:H/M]$ $\pi'$-número.
+			Sabemos además $M$ es $p$-elemental abeliano.   Distinguimos casos
+			de nuevo.  \\
+			\textcompwordmark\\
+			\textbf{Caso 1:}  $p\in\pi$.   Entonces
+			
+			\textcompwordmark
+			\[
+			|H|=[G:M]|M|,
+			\]
+			
+			\textcompwordmark\\
+			y $H$ es $\hall$.  \\
+			\textcompwordmark\\
+			\textbf{Caso 2:}  $p\notin\pi$.   Así $|M|$ y $[H:M]$ son coprimos
+			con $M\normal H$,  por el Teorema de Schur-Zassenhaus $M$ es complementado
+			en $H$ por $K$ con
+			
+			\textcompwordmark
+			\[
+			|K|=[H:M],
+			\]
+			
+			\[
+			[G:K]=[G:H]\text{·}[H:K]=[G:H]|M|.
+			\]
+			\\
+			El primer término es $\pi$-número mientras que el segundo es $\pi'$-número
+			($p\notin\pi$ y $[G:H]$ es $\pi'$-número por ser $H/M$ $\pi$-subgrupo
+			de Hall de $G/M$) concluyéndose que $K$ es $\hall$ de $G$.  
+		\end{proof}
+		\textcompwordmark\\
+		Tanto la conjugación como la dominancia son análogas mediante Schur-Zassenhaus
+		y no se incluirán en el presente texto.  
+		
+		\textcompwordmark{}
+		
+		Si analizamos con detenimiento ambas demostraciones notamos cierta
+		similitud,  y es que en el segundo caso de ambas demostraciones se
+		concluye la existencia de un subgrupo de $G$ con el cardinal deseado.
+		Así tiene sentido una tercera demostración del teorema el cual evita
+		los principales inconvenientes de ambas: de la primera su extensión,
+		y de la segunda, el hecho de hacer uso de Schur-Zassenhaus, el cual no
+		es sencillo de probar.   Esta tercera demostración parece innecesaria
+		en este texto,  damos sin embargo el enunciado del teorema que permite
+		unificar,  de alguna forma,  ambas pruebas y que puede encontrarse
+		en el Capítulo 8 de \cite{Isaacs-graduate}.  
+		
+		\textcompwordmark{}
+		\begin{thm}
+			Sea $M\normal G$ con $G$ un grupo resoluble y suponer que $(\left|M\right|,[G:M])=1$,
+			entonces existe $H\subseteq G$ tal que $M\cap H=1$ y $G=HM$.  
+			
+			\textcompwordmark{}
+		\end{thm}
+		
+		\begin{defn}
+			Dado un conjunto de primos $\pi$,  decimos que un grupo $G$ verifica
+			$E_{\pi}$ si posee $\pi$-subgrupos de Hall.   Decimos que $G$ verifica
+			$C_{\pi}$,  si verifica $E_{\pi}$ y todos los $\pi$-subgrupos de
+			Hall de $G$ son conjugados.  Finalmente,  decimos que $G$ verifica
+			$D_{\pi}$,  si verifica $C_{\pi}$ y todo $\pi$-subgrupo de $G$
+			esta contenido en un $\pi$-subgrupo de Hall de $G$.  
+			
+			\textcompwordmark\\
+			Con esta definición vemos que el resultado de Philip Hall es la demostración
+			de $D_{\pi}$ en grupos resolubles. Por otra parte, esto no solamente
+			es cierto para grupos resolubles. En particular tenemos siguiente
+			teorema.  
+			
+			\textcompwordmark{}
+		\end{defn}
+		
+		\begin{thm}
+			Si $G$ es $\pi$-separable,  $G$ verifica $D_{\pi}$.  
+			
+		\end{thm}
+		
+		\begin{proof}
+			Es posible seguir la argumentación las demostraciones anteriores,
+			en particular la de Schur-Zassenhaus teniendo en cuenta que si $M$
+			es normal minimal $|M|$ es $\pi$-número o $\pi'$-número.  
+		\end{proof}
+		
+		\part{Caracterizaciones de Grupos resolubles}
+		
+		\chapter*{Introducción a Parte 2}
+		
+		\textcompwordmark{}
+		
+		En esta parte veremos como usar la teoría de Sylow y de Hall por tal
+		de caracterizar los grupos resolubles. En el Capítulo $4$ caracterizamos
+		los grupos resolubles por medio de la teoría de Hall. Veremos en particular
+		dos demostraciones distintas de este resultado, cada una de ellas,
+		en una sección de este capítulo. Remarcamos que pese a ser ambas demostraciones
+		distintas, son equivalentes, no siendo ninguna de ellas más general
+		que la otra. Por un lado, la demostración dada en la segunda sección
+		hace uso tanto de la teoría de Hall como de la teoría de Sylow mientras
+		que la primera hace uso exclusivo de la teoría de Hall. En particular,
+		ambas demostraciones hacen uso del Teorema de Burnside, pues como
+		veremos, nuestro resultado generaliza a este teorema.
+		
+		En al Capítulo $5$ veremos otra caracterización de los grupos resolubles,
+		la cual hace uso de la teoría de Hall y de Sylow vista en los anteriores
+		capítulos. Además, esta caracterización pude verse como una generalización
+		de la anterior, la cual requerimos ahora para su demostración. Por
+		otra parte, la teoría de Hall y Sylow no solo nos es útil en tanto
+		que permite probar estos resultados sino que además, tal y como veremos
+		al final de este capítulo, nos introduce en el estudio de nuevos conceptos
+		útiles para el estudio más general de la teoría de grupos.
+		
+		\chapter{Caracterización de Philip Hall}
+		
+		\textcompwordmark{}
+		
+		Observamos que en ambas demostraciones del Teorema de Hall para grupos
+		resolubles es clave el hecho de ser $M$ normal minimal implica $M$
+		es $p$-elemental abeliano a consecuencia de ser $G$ \textit{resoluble};
+		esto es más que anecdótico,  tanto es así que se tiene la siguiente
+		caracterización: 
+		
+		\textcompwordmark{}
+		\begin{thm}
+			[Caracterización de grupos resolubles,  P.  Hall 1937 ] \label{c.  r.  s} 
+			\label{thm:caracterizacion grupos resolubles}
+			
+			Sea $G$ finito,  $G$ es resoluble si y solamente si $G$ tiene $p'$-subgrupos
+			de Hall para todo primo $p$ divisor del orden de $G$.  
+			
+			\textcompwordmark{}
+		\end{thm}
+		
+		Mientras que una implicación es clara,  pues se trata del teorema
+		de existencia de subgrupos de Hall,  el recíproco requiere del Teorema
+		de Burnside,  Teorema \ref{thm:-Burnside}.
+		
+		\textcompwordmark{}
+		
+		Presentaremos dos pruebas diferentes del Teorema \ref{thm:caracterizacion grupos resolubles},
+		la primera y más elegante presentada por M.  Isaacs en \cite{Isaacs-graduate},
+		Capítulo 8,  y debida a H.  Wielandt.   En segundo lugar veremos
+		una demostración que podemos entender,  de alguna forma,  más representativa
+		del álgebra,  reducción al absurdo mediante contraejemplo minimal.
+		\\
+		\textcompwordmark\\
+		Antes de proceder a la demostración del teorema hacemos un inciso
+		acerca de la importancia que tiene el resultado de Burnside con respecto
+		a la caracterización de los grupos resolubles. Tratar de probar que
+		si $G$ tiene $p'$-subgrupos para todo primo $p$ divisor del orden
+		de $G$ entonces $G$ es resoluble,  se trata en el caso en que el
+		orden del grupo $G$ solo tiene dos primos distintos involucrados,
+		$|G|=p^{a}q^{b}$,  en probar que $G$ es resoluble a partir de la
+		existencia de $p$-subgrupos de Hall y $q$-subgrupos de Hall,  o
+		lo que es lo mismo,  la existencia de subgrupos de Sylow,  la cual
+		ya sabemos de antemano que está garantizada.   Así nuestras hipótesis
+		en el caso en el que $|G|=p^{a}q^{b}$ son exactamente las mismas
+		que las de Burnside motivo por el que requerimos de dicho resultado.
+		Remarcamos que nuestro resultado se trata de una generalización del
+		Teorema de Burnside.  
+		
+		\newpage
+		
+		\section{Demostración de Wielandt }
+		
+		\textcompwordmark{}
+		
+		Antes de la demostración de Wielandt,  veremos dos resultados.   Mientras
+		que el segundo se trata de un paso previo a la demostración del teorema,
+		el primero es de carácter mucho más general y será utilizado de nuevo
+		más adelante.  
+		
+		\textcompwordmark{}
+		\begin{lem}
+			\label{lem:indices-coprimos} Sean $H,K\subseteq G$ con $G$ grupo
+			finito y suponer que $({[}G:H{]},{[}G:K{]})=1$.   Entonces $G=HK$
+			y $[H:H\cap K]=[G:K]$.  
+		\end{lem}
+		
+		\begin{proof}
+			Definimos $D=H\cap K$.   Notamos que por ser $D\subseteq H$,  $[G:H]$
+			divide a $[G:D]$,  análogamente $[G:K]$ divide a $[G:D]$ y por
+			ser $[G:H]$,  $[G:K]$ coprimos deducimos que el producto $[G:H][G:K]$
+			divide a $[G:D]$.  
+			
+			\textcompwordmark\\
+			Así $[G:H][G:K]\leq[G:D]$,  equivalentemente
+			
+			\textcompwordmark{}
+			
+			\[
+			|G|\leq\frac{|H||K|}{|D|},
+			\]
+			
+			\textcompwordmark\\
+			esto es,  $G=HK$.   La segunda afirmación es consecuencia de $[G:H][G:K]={[}G:D{]}$
+			y es tanto valida para $H$ como para $K$.  
+		\end{proof}
+		\textcompwordmark{}
+		\begin{thm}
+			Sea $G$ un grupo finito y $H,K,L\subseteq G$.   Si los indices $\indice[][H],\,\indice[][K],\,\indice[][L]$
+			son coprimos dos a dos y cada uno de los grupos $H,\,K,\,L$ es resoluble,
+			entonces $G$ es resoluble.  
+		\end{thm}
+		
+		\begin{proof}
+			Procedemos por inducción sobre $|G|$.   Sea $N\normal G$,  consideramos
+			$H/N,\,K/N,\,L/N$ subgrupos de $G/N$ los cuales son resolubles por
+			el Teorema \ref{thm:N,G/N resol. -> G resol}.   Además dichos grupos
+			siguen siendo coprimos dos a dos ya que $\indice[][H]$ divide a ${[}G/N:H/N{]}$,
+			$\indice[][K]\mbox{ divide a }{[}G/N:K/N{]}$ y $\indice[][L]$ divide
+			a ${[}G/N:L/N{]}$.  \\
+			\textcompwordmark\\
+			Si $N>1$ concluimos que $G/N$ es resoluble por hipótesis de inducción.
+			Si además $|H|=1$,  por ser $([G:H],[G:K])=1$ llegamos a que $G=K$
+			y por tanto $G$ resoluble.  
+			
+			\textcompwordmark{}
+			
+			Sin perdida de generalidad suponemos $H,K,L>1$ y tomamos $M$ normal
+			minimal de $H$; puesto que $H$ es resoluble, $M$ es $\pea$ para
+			cierto primo $p$, y dado que $([G:K],[G:L])=1$, $p$ no divide a
+			uno de estos indices, suponemos $p$ no divide a ${[}G:K{]}$. Con
+			esto, $K$ contiene un $\psylow$ de $G$ y por el el teorema de dominancia
+			de Sylow existe $g\in G$ tal que $M\subseteq K^{g}$.  \\
+			\textcompwordmark\\
+			Por otra parte,  tenemos que $([G:H],[G:K^{g}])=1$; aplicando el
+			lema anterior llegamos a que $G=HK^{g}$.   Si $x\in G$,  existen
+			$h\in H,\,k\in K^{g}$ tales que $x=hk$,  así $M^{x}=(M^{h})^{k}=M^{k}\subseteq K^{g}$
+			donde la inclusión se da por ser $k\in K^{g}$ y $M\subset K^{g}$.
+			Concluimos por tanto que todos los conjugados de $M$ están en $K^{g}$,
+			donde ni $K$ ni $M$ son triviales; además $M$ es resoluble por
+			ser subgrupo de $H$.  
+			
+			\textcompwordmark\\
+			Tenemos así que $M^{G}:=\prod_{g\in G}M^{g}\subseteq K^{g}$ es un subgrupo
+			normal en $G$ y resoluble; aplicando hipótesis de inducción,  $G/M^{G}$
+			es resoluble de donde $G$ es resoluble por el Teorema \ref{thm:N,G/N resol. -> G resol}.
+			
+		\end{proof}
+		
+		\begin{proof}
+			[Primera Demostración Teorema \ref{c.  r.  s}] Procedemos por inducción
+			sobre el número de primos distintos dividiendo el orden de $G$.   Si
+			$n=1$,  $G$ es $p$-grupo y, por tanto, nilpotente,  luego resoluble.
+			Si $n=2$,  $G$ es resoluble por el Teorema de Burnside.   Así
+			podemos asumir que $G$ tiene al menos tres primos distintos $p,q,r$
+			dividiendo su orden. \\
+			\textcompwordmark\\
+			Haciendo uso de nuestra única hipótesis,  si $H,\,K,\,L$ son un $p'$-subgrupo,
+			un $q'$-subgrupo y un $r'$-subgrupo de Hall de $G$ respectivamente,
+			entonces los índices de estos subgrupos son coprimos dos a dos en
+			tanto que son,  respectivamente,  potencias de $p,q$ y $r$; por
+			tanto,  es suficiente ver que dichos subgrupos son resolubles por
+			tal de concluir el resultado por el teorema anterior.   \\
+			\textcompwordmark\\
+			Demostraremos que $H$ es resoluble y de forma similar se tendrá para
+			$K,L$. Dado que $|H|$ tiene la misma expresión que el cardinal de
+			$G$ salvo que en este no aparece el primo $p$,  tenemos $n-1$ primos
+			distintos dividiendo a $|H|$.   Si $s$ un primo divisor del orden
+			de $H$ y $Q$ es $s'$-subgrupo de Hall $G$,  los índices ${[}G:Q],{[}G:H{]}$
+			son coprimos y por el Teorema \ref{lem:indices-coprimos} tenemos
+			que $[H:H\cap Q]=[G:Q]=s^{c}$ con $s^{c}$ la máxima potencia de
+			$s$ dividiendo a $|G|$.   Dado que $s^{c}\dividido|H|$,  $H\cap Q$
+			es $s'$-subgrupo de Hall de $H$.   Así, $H$ tiene $s'$-subgrupos
+			de Hall para cada uno de los $n-1$ primos divisores de su orden,
+			concluimos por hipótesis de inducción que $H$ es resoluble y por
+			tanto $G$.   
+		\end{proof}
+		
+		\section{Segunda demostración}
+		
+		\textcompwordmark{}
+		
+		La siguiente demostración del Teorema \ref{thm:caracterizacion grupos resolubles},
+		al contrario que la anterior,  no requiere de un lema previo, aunque
+		resulta interesante realizar dos pequeñas observaciones con tal de
+		facilitar su entendimiento.   Esta demostración puede encontrarse
+		en \cite{Rotman-book},  páginas 110-111.  
+		
+		\textcompwordmark{}
+		\begin{rem*}
+			1.   Veamos otra consecuencia del Lema \ref{lem:indices-coprimos}.
+			Sabemos que si $H,K$ son subgrupos de $G$ con índices coprimos,
+			$G=HK$ y $[H:H\cap K]=[G:K]$.   Además, afirmamos ahora que ${[}G:H\cap K]={[}G:K{]}{[}G:H{]}$;
+			sin más que recurrir a las expresiones anteriores, vemos que\\
+			\textcompwordmark{} 
+			\begin{eqnarray*}
+				[G:K][G:H] & = & [H:H\cap K][K:H\cap K]=\frac{|H|\text{·}|K|}{|H\cap K|^{2}}\\
+				& = & \frac{|G|}{|H\cap K|}=[G:H\cap K].
+			\end{eqnarray*}
+			\textcompwordmark{}
+			
+			2.   Si $Q$ es un $\psubgrupo$ normal de $G$ grupo finito,  entonces
+			$Q\subseteq P$ para cierto $\sylow$,  por la conjugación de Sylow,  $Q=Q^{x}\subseteq P^{x}\,\mbox{ para todo }x\in G$,
+			de donde $Q\subseteq\cap_{\sylow}P$; en particular $Q$ está contenido
+			en cada $p$-subgrupo de Sylow de $G$.   
+		\end{rem*}
+		\begin{proof}
+			[Segunda Demostración Teorema \ref{c.  r.  s}] Procedemos por inducción
+			sobre $|G|$.   Suponer que el resultado es falso y sea $G$ contraejemplo
+			minimal, i.e.,   $G$ no resoluble grupo con menor cardinal entre
+			todos los contraejemplos.  \\
+			\textcompwordmark{}
+			
+			Si $G$ es no simple,  existe un subgrupo normal de $G$,  $N$,  no
+			trivial.   Si $H$ es un $p'$-subgrupo de Hall de $G$ con $p$ primo,
+			tenemos que $N\cap H$ es un $\hall[p']$ de $N$; de igual forma $HN/N$
+			es un $\hall[p']$ de $G/N$; dado que en ambos casos $N,\,G/N$ son
+			de orden menor que $G$ (contraejemplo minimal),  tenemos que tanto
+			$N$ como $G/N$ son resolubles, luego  $G$ es también resoluble,  en contra de la  hipótesis.
+			\\
+			\textcompwordmark{}
+			
+			Tenemos así que $G$ es simple.   Escribimos $|G|=p_{1}^{a_{1}}p_{2}^{a2}\ldots p_{n-1}^{a_{n-1}}p_{n}^{a_{n}}$
+			donde los $p_{i}$ son todos primos distintos y $a_{i}>0\mbox{ para todo }i$.
+			Si denotamos por $H_{i}$ a un $p_{i}'$-subgrupo de $G$ y $D=H_{3}\cap H_{4}\cap\ldots\cap H_{n}$,
+			entonces $[G:H_{i}]=p_{i}^{a_{i}}$ y $[G:D]=\prod_{i=3}^{n}p_{i}^{a_{i}}$
+			por la observación primera.   Así $|D|=p_{1}^{a_{1}}p_{2}^{a_{2}}$
+			y $D$ será resoluble por el Teorema de Burnside.   Tiene sentido
+			así considerar $N$ normal minimal de $D$,  el cual será además $p_{i}$-elemental
+			abeliano (tomamos $i=1$).   
+			
+			\textcompwordmark{}
+			
+			De nuevo por la primera observación tenemos que $[G:D\cap H_{2}]=\prod_{i=2}^{n}p_{i}^{a_{i}}$,
+			de donde $|D\cap H_{2}|=p_{1}^{a_{1}}$ y $D\cap H_{2}$ es un $\psylow[p_{1}]$
+			de $D$.   Por la segunda observación $N\leq D\cap H_{2}$,  en particular
+			$N\leq H_{2}$.   Realizando lo mismo con $H_{1}$ llegamos a que $|D\cap H_{1}|=p_{2}^{a_{2}}$
+			y la intersección $D\cap H_{2}\cap H_{1}$ debe ser trivial ya que divide
+			a $p_{1}$ y a $p_{2}$; con todo lo anterior llegamos a que $G=H_{2}(D\cap H_{1})$.
+			Haciendo uso de la nueva expresión de $G$,  si $g\in G$ podemos
+			encontrar $h\in H_{2}$ y $d\in D\cap H_{1}$ tales que $g=hd$.   Si
+			$x\in N$,  usando su normalidad en $D\cap H_{1}$,  $gxg^{-1}=hdxd^{-1}h=hxh^{-1}$
+			el cual sigue perteneciendo a $H_{2}$.   Tenemos así que $N^{G}:=\prod_{g\in G}N^{g}\subseteq H_{2}$
+			es un subgrupo normal de $G$ no trivial, absurdo. 
+		\end{proof}
+		\textcompwordmark{}
+		
+		\chapter{Caracterización mediante bases y sistemas de Sylow }
+		
+		\textcompwordmark{}
+		
+		En este capítulo veremos una segunda caracterización de los grupos
+		resolubles finitos basada en la caracterización ya vista y que permite
+		ver a los grupos resolubles y a sus subgrupos de Hall como producto
+		de sus subgrupos de Sylow.   
+		
+		\textcompwordmark{}
+		\begin{defn}
+			Sea $G$ un grupo finito con $|G|=p_{1}^{a_{1}}\text{·}\ldots\text{·}p_{n}^{a_{n}}$.
+			
+			
+			\textcompwordmark{}
+			
+			\item[(i)] Se dice que una colección $\{H_{1},\ldots,H_{n}\}$ es
+			un sistema de Sylow para $G$ si cada $H_{i}$ es un $p_{i}'$-subgrupo
+			de Hall de $G$.   
+			
+			\textcompwordmark{}
+			
+			\item[(ii)] Se dice que una colección $\{P_{1},\ldots,P_{n}\}$ es
+			una base de Sylow de $G$ si cada $P_{i}$ es un $\psylow[p_{i}]$
+			de $G$ y se tiene\\
+			\textcompwordmark
+			\[
+			P_{i}P_{j}=P_{j}P_{i}\,\mbox{para todo }i,j\mbox{ con }i\neq j
+			\]
+			\textcompwordmark\\
+			La caracterización dada en el anterior capítulo puede ser enunciada
+			ahora como: $G$ es resoluble si y solo si $G$ posee un sistema de
+			Sylow.   Ahora,  caracterizaremos la resolubilidad mediante la existencia
+			de bases de Sylow.  
+			
+			\textcompwordmark{}
+		\end{defn}
+		
+		\begin{thm}
+			Sea $G$ finito,  $G$ es resoluble si y solo si posee una base de
+			Sylow.  
+			
+			\textcompwordmark{}
+		\end{thm}
+		
+		\begin{proof}
+			Una implicación es clara, pues si $G$ tiene una base de Sylow,  $\{P_{i}\}_{i=1}^{n}$,
+			el producto $H_{j}=\prod_{i\neq j}P_{i}$ es grupo y su cardinal
+			es $|G|/|P_{j}|$,  esto es,  $H_{j}$ es $p_{j}'$-subgrupo de Hall.
+			
+			
+			\textcompwordmark{}
+			
+			Si $G$ es resoluble,  consideramos el sistema de Sylow $\{H_{j}\}_{j=1}^{n}$,
+			sabemos que ${\displaystyle \cap_{i=1,i\neq r_{1}}^{n}H_{i}}$ es un
+			$p_{r_{1}}'$-subgrupo de Hall.   Además, podemos generalizar este
+			hecho de modo que\\
+			\textcompwordmark
+			\[
+			\cap_{i=1,i\neq\{r_{1},\ldots,r_{k}\}}^{n}H_{i}\,\,\mbox{es un \ensuremath{\pi}-subgrupo de Hall }\mbox{con }\pi=\{p_{1},\ldots,p_{n}\}\backslash\{p_{r_{1}},\ldots,p_{r_{k}}\}.
+			\]
+			
+			\textcompwordmark\\
+			La demostración de este resultado, se sigue fácilmente por inducción,
+			haciendo uso de la fórmula ${[}G:H\cap K]={[}G:K{]}{[}G:H{]}$ si ${[}G:K{]}\mbox{ y }{[}G:H{]}$
+			son coprimos.  
+			
+			\textcompwordmark\\
+			Por otra parte, considerando $P_{r_{1}}={\displaystyle \cap_{i=1,i\neq r_{1}}^{n}H_{i}},\,1\leq r_{1}\leq n$
+			queda claro que $P_{r_{1}}$ es un $\psylow[p_{r_{1}}]$ de $G$.
+			Si $r_{1}\neq r_{2}$ y consideramos el producto $\por[P_{r_{1}}][P_{r_{2}}]$
+			tenemos que por ser $p_{r_{1}},p_{r_{2}}$ primos distintos su intersección
+			es trivial,  y dado que la fórmula es cierta aun no siendo el producto
+			subgrupo de $G$ podemos afirmar que $|P_{r_{1}}P_{r_{2}}|$ es un
+			$\pi$-número con $\pi=\{p_{r_{1}},p_{r_{2}}\}$.  Además, dicho producto
+			da lugar a un $\pi$-subgrupo de Hall.   Observar que $X=\cap_{i=1,i\neq r_{1},r_{2}}^{n}H_{i}$
+			es por la observación anterior un $\pi$-subgrupo de Hall con $\pi=\{p_{r_{1}},p_{r_{2}}\}$.
+			Dado que $P_{r_{1}},\,P_{r_{2}}\subseteq X$ y el producto debe estar
+			contenido en $X$,  ambos deben coincidir concluyéndose que $P_{r_{1}}P_{r_{2}}$
+			es grupo.  
+		\end{proof}
+		\textcompwordmark{}
+		\begin{rem*}
+			Notamos que si $H$ o $K$ son subgrupos normales, entonces $HK=KH$
+			y el producto $HK$ es grupo. Si $G$ es un grupo nilpotente con $|G|=p_{1}^{e_{1}}p_{2}^{e_{2}}...p_{n}^{e_{n}}$
+			y $\{P_{1},P_{2},...,P_{n}\}$ es una familia con $P_{i}\in\Syl_{p_{i}}(G)$,
+			entonces $G=P_{1}P_{2}...P_{n}$ ya que dicho producto es grupo y
+			su orden es, por la fórmula del producto, el producto de los órdenes
+			dado que $|P_{i}\cap P_{j}|=1$ si $i\neq j$. 
+			
+			\textcompwordmark{}
+			
+			Ahora, en el caso de ser $G$ resoluble tenemos que sigue siendo posible
+			encontrar una familia de subgrupos de Sylow tal que el producto de
+			ambos es grupo, dado que conmutan. Si $G$ es un grupo resoluble,
+			no es cierto que todo subgrupo sea normal de donde no es posible afirmar
+			que producto de dos subgrupos de Sylow sea de nuevo subgrupo. Por
+			otro lado, por el teorema anterior vemos que sigue siendo posible
+			encontrar ciertos subgrupos de Sylow cuyo producto es subgrupo. Tenemos
+			ahora el siguiente resultado. 
+			
+			\textcompwordmark{}
+		\end{rem*}
+		\begin{cor}
+			Si $G$ es un grupo finito resoluble,  entonces existen $P_{i}\in\Syl_{p_{i}}(G)$
+			$i=1,...,n$ tal que $G=P_{1}...P_{n}$.  
+			
+			\textcompwordmark{}
+		\end{cor}
+		
+		En realidad es posible decir algo más: si $G$ es un grupo con $|G|=p_{1}^{e_{1}}p_{2}^{e_{2}}...p_{n}^{e_{n}}$,
+		entonces $G$ es resoluble si y solamente si dada una familia $\{P_{i}\}_{i=1}^{n}$
+		con $P_{i}$ un $p_{i}$-subgrupo de Sylow cualquiera, entonces $G=P_{1}P_{2}...P_{n}$.
+		Este hecho puede encontrarse con más detalle en \cite{kaplan2005sylow}.\textcompwordmark{}
+		
+		Si $G$ es un grupo finito no resoluble cabe preguntarse si sigue
+		siendo posible encontrar subgrupos de Sylow tal que su producto sea
+		$G$,  notar que no exigimos a dichos Sylows que conmuten.   La respuesta
+		es negativa,  pese a que puede ampliarse este hecho a ciertos grupos
+		no resolubles como $PGL(2,q),PGL(3,q)$ y $\PSL(2,q)$,  no todo grupo
+		finito puede expresarse como producto de sus subgrupos de Sylow,  en
+		particular, no es cierto para el grupo unitario $U_{3}(3)$ tal y
+		como se demuestra en \cite{holt1993products}.  Por otra parte,  podemos
+		decir algo más sobre las bases de Sylow.  
+		
+		\textcompwordmark{}
+		\begin{defn}
+			Decimos que dos bases $\{P_{i}\}_{i=1}^{n},\{Q_{i}\}_{i=1}^{n}$ son
+			conjugadas si existe $x\in G$ tal que $P_{i}^{x}=Q_{i},\,i=1,...,n$.
+			
+		\end{defn}
+		
+		\textcompwordmark{}
+		\begin{thm}
+			\label{thm:bases conjugadas}Si $G$ es resoluble dos bases de Sylow
+			cualquiera son conjugadas.  
+		\end{thm}
+		
+		\begin{proof}
+			Si $|G|=p_{1}^{e_{1}}p_{2}^{e_{2}}...p_{k}^{e_{k}}$ denotamos por
+			$\caligrafica[P]_{i}$ al conjunto de $p_{i}'$-subgrupos de Hall
+			de $G$,  $i=1,...,k$,  y por $\caligrafica[P]$ al conjunto de todas
+			las bases de Sylow,  esto es,  los elementos de $\caligrafica[P]$
+			son secuencias $(P)_{i=1}^{k}$ con $\sylow[P_{i}][p_{i}]{}{}$ y
+			$P_{i}P_{j}=P_{j}P_{i}$.   \\
+			La demostración se dividirá en seis pasos:\\
+			\textcompwordmark{}
+			
+			\begin{enumerate}
+				
+				\item[Paso 1.  ]  La aplicación $\alpha:\,\caligrafica_{1}\x\caligrafica_{2}\x...\x\caligrafica_{k}\rightarrow\caligrafica$
+				dada por $\alpha(Q_{1},Q_{2},...,Q_{k})=(P_{1},...,P_{k})\mbox{ con }P_{i}=\cap_{j\neq i}Q_{j}$
+				es una biyección entre el conjunto de los sistemas de Sylow y el conjunto
+				de la bases de Sylow de $G$.  \\
+				
+				\item[Paso 2.  ] Fijado $Q_{i}\in\caligrafica_{i}$ se verifica $|\caligrafica_{i}|={[}G:N_{G}(Q_{i})]$,
+				en particular el cardinal de $\caligrafica_{i}$ es potencia de $p_{i}$.
+				\\
+				
+				\item[Paso 3.  ]  $G$ actúa sobre $\caligrafica$ por conjugación.
+				\\
+				
+				\item[Paso 4.  ]  El estabilizador de $(P_{i})_{i=1}^{k}$ es la
+				intersección $\cap_{j=1}^{k}N_{G}(P_{j})$ la cual coincide con $\cap_{j=1}^{k}N_{G}(Q_{j})$\\
+				
+				\item[Paso 5.  ]  ${[}G:\cap_{j=1}^{k}N_{G}(Q_{j})]=\prod_{j=1}^{k}{[}G:N_{G}(Q_{j})]$.
+				\\
+				
+				\item[Paso 6.  ]  $G$ actúa transitivamente sobre $\caligrafica$.
+				\\
+				
+			\end{enumerate}
+			
+			El Paso 6, constituye el final de la demostración, pues si $G$ actúa
+			transitivamente por conjugación sobre el conjunto de todas las bases
+			de Sylow de $G$,  $\caligrafica$, dos elementos cualesquiera de
+			$\caligrafica$ están relacionados por medio de un cierto $g\in G$
+			por conjugación.  \\
+			\textcompwordmark\\
+			\item[Paso 1.  ] Probaremos que $\alpha$ es biyectiva construyendo
+			su inversa.   
+			
+			\textcompwordmark{}
+			
+			Sabemos que si definimos $P_{r}=\cap_{j\neq r}Q_{j}$ donde $Q_{j}$
+			son $\halls[p_{i}']$ entonces $\sylow[P_{r}][p_{r}]$ por lo que
+			$(P_{1},P_{2},...,P_{k})$ forman una base de Sylow para $G$ y $\alpha$
+			está bien definida.  \\
+			\textcompwordmark\\
+			Afirmamos que $P_{r_{1}}P_{r_{2}}...P_{r_{n}}$ es un $\{p_{r_{1}},p_{r_{2}},...,p_{r_{s}}\}$-subgrupo
+			de Hall de $G.$ Siendo claro para $n=1$ procedemos por inducción
+			supuesto válido para $n$.  
+			
+			\textcompwordmark\\
+			Dado que $P_{i}P_{j}=P_{j}P_{i}\,\mbox{ para todo }i,j$,  si denotamos
+			por $K$ al grupo formado por el producto $K=P_{r_{1}}P_{r_{2}}...P_{r_{n}}$,
+			aplicando la permutabilidad entre $P_{r_{r+1}}$ y cada uno de los
+			factores de $K$ obtenemos que $KP_{r_{n+1}}=P_{r_{n+1}}K$ de donde
+			$P_{r_{n+1}}K$ grupo.   Además,  por ser $|K|=p_{r_{1}}^{e_{r_{1}}}p_{r_{2}}^{e_{r_{2}}}...p_{r_{n}}^{e_{r_{n}}}$
+			coprimo con $|P_{r_{n+1}}|=p_{r_{n+1}}^{e_{r_{n+1}}}$ la intersección
+			de ambos debe ser trivial de donde el cardinal del producto el producto
+			de los cardinales concluyéndose el resultado.  \\
+			\textcompwordmark\\
+			Definimos $H_{i}=\prod_{j\neq i}P_{j}$,  por lo anterior $H_{i}$
+			es $\hall[p_{i}']$ de $G$.  
+			
+			\textcompwordmark{}
+			
+			Definimos la aplicación $\beta:\caligrafica\rightarrow\caligrafica_{1}\x\caligrafica_{2}\x...\x\caligrafica_{k}$
+			dada por $\beta(P_{1},...,P_{k})=(H_{1},...,H_{k})$ y robaremos que
+			$\beta\alpha=1$.   Por ser $P_{r}=\cap_{j\neq r}Q_{j},\,\,\,\,P_{1},...,P_{k-1}\subseteq Q_{k}$
+			de donde $H_{k}=P_{1}P_{2}...P_{k-1}\subseteq Q_{k}$; por ser $Q_{k},H_{k}$
+			$\halls[p_{k}']$ se da la igualdad de ambos.   Análogamente $H_{i}=Q_{i}$
+			para todo $i$.   Así
+			
+			\textcompwordmark
+			\[
+			\beta(P_{1},...,P_{k})=(Q_{1},...,Q_{k})\,\,\,\,\,\,\mbox{con }P_{i}=\cap_{j\neq i}Q_{j},
+			\]
+			
+			\textcompwordmark\\
+			luego $\alpha\beta$ es la identidad de $\caligrafica_{1}\x\caligrafica_{2}\x...\x\caligrafica_{k}$
+			sobre si misma.  \\
+			\textcompwordmark\\
+			De forma similar,  por ser $H_{i}=\prod_{j\neq i}P_{j}$ se tiene
+			que $P_{i}\subseteq H_{j}\,\mbox{ para todo }j\neq i$.   Así
+			
+			\textcompwordmark
+			\[
+			P_{i}\subseteq\cap_{j\neq i}H_{j},
+			\]
+			
+			\textcompwordmark\\
+			y dado que la anterior intersección es un $\psylow[p_{i}]$ por ser
+			$H_{j}$ un $p_{j}'$-subgrupo de Hall tenemos que $P_{i}=\cap_{j\neq i}H_{j}$.
+			Ahora
+			
+			\textcompwordmark
+			\[
+			\beta\alpha(P_{1},...,P_{k})=\alpha(H_{1},...,H_{k})=(\cap_{j\neq1}H_{j},...,\cap_{j\neq k}H_{j})=(P_{1},...,P_{k}),
+			\]
+			
+			\textcompwordmark{} \\
+			esto es,  $\beta\alpha=1$.  
+			
+			\textcompwordmark\\
+			\item[Paso 2.  ] Si $Q_{i}\in\P$,  por el Teorema \ref{thm:E,D,C Hall},
+			todos los elementos de $\P$ son de la forma $Q_{i}^{g}$ para cierto
+			$g\in G$.   Teniendo en cuenta que el estabilizador de $Q_{i}$ bajo
+			esta acción es su normalizador,  por el Teorema de la órbita tenemos
+			
+			\textcompwordmark{} 
+			\[
+			|\P|={[}G:N_{G}(Q_{i})]=\frac{{[}G:Q_{i}]}{|N_{G}(Q_{i}):Q_{i}]},
+			\]
+			
+			\textcompwordmark\\
+			de donde $\P$ es de orden potencia de $p_{i}$ por la última igualdad.
+			\\
+			\textcompwordmark\\
+			\item[Paso 3.  ]  Consideramos la acción $(G,\Omega,\rho)$ donde
+			$\Omega=\caligrafica$ y $\rho$ viene dada por $\rho(g)=\rho_{g}$
+			definida como $\rho_{g}(\,(P_{i})_{i=1}^{k}\,)=(P_{i}^{g})_{i=1}^{k}$.
+			Veamos que en efecto es una acción.   La aplicación está bien definida
+			por ser $\sylow[P_{i}^{g}][p_{i}]$ por la conjugación de Sylow.   Además
+			$\rho_{1}(\,(P_{i})_{i=1}^{k}\,)=(P_{i}^{1})_{i=1}^{k}=(P_{i})_{i=1}^{k}$
+			de donde $\rho(1)=1_{\Sigma_{|\Omega|}}$. Por otra parte\\
+			\textcompwordmark\\
+			\begin{eqnarray*}
+				\rho_{gh}(\,(P_{i})_{i=1}^{k}\,) & = & (P_{1},...,P_{k})^{gh}=(P_{1}^{gh},...,P_{k}^{gh})=((P_{1}^{g})^{h},...,(P_{k}^{g})^{h})\\
+				& = & \rho_{h}(\rho_{g}(\,(P_{i})_{i=1}^{k}\,))=(\rho_{g}\circ\rho_{h})(\,(P_{i})_{i=1}^{k}\,).
+			\end{eqnarray*}
+			
+			\textcompwordmark\\
+			luego $\rho_{gh}=\rho_{g}\circ\rho_{h}$, i.e.,  $\rho(gh)=\rho(g)\rho(h)$. 
+			
+			\textcompwordmark{}
+			
+			\item[Paso 4.  ]  Como anteriormente,  escribimos $P_{r}=\cap_{j\neq r}Q_{j}$
+			donde $Q_{j}$ es un $p_{j}'$-subgrupo de Hall de $G$.   Con esto,
+			$g\in G$ se encuentra en el estabilizador de $(P_{i})_{i=1}^{k}$
+			si y solamente si normaliza a cada uno de los $P_{i}$,  i.e.,  \texttt{$g\in\cap_{i=1}^{k}N_{G}(P_{i})$}.
+			Así
+			
+			\texttt{\textcompwordmark
+				\[
+				G_{(P_{i})_{i=1}^{k}}=\cap_{i=1}^{k}N_{G}(P_{i}).
+				\]
+			}Por otra parte $Q_{r}=\prod_{i\neq r}P_{i}$; si $g\in\cap_{i=1}^{k}N_{G}(P_{i})\,\,\,P_{i}^{g}=P_{i}\,\mbox{ para todo }i$,
+			luego $Q_{r}^{g}=\prod_{i\neq r}P_{i}^{g}=\prod_{i\neq r}P_{j}=Q_{r}$
+			y así $g\in\cap_{i=1}^{k}N_{G}(Q_{i})$.   \\
+			\textcompwordmark\\
+			Recíprocamente si $g\in\cap_{i=1}^{k}N_{G}(Q_{i})\,\,\,Q_{i}^{g}=Q_{i}\,\mbox{ para todo }i$
+			de donde $P_{r}^{g}=(\cap_{i\neq r}Q_{i})^{g}=\cap_{i\neq r}Q_{i}^{g}=\cap_{i\neq r}Q_{i}=P_{r}$
+			y así $g\in\cap_{i=1}^{k}N_{G}(P_{i})$.   Concluimos así que
+			$G_{(P_{i})_{i=1}^{k}}=\cap_{i=1}^{k}N_{G}(P_{i})=\cap_{i=1}^{k}N_{G}(Q_{i})$.
+			
+			
+			\textcompwordmark\\
+			\item[Paso 5.  ]  Como consecuencia del Lema \ref{lem:indices-coprimos}
+			vimos en una observación anterior que si $H,K$ son subgrupos de $G$
+			con indices coprimos se da la igualdad ${[}G:H\cap K]={[}G:H{]}{[}G:K{]}$.
+			Nuestro apartado es ahora una simple prueba por inducción.  \\
+			\textcompwordmark\\
+			Supuesto cierto para $n$,  veámoslo para $n+1$.   Si denotamos por
+			$H=\cap_{i=1}^{n}N_{G}(Q_{i})$ tenemos por hipótesis de inducción
+			que ${[}G:H{]}=\prod_{i=1}^{n}{[}G:N_{G}(Q_{i})]$; sabemos además
+			que $[G:N_{G}(Q_{i})]$ es potencia del primo $p_{i}$,  de donde
+			${[}G:N_{G}(Q_{n+1})]$ es coprimo con ${[}G:H{]}$; aplicando la
+			formula anterior con $K=N_{G}(Q_{n+1})$ llegamos a la identidad 
+			
+			\textcompwordmark
+			\[
+			{[}G:\cap_{i=1}^{n+1}N_{G}(Q_{i})]={[}G:H\cap K]={[}G:H{]}{[}G:K{]}=\prod_{i=1}^{n}{[}G:N_{G}(Q_{i})]{[}G:N_{G}(Q_{n+1})].
+			\]
+			
+			\textcompwordmark{}
+			
+			\item[Paso 6.  ]  Sin más que juntar todo lo anterior
+			\[
+			{[}G:G_{(P_{i})_{i=1}^{k}}]={[}G:\cap_{i=1}^{k}N_{g}(Q_{i})]=\prod_{i=1}^{k}{[}G:N_{g}(Q_{i})]=\prod_{i=1}^{k}|\P|=|\caligrafica_{i}\x...\x\caligrafica_{k}|=|\caligrafica[P]|,
+			\]
+			\textcompwordmark\\
+			con lo que $G$ actúa transitivamente sobre $\caligrafica$.  
+		\end{proof}
+		\textcompwordmark{}
+		
+		La demostración anterior nos induce de forma natural la siguiente
+		definición.  
+		
+		\textcompwordmark{}
+		\begin{defn}
+			Sea $\{Q_{1},...,Q_{k}\}$ un sistema de Sylow de un grupo finito
+			resoluble.   Se define el normalizador del sistema de $G$ como el
+			subgrupo $N=\cap_{i=1}^{k}N_{G}(Q_{i}).$ 
+			
+			\textcompwordmark\\
+			Dichos subgrupos poseen destacables propiedades en las cuales no entraremos
+			en detalle. Presentamos sin embargo un breve resultado consecuencia
+			de la segunda caracterización de los grupos resolubles.  
+		\end{defn}
+		
+		\textcompwordmark\\
+		Como vimos en el Paso 4 de la demostración del Teorema \ref{thm:bases conjugadas},
+		si $\{P_{1},...,P_{k}\}$ es la base de Sylow correspondiente al
+		sistema de Sylow $\{Q_{1},...,Q_{k}\}$,  i.e.,  $P_{i}=\cap_{j\neq i}Q_{j}$,
+		el normalizador del sistema $N$ admite la expresión
+		
+		\textcompwordmark
+		\[
+		N=\cap_{i=1}^{k}N_{G}(P_{i}).
+		\]
+		
+		\textcompwordmark{}
+		\begin{thm}
+			Si $G$ es un grupo finito y resoluble,  todos los normalizadores
+			del sistema son nilpotentes y conjugados.  
+		\end{thm}
+		
+		\begin{proof}
+			Sea $\{P_{1},...,P_{k}\}$ una base de Sylow dando lugar al normalizador
+			del sistema $N$.  \\
+			\textcompwordmark\\
+			Sabemos que $N$ normaliza a $P_{i}$,  luego $nP_{i}=P_{i}n\,\mbox{ para todo }n\in N$
+			y $NP_{i}$ es grupo; además $P_{i}\normal NP_{i}$ obteniendo
+			
+			\textcompwordmark
+			\[
+			[N:N\cap P_{i}]=[NP_{i}:P_{i}]\mbox{ divide a }[G:P_{i}].
+			\]
+			
+			\textcompwordmark\\
+			Con esto $N\cap P_{i}\in\Syl_{p_{i}}(N)$.   Además $N\cap P_{i}\normal N$
+			concluyéndose que $N$ es nilpotente por ser sus subgrupos de Sylow
+			normales.   Dado que las bases de Sylow de $G$ son conjugadas,  dado
+			otro normalizador del sistema $M$,  debe ser de la forma
+			
+			\textcompwordmark
+			\[
+			M=\cap_{i=1}^{k}N_{G}(P_{i}^{g}),
+			\]
+			
+			\textcompwordmark\\
+			dado que $N_{G}(P_{i}^{g})=N_{G}(P_{i})^{g}$ se concluye que $M=N^{g}$
+			como deseábamos.   
+		\end{proof}
+		
+		
+		\part{Subgrupos de Hall nilpotentes}
+		
+		\chapter*{Introducción a Parte 3}
+		
+		\textcompwordmark{}
+		
+		Dispuestos a ampliar nuestro conocimiento acerca de la teoría de Hall
+		en grupos finitos, nos plantemos eliminar la condición de resolubilidad
+		impuesta al grupo. Vemos que esto no es posible en general e introducimos
+		la idea de ser nuestro subgrupo de estudio nilpotente. Es con esto
+		que conseguimos probar la dominación de los $\pi$-subgrupos de Hall
+		en el Capítulo $6$ sin más que suponer la existencia de un $\pi$-subgrupo
+		de Hall nilpotente. Posteriormente, vemos en el Capítulo $7$ una
+		caracterización de la existencia de $\pi$-subgrupos de Hall nilpotentes
+		la cual puede aplicarse a casi cualquier grupo finito. Dado que la
+		demostración de este resultado hace uso de la clasificación de los
+		grupos simples, presentamos el enunciado sin demostración y a continuación
+		adaptamos este resultado para el caso en el que el grupo es resoluble
+		presentado una prueba de este caso.
+		
+		\chapter{Teorema de Wielandt}
+		
+		\textcompwordmark{}
+		
+		Dado $\pi$ un conjunto de primos cualquiera hemos visto que siempre
+		se verifica $D_{\pi}$ en grupos finitos resolubles o $\pi$-separables.
+		Queda ahora plantearnos que sucede en el resto de casos.   Como bien
+		podemos pensar la resolubilidad es,  sin ser necesaria,  clave para
+		tales hechos; así,  por ejemplo,  $A_{5}$ no verifica $E_{\pi}$
+		para $\pi=\{2,5\}$ o $\pi=\{3,5\}$ mientras que $\PSL(2,11)$ verifica
+		$E_{\pi}$ pero no verifica $C_{\pi}$ para $\pi=\{2,3\}$. 
+		
+		\textcompwordmark{}
+		
+		El caso de $A_{5}$ es sencillo. De tener un $\pi$-subgrupo de Hall,
+		$H$,  para $\pi=\{2,5\}$ o $\pi=\{3,5\}$,  representando sobre
+		$\Omega=\{Hx\,\mid\,x\in A_{5}\}$ tendríamos $A_{5}/\Ker\rho\cong\Imm\rho\leq\Sigma_{|\Omega|}$,
+		siendo $\left|\Omega\right|=3$ o $\left|\Omega\right|=2^{2}$ según
+		sea $\pi$.   En ambos casos debe ser $\Ker\rho>1$ subgrupo propio
+		normal.   Contradicción.   
+		
+		\textcompwordmark{}
+		
+		El caso del grupo simple $\PSL(2,11)$ es más algo más complejo; una
+		demostración de este hecho puede encontrarse en el Capítulo 3C de
+		\cite{Isaacs-Finite}.   
+		
+		\textcompwordmark\\
+		En el presente apartado introducimos una condición suficiente para
+		la conjugación de los $\pi$-subgrupos de Hall en cualquier grupo
+		finito.   Evidentemente,  perdiendo la condición de resolubilidad
+		del grupo debemos imponer en nuestras hipótesis un hecho más fuerte;
+		en este caso,  basándonos en la teoría de Sylow pensamos en la nilpotencia
+		del propio Hall.   Este resultado es conocido como el Teorema de Wielandt;
+		antes de proceder a su demostración probaremos un resultado previo.
+		
+		\textcompwordmark{}
+		\begin{thm}
+			Si $G$ es un grupo finito no nilpotente tal que cada subgrupo maximal
+			es nilpotente,  entonces
+			
+			\textcompwordmark{}
+			
+			\item[(i)] $G$ es resoluble
+			
+			\item[(ii)] $|G|=p^{m}q^{n}$
+			
+			\item[(iii)] $G=PQ$ con $P\normal G$ y $Q$ cíclico.  
+		\end{thm}
+		
+		\begin{proof}
+			(i) Sea $G$ contraejemplo minimal.   Si $N$ es subgrupo normal propio,
+			tanto $N$ como $G/N$ es resoluble por la minimalidad de $G$ de
+			donde $G$ es resoluble,  absurdo.  \\
+			\textcompwordmark\\
+			Así $G$ es un grupo simple.   Suponer que dados dos subgrupos maximales
+			distintos de $G$ su intersección es trivial.   Si $M$ es maximal
+			de $G$,  $M=N_{G}(M)$, y si escribimos $|G|=m,\,|M|=n$ entonces
+			$M$ tiene $n/m$ conjugados,  los cuales siguen siendo maximales
+			e intersectan trivialmente. Con esto, el número de elementos no triviales
+			proporcionados por los conjugados de $M$ es\\
+			\textcompwordmark
+			\[
+			|M\backslash\{1\}|\text{·}\frac{n}{m}=(m-1)\text{·}\frac{n}{m}=n-\frac{n}{m}.
+			\]
+			
+			\textcompwordmark\\
+			Si $m\geq2$ tenemos que  $n-\frac{n}{m}\geq\frac{n}{2}\geq\frac{n-1}{2}$;
+			por otra parte $n-\frac{n}{m}\leq n-2<n-1$.   Con todo esto llegamos
+			a que
+			
+			\textcompwordmark
+			\[
+			n-1>n-2\geq n-\frac{n}{m}>\frac{n}{2}\geq\frac{n-1}{m}.
+			\]
+			
+			\textcompwordmark\\
+			Notar que la anterior expresión se trata de una cota del número de
+			elementos no triviales proporcionados por la familia de maximales
+			$\{M^{g}\}_{g\in G}$.   Así,  el número de elementos no triviales
+			de $G$,  $n-1$ puede escribirse como suma de las cantidades de elementos
+			no triviales proporcionados por familias de la forma $\{M^{g}\}_{g\in G}$
+			donde $M$ es maximal de $G$,  ya que los elementos de la anterior
+			familia intersectan trivialmente. Así $n-1$ es suma de ciertas cantidades
+			estrictamente comprendidas entre $n-1$ y $\frac{n-1}{2}$,  absurdo.
+			Concluimos, por tanto, la existencia dos subgrupos maximales con intersección
+			no trivial.   
+			
+			\textcompwordmark{}
+			
+			Sean $M_{1}\neq M_{2}$ maximales de $G$ tal que su intersección
+			es de orden lo más grande posible entre las intersecciones de todos
+			los subgrupos maximales de $G$.   Denotamos por $I:=M_{1}\cap M_{2}$
+			y por $N:=N_{G}(I)$.   Haciendo uso de la nilpotencia de $M$,  $I\neq N$
+			y $I<N\cap M_{1}$; por ser $G$ simple,  $N<G$ y $N\subseteq M$ para cierto
+			maximal $M$ de $G$,  así
+			
+			\textcompwordmark
+			\[
+			I\subset M\cap M_{1},
+			\]
+			
+			\textcompwordmark\\
+			contradiciendo la maximalidad de $I$.  
+			
+			\textcompwordmark\\
+			\item[(ii)] Escribimos $|G|=p_{1}^{e_{1}}p_{2}^{e_{2}}...p_{k}^{e_{k}}$
+			y suponer $k\geq3$.   Notamos que todo subgrupo propio de $G$ es
+			nilpotente, ya que se encuentra conteniendo en algún maximal de $G$.
+			\\
+			\textcompwordmark{}
+			
+			Por ser $G$ resoluble,  si $M$ es subgrupo normal maximal su índice
+			en $G$ es primo,  escribimos ${[}G:M]=p_{i}$ y sin perdida de generalidad
+			tomamos $i=1$.   Si denotamos por $P_{i}$ a un $\psylow[p_{i}]$
+			de $G$ y consideramos $i>1$,  dado que ${[}G:M]=p_{1}$,  $M$ contiene
+			a un $P_{i}\in\Syl_{p_{i}}(G)$.   Por ser $M$ nilpotente,  dicho
+			$P_{i}$ es el único $\psylow[p_{i}]$ de $M$; por otro lado, $P_{i}^{g}\subseteq M^{g}=M\,\mbox{ para todo }g\in G$
+			de donde $\Syl_{p_{i}}(M)=\Syl_{p_{i}}(G)$ y $P_{i}\normal G$.   De
+			esta forma $H_{i}=P_{1}P_{i}$ es grupo y distinto de $G$ por ser
+			$k>3$; $H_{i}$ es subgrupo propio,  luego nilpotente de donde $P_{1},P_{i}\normal H_{i}$;
+			además $P_{1}\cap P_{i}=1$,  así $P_{i}\subseteq N_{G}(P_{1})\,\,i=1,...,k$
+			y $N_{G}(P_{1})=G$ de donde todos los subgrupos de Sylow de $G$
+			son normales,  esto es,  $G$ nilpotente,  contradicción.  
+			
+			\textcompwordmark\\
+			\textcompwordmark\\
+			\item[(iii)] Escribimos $|G|=p^{a}q^{b}$ y consideramos $M$ normal
+			maximal de $G$.   Suponer que ${[}G:M]=q$,  entonces existe un
+			único $\sylow$,  $P\subseteq M$ y $P\normal G$.  \\
+			\textcompwordmark\\
+			Si $\sylow[Q][q]$ tenemos que $G=QP$; si $Q$ no es cíclico y $g\in Q$
+			tenemos que $\generado[{\generado[g],P}]<G$ pues en otro caso $\generado[g]P=G=QP$
+			de donde $Q\isomorfo\frac{\generado[g]P}{P}\isomorfo\frac{\generado[g]}{\generado[g]\cap P}=\frac{\generado[g]}{1}$
+			y, por tanto, $Q$ cíclico,  absurdo.   Tenemos que $\generado[{\generado[g],P}]$
+			es un subgrupo nilpotente,  pues es propio,  y además $[g,x]=1$ para
+			todo $x\in P$ ya que $P,\generado[g]\normal\generado[{\generado[g],P}]$
+			con intersección trivial; así $[Q,P]=1$ y $G=P\x Q$ es un grupo
+			nilpotente,  contradicción.  
+		\end{proof}
+		\textcompwordmark{}
+		\begin{thm}
+			[Wielandt]  Si $G$ es un grupo finito y $H$ es un $\hall$ nilpotente,
+			entonces todo $\pi$-subgrupo de $G$ está contenido en un conjugado
+			de $H$,  i.  e,  Si $G$ tiene un $\pi$-subgrupo de Hall nilpotente
+			entonces $G$ verifica $D_{\pi}$.  
+			
+			\textcompwordmark{}
+		\end{thm}
+		
+		\begin{proof}
+			Sea $K$ un $\hall$ de $G$ distinto de $H$.   Razonaremos por inducción
+			sobre $|K|>1$.   La hipótesis de inducción sobre $K$ nos dice que
+			todo subgrupo maximal de $K$ se encuentra contenido en algún conjugado
+			de $H$,  de donde obtenemos que dicho subgrupo es nilpotente.  
+			
+			\textcompwordmark\\
+			Si $K$ no es nilpotente,  aplicando el teorema anterior obtenemos
+			$\sylow[Q][q][K]$ y $L\normal K$ tales que $Q\cap L=1$ y $K=QL$.
+			En caso de ser $K$ nilpotente vemos claramente que lo anterior
+			sigue siendo cierto.  
+			
+			\textcompwordmark\\
+			Escribimos $H=H_{1}\x H_{2}$ donde $H_{1}$ es el único $q$-subgrupo
+			de Sylow de $H$.   La hipótesis de inducción nos dice ahora que $L\leq H^{g}=H_{1}^{g}\x H_{2}^{g}$
+			para cierto elemento $g\in G$.   Dado que $H_{1}^{g}\cap H_{2}^{g}=1$
+			debe ser $L<H_{2}^{g}$.  Por la observación anterior $H_{1}^{g}$
+			centraliza a $L\subseteq H_{2}$ de donde $\generado[H_{1}^{g},K]\subseteq N_{G}(L)$.
+			Dado que $H_{1}^{g}$ es $\psubgrupo[q]$ de Sylow de $G$ así como
+			de $N_{G}(L)$ concluimos que existe un elemento $x\in N_{G}(L)$
+			tal que $Q\leq(H_{1}^{g})^{x}$,  de donde
+			
+			\textcompwordmark
+			\[
+			K=QL=QL^{x}\subseteq H_{1}^{gx}H_{2}^{gx}=H^{gx}.
+			\]
+		\end{proof}
+		
+		\chapter{Caracterización en términos de los números de Sylow}
+		
+		\textcompwordmark{}
+		
+		Dada la importancia para un grupo finito de tener un subgrupo de Hall
+		nilpotente,  resulta interesante tratar de obtener bajo que circunstancias
+		sucede esto. En el presente capítulo expondremos el resultado principal
+		del articulo \cite{caracterizacion-hall-nilpotente} el cual caracteriza
+		la existencia de subgrupos de Hall nilpotentes en grupos finitos.
+		\\
+		\textcompwordmark{}
+		
+		Si $G$ posee un subgrupo de Hall nilpotente $H$,  y $p,q$ son primos
+		distintos divisores del orden de $H$,  existen $\sylow[P][p][G],\sylow[Q][q][G]$
+		tales que $P,Q\normal H$,  de donde $P,Q$ se centralizan mutuamente.
+		Así $q$ no divide $\nu_{p}(G)$,  y recíprocamente.  El siguiente
+		resultado afirma que el recíproco es también cierto para casi todo
+		grupo finito $G$.
+		
+		\textcompwordmark{}
+		\begin{thm}
+			\label{thm:Hall-nilpotente-moqui} Si $G$ es un grupo finito y $\pi$
+			un conjunto de primos,  entonces $G$ posee un subgrupo de Hall nilpotente
+			si y solamente si se verifican
+			
+			\textcompwordmark{}
+			
+			\item[(i)] Dados $p,q\in\pi$ primos distintos,  $q$ no divide $\nu_{p}(G)$.
+			
+			
+			\item[(ii)] Si $\{2,3\}$$\subseteq\pi$,  entonces $G$ no posee
+			ningún factor isomorfo con $PSL(2,q)$ con $(q^{2}-1)_{\{2,3\}}=24$.
+			
+			
+			\item[(iii)] Si $\{2,7\}\subseteq\pi$,  entonces $G$ no posee factores
+			de composición isomorfos con $^{2}G_{2}(3^{2n+1})$ con $n\not\equiv1(m\acute{o}d\,7)$.
+			
+		\end{thm}		
+		
+		\textcompwordmark{}
+		
+		La demostración del teorema anterior requiere de la clasificación
+		de los grupos simples,  motivo por el que no presentamos la demostración.
+		El caso en el que $G$ es resoluble el resultado anterior es sencillo.
+		
+		\textcompwordmark{}
+		\begin{thm}
+			\label{thm:caso G resoluble, hall nilpotente}Si $G$ es un grupo
+			resoluble y $\pi$ es un conjunto de primos,  $G$ posee un $\pi$-subgrupo
+			de Hall nilpotente si y solamente dados dos primos $p,q\in\pi$,  $p$
+			no divide $\nu_{q}(G)$.  
+		\end{thm}
+		
+		\begin{proof}
+			Razonaremos por inducción.   Si $\pi=\{p,q\}$ tomamos $\sylow$ y
+			dado que $q$ no divide $\nu_{p}(G)=[G:\N GP]$ debe existir $\sylow[Q][q]$
+			tal que normaliza a $P$.   Así $H=PQ$ es un $\pi$-subgrupo de Hall
+			con un $p$-subgrupo de Sylow normal.   Repitiendo el procedimiento
+			para $q$,  obtenemos otro $\pi$-subgrupo de Hall,  $K$,  con un
+			$q$-subgrupo de Sylow normal y dado que $H,K$ son conjugados por
+			ser $G$ resoluble,  son isomorfos y por tanto $H,K$ tienen un $p$-subgrupo
+			de Sylow y un $q$-subgrupo de Sylow normal,  de donde $H,K$ son
+			nilpotentes.  
+			
+			\textcompwordmark{}
+			
+			Asumimos ahora que $\pi$ tiene más de dos primos.   Si $H$ es un
+			$\pi$-subgrupo de Hall de $G$,  teniendo en cuenta que es resoluble,
+			$H$ tiene $\tau$-subgrupos de Hall para todo $\tau\subset\pi$.   Ahora,
+			por hipótesis de inducción $G$ tiene $\tau$-subgrupos de Hall nilpotentes
+			para todo $\tau\subset\pi$,  y de nuevo por conjugación,  $H$ tiene $\tau$-subgrupos
+			de Hall nilpotentes para todo $\tau\subset\pi$.  En particular,  si tomamos
+			$p\in\pi$ y $\tau=\{p,q\}$ con $q$ un primo de $\pi$ distinto
+			de $p$,  por la nilpotencia del $\tau$-subgrupo de Hall de $H$,
+			si $\sylow$ existe $\sylow[Q][q]$ tal que centraliza a $P$,  así
+			$q$ no divide a $\nu_{p}(H)$; de la generalidad de $q$ llegamos
+			a que $\nu_{p}(H)=1$ y por tanto $P\normal H$.   Ahora de la generalidad
+			de $p$ se tiene que todo Sylow de $H$ es normal en este y así $H$
+			es un $\pi$-subgrupo de Hall de $G$ nilpotente.  
+		\end{proof}
+		\textcompwordmark\\
+		
+		
+		\part{Números de Sylow y de Hall}
+		
+		\chapter*{Introducción a Parte 4}
+		
+		\textcompwordmark{}
+		
+		En esta parte nos centramos en el estudio del número de subgrupos
+		de Hall y Sylow de un grupo finito. Empezamos en el Capítulo $8$
+		estudiando el número de subgrupos de Hall en grupos resolubles ampliando
+		el resultado $\nu_{p}(G)$$\equiv1\,(\mbox{mód}\,p)$ a la teoría
+		de Hall. En el Capítulo $9$ obtenemos un resultado similar al del
+		capítulo anterior, ahora para la teoría de Sylow, sin exigir la resolubilidad
+		del grupo. Tenemos así en este capítulo dos nuevos resultados los
+		cuales amplían junto con el teorema del capítulo anterior nuestro
+		conocimiento acerca de la forma del numero de subgrupos de Sylow.
+		Además es posible concluir gracias a estos dos nuevos resultados que
+		$\nu_{p}(G)$ no admite ciertos valores para ningún grupo finito $G$. 
+		
+		\textcompwordmark{}
+		
+		En el Capítulo $10$ damos una relación de divisibilidad entre el
+		número de $\pi$-subgrupos de Hall de  un grupo $G$ y el número
+		de $\pi$-subgrupos de Hall de un subgrupo $H$ de $G$. Para ello
+		requerimos la condición de $\pi$-separabilidad del grupo $G$. En
+		la primera sección de este capítulo vemos la demostración de este
+		resultado para el caso en el que $\pi$ consta de un único primo,
+		esto es, en el contexto de la teoría de Sylow. En la segunda sección
+		ampliamos este resultado a la teoría de Hall.
+		
+		Finalmente, en los Capítulos $11$ y $12$ vemos dos condiciones suficientes
+		para la resolubilidad basadas en el número de subgrupos de Sylow.
+		En el Capítulo $11$ vemos como la cantidad,  en termino medio,  del
+		número de subgrupos de Sylow puede ser suficiente para determinar
+		la resolubilidad de un grupo mientras que el último capítulo,  Capítulo
+		$12$,  vemos como las distintas cantidades de subgrupos de Sylow
+		para cada primo,  en tanto que varíen poco,  pueden ser de nuevo suficientes
+		para concluir que un grupo finito $G$ sea resoluble.  
+		
+		\chapter{Número de subgrupos de Hall en grupos resolubles }
+		
+		\textcompwordmark{}
+		
+		El siguiente resultado es debido al propio Philip Hall y es una adaptación
+		a la teoría de Hall en grupos resolubles del resultado de Sylow $\nu_{p}(G)\equiv1\,(m\acute{o}d\,p)$.
+		Este resultado se encuentra como un apartado más del teorema acerca
+		de la existencia conjugación y dominancia de subgrupos de Hall en
+		grupos resolubles que puede encontrarse en \cite{hall1988collected},
+		páginas 29-31.   Siendo esta prueba algo confusa, la hemos sintetizado
+		por tal adaptarla a nuestro interés. Remarcamos que pese haber simplificado
+		al demostración sigue siendo posible siguiendo demostrar tales hechos
+		siguiendo los pasos de nuestra demostración.
+		
+		%%Si  es normal minimal de  resoluble,   es -elemental abeliano.   Si  son una familia de subgrupos normales en  con  y cociente  abeliano,  la familia de subgrupos normales en,  verifica de nuevo las relaciones anteriores. Además, el primer miembro de la familia es  abeliano teniéndose así un factor de orden.  
+		
+		\begin{rem*}
+			Con respecto a esta demostración resulta práctico cambiar la notación
+			del número $\nu_{\pi}(G)$ de $\pi$-subgrupos de Hall de $G$,  por
+			$h_{m}$ donde entendemos que $m$ es el orden de los $\pi$-subgrupos
+			de Hall de $G$.   Así mismo,  si $m$ es un número entero escribimos
+			$\pi(m)$, con tal de denotar al conjunto de primos divisores de $m$.
+			Con esto un $\pi(m)$-subgrupo de Hall de $G$ es de orden $m$.
+			
+		\end{rem*}
+		\textcompwordmark{}
+		\begin{thm}
+			\label{thm:Work of Hall}$G$ finito resoluble,  $|G|=mn$,  si $h_{m}$
+			es el número de subgrupos de $G$ de orden $m$ y $h_{m}=f_{1}f_{2}...f_{n}$,
+			entonces cada factor $f_{i}$ verifica las dos condiciones siguientes
+			
+			\textcompwordmark{}
+			
+			\item[(i)] $f_{i}$ es congruente con $1$ módulo algún primo de
+			$m$.  
+			
+			\textcompwordmark{}
+			
+			\item[(ii)] Cada factor $f_{i}$ es una potencia de primo que divide
+			a uno de los factores principales de $G$.  
+		\end{thm}
+		
+		\begin{proof}
+			Probamos el resultado por inducción sobre $|G|$.  Suponer que $G$
+			posee un subgrupo propio $H\normal G$.   Escribimos $H=m_{1}n_{1}$,
+			$\indice[G][H]=m_{2}n_{2}$,  $m=m_{1}m_{2},\,\,n=n_{1}n_{2}$ y
+			suponer además que $n_{1}<n$.  
+			
+			\textcompwordmark\\
+			Sea $\mathscr{H}$ el conjunto de todos los $\pi(m)$-subgrupos de
+			Hall de $G$.   Podemos dividir el conjunto anterior en clases por
+			medio del convenio barra,  esto es,  dados $K,L\in H$,  $K\rel L\mbox{ si y solamente si }\bar{K}=\bar{L}$.
+			Ahora,  dado que $M$ es $\pi(m)$-subgrupo de Hall de $G$ si y
+			solamente si $\bar{M}$ es un $\pi(m_{2})$-subgrupo de Hall de $\bar{G}$,
+			tenemos que el número de clases de equivalencia de $\gotica H$ coincide
+			con el número $h_{m_{2}}^{'}$ de $\pi(m_{2})$-subgrupos de Hall
+			de $\bar{G}$.   Ahora,  siendo los elementos de $\gotica H$ conjugados
+			y $H\normal G$,  si $K,L$ son dos representantes de distintas clases,
+			los grupos finitos $KH,LH$ son isomorfos por ser conjugados.   Con
+			esto,  el número $h_{m}'$ de $\pi(m)$-subgrupos de Hall de $KH$
+			es el mismo,  independientemente del representante y de la clase.
+			Tenemos así que hay $h_{m_{2}}'$ clases de equivalencia,  cada
+			una de las cuales aporta $h_{m}'$ $\pi(m)$-subgrupos de Hall distintos,
+			concluyéndose que $h_{m}=h_{m}'h_{m_{2}}'$. Sin más que aplicar
+			la hipótesis de inducción a $h_{m}',h_{m_{2}}'$ obtenemos el primer
+			resultado.   
+			
+			\textcompwordmark{}
+			
+			Consideramos ahora $D\leq G$ tal que $\bar{D}$ es un $\pi(m_{2})$-subgrupo
+			de Hall del cociente $G/H$,  $|D|=mn_{1}$; tenemos que los factores
+			principales de $D$ coprimos con $m$ dividen algún factor principal
+			de $G$; para ver esto es suficiente construir una serie principal
+			para $D$ a partir de la de $G$, i.e., tomamos $\{\mathcal{N}_{i}\}_{i=0}^{k}$
+			con $\mathcal{N}_{i}=N_{i}\cap D$ como serie principal para $D$;
+			si $H\subseteq\mathcal{N}_{i}\subseteq\mathcal{N}_{i+1}\subseteq D$,  dado que $|D/H|=m_{2}$,
+			el cociente $\mathcal{N}_{i+1}/\mathcal{N}_{i}$ divide a $m$ por
+			lo que los factores que dan cociente primo con $m$ deben estar contenidos
+			en $H$; ahora haciendo uso de los teoremas de isomorfía y la identidad
+			de Dedekind es rutinario comprobar que el factor $\mathcal{N}_{i+1}/\mathcal{N}_{i}$
+			divide al factor $N_{i+1}/N_{i}$. Finalmente teniendo en cuenta que
+			los factores principales de $G/H$ son todos factores principales
+			de $G$ y dado que tanto el orden de $D$ como el de $G/H$ es menor
+			que el orden de $G$,  concluimos la segunda afirmación por hipótesis
+			de inducción.
+			
+			\textcompwordmark\\
+			Tenemos ahora que todo subgrupo normal de $G$ tiene a $n$ como divisor
+			de su orden ($n_{1}=n$).   Si $K$ es normal minimal de $G$,  $n$
+			debe dividir a $|K|$ el cual es potencia de primo al ser $K$ $p$-elemental
+			abeliano; además $n=|K|$ ya que si escribimos $|K|=p^{a}$ y $n<p^{a}$,
+			$p$ sería divisor común de $m$ y $n$.  
+			
+			\textcompwordmark{}
+			
+			Sea ahora $L\normal G$ tal que $L/K$ es normal minimal de $G/K$,
+			$|L/K|=q^{b}$ con $q\neq p$ pues $q$ divide a $m$.   Sea $\sylow[L_{1}][q][L]$,
+			$|L_{1}|=q^{b}$,  y $N_{1}=\N G{L_{1}}$.   Si $N:=N_{1}\cap K$
+			se tiene que tanto $L_{1}$ como $N$ son subgrupos normales de $N_{1}$;
+			dado que $N\cap L_{1}=\{1\}$ tenemos que $nl=ln\mbox{ para todo }l\in L_{1},n\in N$.
+			Teniendo en cuenta que $K$ es abeliano y $N\leq K$,  $N\subseteq Z(L)char\,L\normal G$
+			luego $N\subseteq Z(L)\normal G$.   Si suponemos $N>1$,  $p$ divide a
+			$N$ que divide a $Z(L)$ de donde $Z(L)\cap K>1$ y por ser $K$normal
+			minimal de $G$,  $K\subseteq Z(L)$.   Ahora,  dado que $L=L_{1}K$,  si
+			$x\in L$ podemos escribir $x=lz$ con $l\in L_{1},z\in Z(L)$ y así
+			$L_{1}^{x}=L_{1}$,  por tanto $L_{1}$ es $q$-subgrupo de Sylow
+			normal de $L$,  equivalentemente,  $L_{1}char\,L\normal G$ de donde
+			$L_{1}\normal G$,  contradicción con el hecho de no dividir $n$
+			el orden de $L_{1}$.  Concluimos que $N=1$.   Con esto $\N L{L_{1}}$
+			no es divisible por $p$ de donde $[L:\N L{L_{1}}]=p^{a}$.   Así,
+			por un lado,  $p^{a}$ es un factor principal de $G$ dado que es
+			el orden de $K$ normal minimal,  por otro lado es el número de $q$-subgrupos
+			de Sylow de $L$ y, por tanto, es congruente con $1\,(m\acute{o}d\,q)$
+			teniéndose el resultado.  
+		\end{proof}
+		
+		\chapter{Número de subgrupos de Sylow en grupos finitos}
+		
+		\textcompwordmark{}
+		
+		Dado que la teoría de Sylow no es más que un caso particular de la
+		teoría de Hall,  el resultado anterior de P.  Hall sigue siendo cierto
+		para el caso de un único primo.   Los siguientes resultados,  Teorema
+		\ref{thm:numero-sylow-normal-marshall} y \ref{thm:marshall-hall 2},
+		son una ampliación del Teorema \ref{thm:Work of Hall}  en el contexto
+		de la teoría de Sylow en grupos finitos (no necesariamente resolubles).
+		
+		\textcompwordmark{}
+		\begin{thm}
+			\label{thm:numero-sylow-normal-marshall} Sea $G$ un grupo finito
+			y $K$ un subgrupo normal.   Si $\sylow$ y denotamos por $\nu_{p}(G)$
+			al número de $p$-subgrupos de Sylow de $G$,  entonces $\nu_{p}(G)=a_{p}b_{p}c_{p}$
+			donde $a_{p}$ es el número de $p$-subgrupos de Sylow de $G/K$,
+			$b_{p}$ es el número de $p$-subgrupos de Sylow de $K$ y $c_{p}$
+			es el número de $p$-subgrupos de Sylow de $N_{PK}(P\cap K)/(P\cap K)$.
+			
+		\end{thm}
+		
+		\begin{proof}
+			Sabemos que $\nu_{p}(G)=[G:\N GP]=[G:\N G{PK}][N_{G}(PK):N_{G}(P)]$.
+			Haciendo uso de la notación barra,  $\overline{G}=G/K$,  $\overline{P}=PK/K$,
+			tenemos que el número de $p$-subgrupos de Sylow,  $a_{p}$,  de
+			$\overline{G}$
+			
+			\textcompwordmark
+			\begin{eqnarray*}
+				a_{p} & = & [\overline{G}:\N{\overline{G}}{\overline{P}}]=[G:\N G{PK}],
+			\end{eqnarray*}
+			
+			\textcompwordmark{}
+			
+			de donde
+			
+			\textcompwordmark
+			\[
+			\nu_{p}(G)=a_{p}[\N G{PK}:\N GP].
+			\]
+			
+			\textcompwordmark\\
+			Ahora,  teniendo en cuenta que $P$ es un $p$-subgrupo de Sylow de
+			$PK$ y $PK\normal\N G{PK}$, el número de $p$-subgrupos de Sylow
+			de $PK$ coincide con el de $\N G{PK}$ y $[\N G{PK}:\N GP]=[PK:\N{PK}P]$.
+			Notar que $\N GP=\N{\N G{PK}}P$ ya que si $x\in G$ es tal que $P^{x}=P$,
+			$(PK)^{x}=PK$.   Con esto
+			
+			\textcompwordmark
+			\[
+			\nu_{p}(G)=a_{p}[PK:\N{PK}P].
+			\]
+			
+			\textcompwordmark\\
+			Ahora,  por ser $P\subseteq\N{PK}P$,  tenemos las identidades
+			
+			\textcompwordmark
+			\[
+			P(\N{PK}P\cap K)=\N{PK}P\cap PK=\N{PK}P,
+			\]
+			
+			\[
+			P\cap(\N{PK}P\cap K)=P\cap K,
+			\]
+			
+			\textcompwordmark\\
+			donde la primera de ellas debida a la identidad de Dedekind.   Considerando
+			el producto $P(\N{PK}P\cap K)$,  el cual es grupo ya que $\N{PK}P\cap K\normal\N{PK}P$,
+			obtenemos a partir de la formula del producto $[\N{PK}P:K\cap K]=[P:P\cap K]$.
+			Ahora, utilizando las identidades anteriores tenemos
+			
+			\textcompwordmark
+			\[
+			[\N{PK}P:P]=[\N{PK}P\cap K:P\cap K].
+			\]
+			
+			\textcompwordmark\\
+			Por otra parte,  tenemos que $[PK:P]=[K:P\cap K]$ y $[PK:\N{PK}P]=[K:K\cap\N{PK}P]$
+			nuevamente por la formula del producto. Queda claro que si $y\in K\subseteq PK$
+			es tal que $P^{y}=P$,  entonces $y\in N_{PK}(P\cap K)$ de donde 
+			
+			\textcompwordmark
+			\begin{eqnarray*}
+				\N K{P\cap K} & = & K\cap\N{PK}{P\cap K}\geq K\cap\N{PK}P,
+			\end{eqnarray*}
+			
+			\textcompwordmark\\
+			luego
+			
+			\textcompwordmark
+			\begin{eqnarray*}
+				[K:K\cap\N{PK}P] & = & [K:\N K{P\cap K}][K\cap\N{PK}{P\cap K}:K\cap\N{PK}P].
+			\end{eqnarray*}
+			
+			\textcompwordmark\\
+			Notar que $[K:\N K{P\cap K}]=b_{p}$ es el número de $p$-subgrupos
+			de Sylow de $K$.   Con esto
+			
+			\textcompwordmark
+			\[
+			\nu_{p}(G)=a_{p}b_{p}[K\cap\N{PK}{P\cap K}:K\cap\N{PK}P]=a_{p}b_{p}c_{p}.
+			\]
+			
+			\textcompwordmark\\
+			Resta ver que $c_{p}$ es el número de $p$-subgrupos de Sylow de
+			$N_{PK}(P\cap K)/(P\cap K)$.   Si escribimos $H=\N{PK}{P\cap K}$,
+			observamos que $H=\N{PK}{P\cap K}\geq\N{PK}P\geq P$,  de donde $HK\geq\N{PK}PK\geq PK$
+			y $HK=PK$.   Ahora,  de la formula del producto
+			
+			\textcompwordmark
+			\[
+			[PK:K]=[H:H\cap K]=[\N{PK}P:\N{PK}P\cap K]=[P:P\cap K].
+			\]
+			
+			\textcompwordmark\\
+			Con esto queda probado que\\
+			\textcompwordmark
+			\[
+			[PK:H]=[K:H\cap K],
+			\]
+			\[
+			[H:\N{PK}P]=[H\cap K:\N{PK}P\cap K],
+			\]
+			\[
+			[\N{PK}P:P]=[\N{PK}P\cap K:P\cap K].
+			\]
+			\textcompwordmark\\
+			\newpage 
+			
+			\noindent Así
+			
+			\textcompwordmark
+			\begin{eqnarray*}
+				c_{p} & = & [K\cap\N{PK}{P\cap K}:K\cap\N{PK}P]=[H\cap K:\N{PK}{P\cap K}]\\
+				& = & [H:\N{PK}P]=[H:\N HP],
+			\end{eqnarray*}
+			
+			\textcompwordmark\\
+			donde $\N{PK}P=\N HP$ ya que $\N{PK}P\subseteq H=N_{PK}(P\cap K)$.  Concluimos
+			que $c_{p}$ es el número de $p$-subgrupos de Sylow de $H$ y dado
+			que $P\cap K\normal H=\N{PK}{P\cap K}$,  $P\cap K$ esta contenido
+			en todo $p$-subgrupo de Sylow de $H$; así,  $c_{p}$ es el número
+			de $p$-subgrupos de Sylow de $H/(P\cap K)=\N{PK}{P\cap K}/(P\cap K)$
+			concluyéndose el resultado.  
+		\end{proof}
+		\textcompwordmark\\
+		
+		\begin{thm}
+			\label{thm:marshall-hall 2}Si $G$ es un grupo finito y expresamos
+			$\nu_{p}(G)=f_{1}f_{2}...f_{n}$.   Entonces cada factor $f_{i}$
+			verifica una de las siguientes condiciones
+			
+			\textcompwordmark{}
+			
+			\item[(i)] $f_{i}$ es el número de $p$-subgrupos de Sylow de un
+			grupo simple.  
+			
+			\textcompwordmark{}
+			
+			\item[(ii)] $f_{i}$ es una potencia de primo,  $q^{a}$,  con $q^{a}\equiv1\,(m\acute{o}d\,p)$.
+			
+		\end{thm}
+		
+		\begin{proof}
+			Procederemos por inducción sobre el orden de $G$.   Notamos que el
+			resultado es trivial si $G$ es un $p$-grupo o un grupo simple.   
+			
+			\textcompwordmark{}
+			
+			Si $1\not=K\,\normalestricto\,G$,  sabemos por el teorema anterior
+			que $\nu_{p}(G)=a_{p}b_{p}c_{p}$ con $a_{p},b_{p},c_{p}$ el número
+			de $p$-subgrupos de Sylow de $G/K$,  $K$ y $\N{PK}{P\cap K}/P\cap K$
+			respectivamente.   Si estos tres subgrupos fuesen de orden menor,
+			tendríamos el resultado por hipótesis de inducción.   Así debemos
+			suponer que alguno de ellos no lo es y dado que $K\mbox{ y }G/K$
+			los son,  debe ser $\left|G\right|=\left|\N{PK}{P\cap K}/P\cap K\right|$
+			de donde $P\cap K=1$ y $G=PK$.  Ahora,  por ser $K\normal G$ tenemos
+			que $G/K\cong P$ y si denotamos por $\left|P\right|=p^{r}$ con $r\geq2$,
+			tenemos existe $P_{1}\normal P$ tal que $\left|P_{1}\right|=p^{r-1}>1$.
+			Así,  tomando $K_{1}=KP_{1}<G$,  obtenemos otro subgrupo propio
+			normal de $G$ ahora, con $1<P\cap K_{1}$ el cual nos permite concluir
+			el resultado por hipótesis de inducción.  
+			
+			\textcompwordmark{}
+			
+			Consideramos ahora el caso en el que $\left|P\right|=p$,  esto es,
+			$P=\left\langle a\right\rangle $ es cíclico de orden $p$.  Dado
+			que $K$ es normal en $G$, la aplicación $\alpha:K\rightarrow K$
+			dada por $\alpha(x)=x^{a}$ está bien definida y $\alpha\in Aut(K)$.
+			Ahora,  si $x\in\N{PK}P\cap K$ se tiene que $[x,a]=x^{-1}a^{-1}xa$
+			pertenece a $P\cap K=1$ ya que $(x^{-1}a^{-1}x)a\in P$ por definición
+			de $x$ y $x^{-1}(a^{-1}xa)\in K$ por la normalidad de este.   Así,
+			denotando por $F=\N{PK}P\cap K$ tenemos que $F\subseteq C_{G}(P)$ y $G=PF$
+			de donde concluimos que el número de $p$-subgrupos de Sylow de $G=PK$
+			es $\nu_{p}(G)=[PK:PF]=[K:F]$.   Si $K=q_{1}^{e_{1}}q_{2}^{e_{2}}...q_{r}^{e_{r}}$
+			y $F=\orden[q][f][r]$,  tenemos
+			
+			\[
+			\nu_{p}(G)=q_{1}^{e_{1}-f_{1}}q_{2}^{e_{2}-f_{2}}...q_{r}^{e_{r}-f_{r}},
+			\]
+			
+			\textcompwordmark\\
+			quedando probar que $q^{e_{i}-f_{i}}\equiv1(m\acute{o}d\,p)$ $i=1,...,r$
+			con tal de concluir la demostración.\\
+			\textcompwordmark\\
+			Tomamos $Q_{1}$ un $q_{i}$-subgrupo de Sylow de $F$; si $Q_{i}$
+			es un $q_{i}$-subgrupo de Sylow de $P$, $q^{e_{i}-f_{i}}=1\equiv1(m\acute{o}d\,p)$
+			y el resultado quedaría probado. Si $Q_{1}$ es subgrupo propio de
+			algún $q_{i}$-subgrupo de Sylow de $K$,  existe $Q^{*}\leq K$ tal
+			que $[Q^{*}:Q_{1}]=q_{i}$ de donde $Q_{1}\normal Q^{*}$ y $[N_{K}(Q_{1}):Q_{1}]\equiv0\,(m\acute{o}d\,q_{i})$.
+			Además,  puesto que $Q_{1}^{a}=Q_{1}$,  $\N K{Q_{1}}^{a}=\N K{Q_{1}}$
+			y si consideramos otro subgrupo $H\normal K$,  el número de $q_{i}$-subgrupos
+			de Sylow de $H$,  $\nu_{q_{i}}(H)$,  es un divisor del orden de
+			$K$ de donde $\nu_{q_{i}}(H)$ es coprimo con $p$.   Con esto,  podemos
+			formar una cadena de $q_{i}$-subgrupos,  $Q_{1}\subset Q_{2}\subset...\subset Q_{s}$
+			tales que $Q_{j}$ es un $q_{i}$-subgrupo de Sylow de $\N K{Q_{j-1}}$
+			y cada $Q_{j}$ es fijado por $\alpha$.   Tomamos $s$ tal que $Q_{s}=Q$
+			es $q_{i}$-subgrupo de Sylow de $K$; dado que $Q_{1}\subset Q$ es un
+			$q_{i}$-subgrupo de Sylow de $F$,  no puede existir un $q_{i}$-subgrupo
+			de $Q$ mayor que $Q_{1}$ el cual sea fijado por $\alpha$.   Concluimos
+			que los $q_{i}^{e_{i}}-q_{i}^{f_{i}}$ elementos de $Q\backslash Q_{1}$
+			son todos permutados,  y en particular,  son permutados en ciclos
+			de longitud $p$ de donde obtenemos $q_{i}^{e_{i}}-q^{f_{i}}\equiv0\,(m\acute{o}d\,p)$,
+			luego $q_{i}^{e_{i}-f_{i}}\equiv1(m\acute{o}d\,p)$, como deseábamos.
+			
+		\end{proof}
+		\textcompwordmark{}
+		
+		Haciendo uso de este resultado es posible probar si $p=2$,  dado
+		que todo número impar $q$ satisface $q\equiv1(m\acute{o}d\,p)$ existe
+		un grupo finito $G$ tal que $\nu_{p}(G)=q$.  
+		
+		\textcompwordmark{}
+		
+		Por otro lado no todo número natural puede ser el número de $p$-subgrupos
+		de Sylow de un grupo finito si $p>2$.   Una demostración de este
+		hecho se encuentra en \textbf{\cite{hall1967number}}.   En particular,
+		puede probarse que no existe un grupo finito $G$ con $\nu_{p}(G)=1+rp$
+		con $1<r<(p+3)/2$ a menos que $\nu_{p}(G)=q^{t}$ con $q$ primo
+		o bien $r=(p-3)/2$ y $p>3$ es un primo de Fermat.   Con esto no
+		existe un grupo finito $G$ con  $\nu_{3}(G)=22$,  $\nu_{5}(G)=21$
+		o $\nu_{p}(G)=1+3p$ con $p\geq7$.  
+		
+		\chapter{Relación con subgrupos}
+		
+		\section{Número de $p$-Sylows en grupos $p$-resolubles }
+		
+		\textcompwordmark{}
+		
+		Sabemos que si $H$ es subgrupo de $G$,  $\nu_{\pi}(H)\leq\nu_{\pi}(G)$.
+		Probaremos además que bajo ciertas condiciones sobre $G$ se da
+		la divisibilidad entre ambos números.   En esta sección probaremos
+		los resultados para el caso de un único primo $\pi=\{p\}$ y $G$
+		un grupo $p$-resoluble la cual puede encontrarse en \cite{Gabriel-Navarro}.
+		
+		
+		\textcompwordmark{}
+		\begin{lem}
+			\label{lem:no-generalizable} Si $A$ es un grupo finito actuando
+			coprimamente sobre $G$,  $C:=C_{G}(A)$ y $H\leq G$ es un subgrupo
+			propio $A$-invariante,  entonces el índice $[C:C\cap H]$ divide a
+			${[}G:H{]}$.  
+		\end{lem}
+		
+		\begin{proof}
+			Sabemos que por ser la acción coprima,  si $p$ es un primo cualquiera
+			divisor del orden de $G$ entonces todo $q$-subgrupo $A$-invariante
+			esta contenido en un $p$-subgrupo de Sylow de $G$ $A$-invariante.
+			Además,  dos $p$-subgrupos de Sylow $A$-invariantes deben ser $C$-conjugados
+			y si $\sylow$ es $A$-invariante,  $\sylow[P\cap C][][C]$.   
+			
+			\textcompwordmark{}
+			
+			Si $\sylow[Q][][H]$ es $A$-invariante,  tenemos que $Q\cap C\cap H=Q\cap C$
+			es un $p$-subgrupo de Sylow de $C\cap H$.   Por otro lado $Q$ está
+			contenido en algún $p$-subgrupo de Sylow de $G$,  $P$,  $A$-invariante.
+			Además, $P\cap C\in\Syl_{p}(C)$, y  $[C\cap P:C\cap Q]$ divide a $[P:Q]$
+			ya que
+			
+			\textcompwordmark
+			\[
+			\I{Q(P\cap C)}=\frac{\I Q\I{P\cap C}}{\I{Q\cap C}}\leq|P|,
+			\]
+			
+			\textcompwordmark{}
+			
+			y de aquí
+			
+			\textcompwordmark{}
+			
+			\[
+			\frac{|P\cap C|}{|Q\cap C|}\leq\frac{\I P}{\I Q},
+			\]
+			
+			\textcompwordmark\\
+			de donde concluimos la divisibilidad entre ambos indices por ser ambos
+			potencia de $p$.   Ahora,  teniendo en cuenta que $|P\cap C|$ es
+			la $p$-parte de $|C|$,  $|Q\cap C|$ es la $p$-parte de $|C\cap H|$,
+			$|P|$ la $p$-parte de $|G|$ y $|Q|$ la de $|H|$,  la anterior
+			relación se ve ahora como
+			
+			\textcompwordmark
+			\[
+			\frac{|C|_{p}}{|C\cap H|_{p}}\,\mbox{divide a }\frac{|G|_{p}}{|H|_{p}}.
+			\]
+			
+			\textcompwordmark\\
+			De la arbitrariedad de $p$ se sigue ahora el resultado.  
+		\end{proof}
+		\textcompwordmark{}
+		\begin{lem}
+			Si $G$ es un grupo $p$-resoluble y $\sylow$ con $P\subseteq M\subseteq G$
+			entonces $[N_{G}(P):N_{M}(P)]$ divide a ${[}G:M]$.  
+		\end{lem}
+		
+		\begin{proof}
+			Razonamos por inducción sobre $|G|$.  Dado que $G$ es $p$-resoluble,
+			existe una familia de subgrupos $\{H_{i}\}_{i=1}^{n}$ tal que $1=H_{1}\normal...\normal H_{n-1}\normal H_{n}=G$
+			y el cociente $H_{i+1}/H_{i}$ es $p$-grupo o $p'$-grupo.   Escribimos
+			$N=H_{n-1}$ el cual es un subgrupo propio tal que $N\normal G$ y
+			$G/N$ es $p$-grupo o $p'$-grupo.  
+			
+			\textcompwordmark{}
+			
+			Si $G/N$ es $p'$-grupo,  entonces $|N|_{p}=|G|_{p}$ y $N$ contiene
+			un $p$-subgrupo de Sylow de $G$,  $P$.   Además,  de la normalidad
+			de $N$ y la conjugación de los subgrupos de Sylow se tiene que $\Syl_{p}(N)=\Syl_{p}(G)$.
+			Si $V:=M\cap N$,  aplicando la hipótesis de inducción a $N$ tenemos
+			que
+			
+			\textcompwordmark
+			\[
+			[N_{G}(P):N_{V}(P)]\,\mbox{divide a }[N:V].
+			\]
+			
+			\textcompwordmark\\
+			Haciendo uso del argumento de Frattini $G=N\N GP$; escribimos ahora
+			$G=(MN)\N GP$ y despejando en $|G|=\frac{|MN|\I{\N GP}}{\I{MN\cap\N GP}}$
+			obtenemos
+			
+			\textcompwordmark
+			\[
+			[G:NM]=[\N GP:\N{NM}P].
+			\]
+			
+			\textcompwordmark\\
+			Afirmamos que $\N{NM}P=\N MP\N NP$.   Por el argumento de Frattini
+			tenemos que $M=(M\cap N)\N MP$,  luego $NM=N\N MP$ y
+			
+			\textcompwordmark
+			\[
+			\N{NM}P=\N{NM}P\cap\N MPN=\{xy\mid x\in\N MP,\,y\in N\mbox{ tal que }P^{xy}=P\}.
+			\]
+			
+			\textcompwordmark\\
+			de donde $\N{NM}P=\N MP\N NP$.   Además,  por la formula del producto
+			
+			\textcompwordmark
+			\[
+			\frac{\I{\N{MN}P}}{\I{\N MP}}=\frac{\I{\N NP}}{|\N VP|}.
+			\]
+			
+			\textcompwordmark\\
+			Ahora
+			
+			\textcompwordmark
+			\begin{eqnarray*}
+				[N_{G}(P):\N MP] & = & [\N GP:\N{NM}P][\N{NM}P:\N MP]\\
+				& = & [G:NM][\N NP:\N VP],
+			\end{eqnarray*}
+			
+			\textcompwordmark\\
+			el cual divide a $[G:NM]=[N:V]$ y teniendo en cuenta que $[N:V]=[NM:M]$,
+			tenemos que $NM=NN_{M}(P)$. \\
+			\textcompwordmark{}
+			
+			Si $G/N$ es $p$-grupo,  dado que $P\subseteq M$ debe ser $G=MN$; tomamos
+			$H:=N\cap M$,  por hipótesis de inducción $[\N N{P\cap N}:\N H{P\cap N}]$
+			divide a $[N:H]=[G:M]$.   Denotamos por $G_{0}=\N G{P\cap N}$ y $M_{0}:=G_{0}\cap M$,
+			con esto $\N GP\subseteq G_{0}$. \\
+			\textcompwordmark{}
+			
+			Si $G_{0}$ es un subgrupo propio de $G$,  haciendo uso de la forma
+			del producto teniendo en cuenta que $\N GP\cap G_{0}=\N{G_{0}}P$ y
+			$\N GP\subseteq G_{0}$ tenemos que $[\N{G_{0}}P:\N{M_{0}}P]=[\N GP:\N MP]$
+			el cual divide a $[G_{0}:M_{0}]$ por hipótesis de inducción al ser
+			$G_{0}<G$.   Ahora,  $P\subseteq\N M{P\cap N}$ y $G=PN$ luego $M=M\cap PN$
+			con $P\subseteq M$ y por la identidad de Dedekind,  $M=P(M\cap N)=PH$.
+			Así,
+			
+			\textcompwordmark
+			\begin{eqnarray*}
+				\N G{P\cap N} & = & \{pn\in PN\,\mid\,P^{pn}\cap N=P\cap N\}=\{n\in N\,\mid\,(P\cap N)^{n}=P\cap N\}\\
+				& = & \N N{P\cap N},
+			\end{eqnarray*}
+			
+			\[
+			\N M{P\cap N}=\{ph\in PH\,\mid\,(P\cap N)^{h}=P\cap N\}=\N H{P\cap N}.
+			\]
+			
+			\textcompwordmark\\
+			Sin más que juntar lo anterior
+			
+			\textcompwordmark
+			\[
+			[G_{0}:M_{0}]=[\N G{P\cap N}:\N M{P\cap N}]=[\N N{P\cap N}:\N H{P\cap N}],
+			\]
+			
+			\textcompwordmark\\
+			por lo que $[G_{0}:M_{0}]$ divide a $[N:H]=[G:M]$ teniéndose de
+			nuevo el resultado.  \\
+			\textcompwordmark\\
+			Podemos, por tanto, asumir que $G_{0}=\N G{P\cap N}$ no es propio.   Haciendo
+			uso de la notación barra para el cociente por $P\cap N$,  $\bar{N}=N/P\cap N$,
+			tenemos que $P$ actúa coprimamente por automorfismos sobre $\bar{N}$.
+			Si denotamos por $C:=\N GP\cap N=\N NP$, $\bar{C}=C_{\bar{N}}(\bar{P})$,
+			y dado que $P\subseteq M$ y $G/N$ es $p$-grupo,  llegamos a 
+			
+			\textcompwordmark
+			\[
+			[\N GP:\N MP]=[\bar{C}:\bar{C}\cap\bar{H]}\mbox{ y }[G:M]=[\bar{N}:\bar{H]},
+			\]
+			
+			\textcompwordmark\\
+			concluyéndose el resultado por el lema anterior.   
+		\end{proof}
+		\textcompwordmark{}
+		\begin{thm}
+			Si $G$ es finito $p$-resoluble y $H\leq G$,  entonces $\nu_{p}(H)$
+			divide a $\nu_{p}(G)$.  
+		\end{thm}
+		
+		\begin{proof}
+			Argumentamos por inducción sobre $[G:H]$.   De existir un subgrupo
+			de $G$, $K$, tal que $H<K<G$, tenemos por hipótesis de inducción
+			que $\nu_{p}(H)$ divide a $\nu_{p}(K)$ el cual a su vez divide a
+			$\nu_{p}(G)$ siguiéndose el resultado.   Así $H$ es maximal de $G$
+			y $[G:H]$ es $p$-número o $p'$-número por el Lema \ref{cor:Maximal p-resoluble}.
+			\\
+			\textcompwordmark{}
+			
+			Si $[G:H]$ es potencia de $p$,  tomamos $\sylow$; tenemos que $G=HP$
+			y $P\cap H\in\Syl_{p}(H)$.   Además $G=H\N GP$ y $[G:\N GP]=[H:\N HP]$
+			por la formula del producto; ahora es suficiente que $\N HP\subseteq\N H{P\cap H}$
+			y de donde $\nu_{p}(H)=[H:\N H{P\cap H}]$ divide a $[H:\N HP]=\nu_{p}(G)$.
+			\\
+			\textcompwordmark{}
+			
+			Consideramos ahora el caso $[G:H]$ no es divisible por $p$; con
+			esto,  si $\sylow[][][H]\subseteq\Syl_{p}(G)$,  por el teorema anterior
+			tenemos que $[\N GP:\N HP]$ divide a $[G:H]$ de donde $[H:\N HP]=\nu_{p}(H)$
+			divide a $[G:\N GP]=\nu_{p}(G)$.  
+		\end{proof}
+		\textcompwordmark\\
+		Remarcamos que el anterior resultado no es cierto si el grupo no es
+		$p$-resoluble; así,  por ejemplo, si $G=A_{5}$ y $H=A_{4}$,  tenemos
+		para el primo $p=3$, $\nu_{p}(H)=4$ mientras que $\nu_{p}(G)=10$.
+		
+		
+		\textcompwordmark{}
+		
+		Como consecuencia de este teorema tenemos otra forma de demostrar
+		el Teorema \ref{thm:caso G resoluble, hall nilpotente}.   Veámoslo:
+		
+		\textcompwordmark{}
+		
+		Sea $H$ un $\pi$-subgrupo de Hall de $G$.   Si $\nu_{p}(H)>1$
+		existe $q\in\pi$ tal que $q$ divide a $\nu_{p}(H)$.   Si $G$ es
+		resoluble,  $G$ es $p$-resoluble y $\nu_{p}(H)$ divide $\nu_{p}(G)$,
+		de donde $q$ divide a $\nu_{p}(G)$ contradicción.  
+		
+		\section{Número de $\pi$-subgrupos de Hall en grupos $\pi$-separables}
+		
+		\textcompwordmark{}
+		
+		Procedemos ahora a generalizar el teorema anterior para un conjunto
+		de primos $\pi$ y $G$ un grupo $\pi$-separable, reproduciendo la
+		demostración que puede encontrarse \cite{Turull}.  Notamos en primer
+		lugar que la demostración de la sección anterior o no puede ser aplicada
+		directamente para grupos $\pi$-separables.   En particular,  el Teorema
+		\ref{lem:no-generalizable} hace uso de la generalización de teoría
+		de Sylow mediante la acción de grupos sobre grupos,  de la cual no
+		se tiene una versión para Hall; así pese a que el número de subgrupos
+		de Hall puede ser computada como el índice en $G$ del normalizador
+		de un $\pi$-subgrupo de Hall,  al igual que los subgrupos de Sylow,
+		requerimos de otra formula para el número de $\pi$-subgrupos de
+		Hall de un grupo.
+		
+		\textcompwordmark{}
+		
+		Vemos ahora un lema previo a los resultados del artículo.
+		
+		\textcompwordmark{}
+		\begin{lem}
+			Sea $G$ grupo finito de la forma $G=HN$ con $N\normal G$ y $\left(\left|H\right|,\left|N\right|\right)=1$.
+			Entonces $N_{N}(H)=C_{N}(H)$.  
+		\end{lem}
+		
+		\begin{proof}
+			Denotando por $K=N_{N}(H)$,  si $h\in H$ y $k\in K$
+			
+			\textcompwordmark
+			\[
+			[h,k]=h^{-1}h^{k}\in H,
+			\]
+			\[
+			[h,k]=(k^{-1})^{h}k\in N,
+			\]
+			
+			\textcompwordmark\\
+			de donde $[h,k]=1$ por ser $\left(\left|H\right|,\left|N\right|\right)=1$
+			y así $N_{N}(H)\subseteq C_{N}(H)$.  
+		\end{proof}
+		\textcompwordmark{}
+		\begin{thm}
+			Sea $G$ un grupo finito $\pi$-separable y sea $H$ un $\pi$-subgrupo
+			de Hall de $G$.   Si $\left\{ N_{i}\right\} _{i=0}^{\ell}$ es la
+			familia de subgrupos normales de $G$ tales que $N_{i+1}/N_{i}$ es
+			$\pi$-grupo o $\pi'$-grupo y denotamos por $\gotica F$ al conjunto
+			de factores que son $\pi'$-grupos,  entonces
+			
+			\textcompwordmark
+			\[
+			\nu_{\pi}(G)=\prod_{F\in\gotica F}[F:C_{F}(H)].
+			\]
+			
+			\textcompwordmark{}
+		\end{thm}
+		
+		\begin{proof}
+			Sea $G$ un contraejemplo con $\ell$ mínimo.   Claramente el resultado
+			es cierto para $\ell=0,1$; si $\ell=2$ tenemos $1\normalestricto N\normalestricto G$
+			con $N$ $\pi$-grupo o $\pi'$-grupo.   
+			
+			Si $N$ es $\pi$-grupo,  tenemos que $\nu_{\pi}(G)=[G:N_{G}(N)]=1$;
+			siendo $N=H$,  el estabilizador de la acción $C_{G/N}(H)=G/N$ y
+			nuestra formula queda como
+			
+			\textcompwordmark
+			\[
+			\nu_{\pi}(G)=[G/N:C_{G/N}(H)]=1.
+			\]
+			
+			\textcompwordmark\\
+			Si $N$ es $\pi'$-grupo,  $G=HN$ con $N\normal G$ y $\left(\left|H\right|,\left|N\right|\right)=1$
+			de donde $N_{N}(H)=C_{N}(H)$ y haciendo uso de la descomposición
+			de $G$,  $N_{G}(H)g=N_{G}(H)n$ con $n\in N$. Así $[G:N_{G}(H)]=[N:N_{N}(H)]$
+			y el resultado es cierto para $\ell=2$.  
+			
+			\textcompwordmark{}
+			
+			Dado que $G$ es un contraejemplo,  $\ell>2$,  pudiéndose tomar $N=N_{1}$
+			subgrupos propios de $G$.   Si denotamos por $\gotica H$ al conjunto
+			de $\pi$-subgrupos de Hall de $G$,  argumentando como en el Teorema
+			\ref{thm:Work of Hall} vemos que el numero de elementos de $\gotica H$
+			es
+			
+			\textcompwordmark
+			\[
+			\nu_{\pi}(G)=\nu_{\pi}(G/N)\nu_{\pi}(HN)\mbox{ con }H\in\gotica H.
+			\]
+			
+			\textcompwordmark\\
+			Además,  $G/N$ y $HN$ son subgrupos de orden menor que $G$ concluyéndose
+			el resultado para ambos subgrupos.   Dado que los factores de $G/N$
+			son isomorfos a los de $G$,  $\nu_{\pi}(G/N)=\prod_{F\in\bar{\gotica F}}[F:C_{F}(H)]$
+			donde $\bar{\gotica F}$ está compuesto por todos los factores de
+			$G$ que son $\pi'$-grupos a excepción de $N_{1}/N_{0}=N$.  Si $N$
+			es $\pi$-grupo,  así lo es $HN$ y $\nu_{\pi}(N)=1$.   Si $N$ es
+			$\pi'$-grupo $\nu_{\pi}(HN)=[N:C_{G}(H)]$.
+			
+			\textcompwordmark\\
+			Sin más que juntar lo anterior vemos que el resultado es cierto para
+			$G$, contradicción.
+		\end{proof}
+		\textcompwordmark{}
+		\begin{lem}
+			Sean $H,F$ grupos finitos tal que $H$ actúa coprimamente sobre $F.$
+			Si $K$ es un subgrupo de $F$ $H$-invariante,  $[K:C_{K}(H)]$ divide
+			a $[F:C_{F}(H)]$.   
+		\end{lem}
+		
+		\begin{proof}
+			Suponemos que el resultado es falso y tomamos $F$ contraejemplo con
+			$\left|F\right|$ mínimo y $[F:K]$ lo menor posible.   
+			
+			\textcompwordmark{}
+			
+			Siendo la acción coprima sabemos que $F$ posee $p$-subgrupos de
+			Sylow $H$-invariantes y dos cualquiera de ellos son $C_{F}(H)$-conjugados.
+			Para cada primo $p$ tomamos $\sylow$ $H$-invariante tal que $P$
+			contiene un $p$-subgrupo de Sylow $H$-invariante de $K$.   Además,
+			podemos tomar $P$ tal que contenga a  un Sylow $H$-invariante
+			de $C_{F}(H)$ y otro de $C_{K}(H)$.   Con esto $P,P\cap K,C_{P}(H),K\cap C_{P}(H)$
+			son $p$-subgrupos de Sylow de $F,K,C_{F}(H)$ y $C_{K}(H)$ respectivamente.
+			Las relaciones entre los subgrupos anteriores quedan ahora recogidas
+			mediante los siguientes diagramas
+			
+			\textcompwordmark{}
+			
+			\begin{tabular}{cccccc}
+				& \includegraphics[width=5cm]{Turrul1.png} &  &  &  & \includegraphics[width=4cm]{Turrul2.png}
+				\tabularnewline
+			\end{tabular}
+			
+			\textcompwordmark{}
+			
+			A partir de estas ilustraciones vemos que $\left[K:C_{K}(H)\right]_{p}=\left[P\cap K:P\cap C_{K}(H)\right]$
+			y $\left[F:C_{F}(H)\right]_{p}=\left[P:P\cap C_{F}(H)\right]$,  de
+			donde se deduce por ser $F$ contraejemplo que $\left[P\cap K:P\cap C_{K}(H)\right]$
+			no divide a $\left[P:P\cap C_{F}(H)\right]$ para algún primo $p$.
+			Ahora,  dado que $|F|$ mínimo debe ser $F$ un $p$-grupo.   
+			
+			\textcompwordmark\\
+			Siendo $[F:K]$ minimal,  $K$ es de orden máximo entre todos los
+			subgrupos $H$-invariantes de $F$.   Si $K$ es subgrupo propio y
+			$\Phi(F)$ el Frattini de $F$, $K\Phi(F)$ es un subgrupo propio
+			de $F$ y además $H$-invariante por ser $\Phi(F)$ característico.
+			Así,  $\Phi(F)\subseteq K$ y $K\normal F$ pues $F/\Phi(F)$ es $p$-elemental
+			abeliano por el Teorema \ref{thm:G/frattini es p-etal abel}.   Con
+			esto $H$ actúa sobre $F/K$ y $C_{F}(H)/C_{K}(H)$ es isomorfo al
+			centralizador de la acción. Así $\left[C_{F}(H):C_{K}(H)\right]$
+			divide $\left[F:K\right]$, contradicción.  
+		\end{proof}
+		\textcompwordmark{}
+		\begin{cor}
+			Sea $\pi$ un conjunto de primos y $G$ un grupo finito $\pi$-separable.
+			Si $K\leq G$ entonces $\nu_{\pi}(K)$ divide a $\nu_{\pi}(G)$.
+			
+		\end{cor}
+		
+		\begin{proof}
+			Sea $H$ un $\pi$-subgrupo de Hall de $G$ que contiene a un $\pi$-subgrupo
+			de Hall de $K$ y sea $\{N_{i}\}_{i=0}^{\ell}$ una familia de subgrupos
+			normales en $G$ tal que
+			
+			\textcompwordmark
+			\[
+			1=N_{0}\subseteq N\subseteq...\subseteq N_{\ell-1}\subseteq N_{\ell}=G,
+			\]
+			
+			\textcompwordmark\\
+			y el cociente $N_{i+1}/N_{i}$ es un $\pi$-grupo para $i=0,...,l-1$.
+			
+			
+			\textcompwordmark\\
+			Ahora,  por el teorema anterior
+			
+			\textcompwordmark
+			\[
+			\numeroHalls[G]=\prod_{F\in\gotica F}[F:\subset[H][F]].
+			\]
+			
+			\textcompwordmark\\
+			Calculamos ahora $\numeroHalls[K]$ por medio de la acción de $H\cap K$
+			sobre el conjunto de factores que son $\pi'$-grupos,  $\mathscr{H}=\left\{ N_{i+1}\cap K/N_{i}\cap K\,\mbox{tal que es }\pi'\mbox{-grupo}\right\} $.
+			Claramente $N_{i+1}\cap K/N_{i}\cap K$ es isomorfo con $(N_{i}\cap K)N_{i+1}/N_{i}$
+			el cual es un subgrupo $(H\cap K)$-invariante de $N_{i+1}/N_{i}$.
+			Así,  si para cada $H\in\mathscr{H}$, si denotamos por $K(F):=(N_{i}\cap K)N_{i+1}/N_{i}$,
+			tenemos que
+			
+			\textcompwordmark
+			\[
+			\numeroHalls[K]=\prod_{H\in\mathscr{H}}[K(F):\subset[H\cap K][K(F)]].
+			\]
+			
+			\textcompwordmark\\
+			Por el lema anterior,  $\numeroHalls[K]$ divide al número
+			
+			\textcompwordmark
+			\[
+			\prod_{F\in\mathscr{F}}[F:\subset[H\cap K][F]],
+			\]
+			
+			\textcompwordmark\\
+			el cual claramente divide a $\numeroHalls[G].$
+		\end{proof}
+		
+		
+		\chapter{Número medio de Sylows en grupos finitos}
+		
+		\textcompwordmark{}
+		
+		Presentamos en este capítulo una condición suficiente para la resolubilidad,
+		la cual puede encontrarse en \cite{moreto14numero-medio},  y que
+		se caracteriza por hacer uso de la cantidad ``media'' de subgrupos
+		de Sylow de un grupo.   \\
+		La idea intuitiva en la que se basa este resultado consiste en que
+		si dos grupos son ``parecidos'',  tendrán una cantidad similar de
+		subgrupos de Sylow.   La noción de ser parecidos puede entenderse,
+		por ejemplo, como ser ambos grupos resolubles.   La idea de tener
+		una cantidad similar de subgrupos de Sylow es más compleja en tanto
+		que los primos divisores de ambos grupos pueden ser distintos y por
+		tanto no ser posible comparar la cantidad de $p$-subgrupos de Sylow
+		para cada primo $p$.   Damos ahora una definición que permite aclarar
+		este último hecho.  
+		
+		\textcompwordmark{}
+		\begin{defn}
+			Sea $G$ un grupo finito y sea $S(G)=\left\{ p\,\mbox{primo}\mid\nu_{p}(G)>1\right\} $.
+			Se define el número medio de Sylows de $G$ como
+			
+			\textcompwordmark
+			\[
+			asn(G)=\frac{\left(\sum_{p\in S(G)}\nu_{p}(G)\right)}{\left|S(G)\right|}.
+			\]
+			
+			\textcompwordmark{}
+		\end{defn}
+		
+		Antes de probar el resultado principal requerimos de un lema.  
+		
+		\textcompwordmark{}
+		\begin{lem}
+			Si $S$ es un factor de composición de grupo finito $G$,  entonces
+			$\nu_{p}(S)\leq v_{p}(G)$.  
+		\end{lem}
+		
+		\begin{proof}
+			Si $S$ es factor de composición,  existen $N_{1}\normalestricto N_{2}$
+			subgrupos de $G$ tal que $S=N_{2}/N_{1}$.   Sabemos por el Teorema
+			\ref{thm:numero-sylow-normal-marshall} que si $K\normal G$, $\nu_{p}(K)\leq\nu_{p}(G)$
+			de donde $\nu_{p}(N_{1}),\nu_{p}(N_{2})\leq\nu_{p}(G)$.   Además,
+			por el mismo teorema,  $\nu_{p}(N_{2}/N_{1})\leq\nu_{p}(N_{2})$
+			concluyéndose el resultado. 
+		\end{proof}
+		\textcompwordmark{}
+		
+		\begin{thm}
+			Si $G$ es un grupo finito tal que $\asn(G)<7$,  entonces $G$ es
+			resoluble.  
+		\end{thm}
+		
+		\begin{proof}
+			Sea $G$ contraejemplo minimal y sea $S$ un factor de composición
+			no abeliano ($S$ simple no abeliano,  en otro caso $S\isomorfo C_{p}$
+			y $\nu_{p}(S)=1$).   
+			
+			\textcompwordmark{}
+			
+			Si $\nu_{p}(S)<7$ para algún primo $p$,  entonces $S$ tiene un
+			subgrupo propio de indice menor que $7$,  de donde $S$ es isomorfo
+			a un subgrupo de $A_{6}$.   Así $S=A_{5}$ o bien $S=A_{6}$.   En
+			ambos casos se tiene $\nu_{2}(S)\geq5$,  $\nu_{3}(S)\geq10$ y $\nu_{5}(S)\geq6$.
+			Ahora,  por el lema anterior,  debe ser $\nu_{2}(G)\geq5$,  $\nu_{3}(G)\geq10$
+			y $\nu_{5}(G)\geq6$ y dado que $\nu_{q}(G)=1+kq$,  si $q$ es un
+			primo mayor que $5$,  $\nu_{q}(G)\geq8$.   Con esto $\asn(G)\geq7$,
+			hecho contradictorio.  
+			
+			\textcompwordmark{}
+			
+			Tenemos que $\nu_{p}(S)\geq7$ para cada primo divisor del orden de
+			$G$; además,  de la simplicidad de $S$,  el orden de $S$ debe tener
+			al menos tres primos distintos dividiendo su orden por el Teorema
+			de Burnside,  Teorema \ref{thm:-Burnside}.   
+			
+			\textcompwordmark\\
+			\textbf{Caso 1: } $5$ divide el orden de $S$.  En tal caso $7\leq\nu_{5}(S)\leq1+5k$
+			de donde $\nu_{5}(G)\geq\numeros[5][S]\geq11$.   \\
+			\textcompwordmark\\
+			Si $2$ divide el orden de $S$,  tenemos $\numeros[2][G]\geq\numeros[2][S]\geq7$.
+			Dado que $\asn(G)\leq7$,  debe existir un primo $p$ tal que $1<\numeros[p][G]<7$,
+			pero el único primo posible es $p=3$,  para el cual $\numeros[3][G]=4$
+			de donde $\asn(G)\geq\frac{(11+7+4)}{3}\geq7$,  contradicción.  \\
+			\textcompwordmark\\
+			Si $3$ divide el orden de $S$,  $\numeros[3][G]\geq\numeros[3][S]\geq7$
+			y el único primo $p$ para el cual tiene sentido $\numeros[p]<7$
+			es $p=2$,  siendo $\numeros[2][G]\geq3$ y por tanto $\asn(G)\geq\frac{(11+7+3)}{3}=7$,
+			absurdo.  \\
+			\textcompwordmark\\
+			Con esto,  si $q,r$ son primos distintos de $5$ divisores del orden
+			de $S$,  deben ser $q,r\geq7$.   En tal caso\\
+			\textcompwordmark
+			\[
+			\numeros[5]+\numeros[q]+\numeros[r]\geq11+(1+7)+(1+11)=31.
+			\]
+			\textcompwordmark\\
+			Dado que $\asn(G)<7$,  debe existir algún primo $p$ tal que $\numeros[p]<7$.
+			Siendo $p=2$ y $p=3$ los únicos valores posibles para $p$ obtenemos\\
+			\textcompwordmark
+			\[
+			\numeros[2]+\numeros[3]+\numeros[5]+\numeros[q]+\numeros[r]\geq3+4+31=38,
+			\]
+			\textcompwordmark\\
+			de donde $\asn(G)\geq\frac{38}{5}>7$, de nuevo contradicción.  
+			
+			\textcompwordmark\\
+			\textbf{Caso 2: } $5$ no divide el orden de $S$.  Si $2$ y $3$
+			dividen a $\left|S\right|$,  $\numeros[2]\mbox{ y }\numeros[3]\geq7$
+			y existe otro primo $s\geq7$ tal que $\numeros[s]\geq8$.   El único
+			primo $p$ que puede hacer $\asn(G)<7$ es $p=5$; en tal caso $\numeros[5]=6$
+			y $\asn(G)\geq\frac{7+7+8+6}{4}=$7,  absurdo.  \\
+			\textcompwordmark\\
+			Finalmente,  suponemos que $2$ o $3$ no divide el orden de $S$,
+			de donde deben existir primos $u,v\geq7$ divisores del orden de
+			$S$.   Además,  si un primo $r$ mayor que $11$ es divisor de $S$,
+			de tener un subgrupo propio con indice $g\leq8$ representado sobre
+			$\sum_{g}$ obtenemos que $r$ divide $Ker\rho<S$ y $S$ es no simple;
+			con esto $8$ no puede el ser el número de $7$-subgrupos de Sylow
+			de $G$ de donde $asn(G)\geq7$; tenemos así que $u,v\geq11$ y $\numeros[u]+\numeros[v]\geq(1+11)+(1+13)=26$.
+			Ahora,  los únicos primos capaces de hacer que $\asn(G)<7$ son
+			$2,3$ y $5$; con esto\\
+			\textcompwordmark
+			\[
+			\numeros[2]+\numeros[3]+\numeros[5]+\numeros[u]+\numeros[v]\geq3+4+6+26=39,
+			\]
+			\textcompwordmark\\
+			de donde $\asn(G)\geq\frac{39}{5}>7$,  absurdo. 
+		\end{proof}
+		\textcompwordmark{}
+		
+		En realidad,  podemos decir algo más sobre la relación entre el número
+		$\asn(G)$ y lo cerca que está el grupo $G$ de ser nilpotente.  
+		
+		\textcompwordmark{}
+		\begin{thm}
+			Existe una función de variable real $f$ tal que $[G:F(G)]\leq f(\asn(G))$
+			en donde $G$ es un grupo finito.  
+		\end{thm}
+		
+		\begin{proof}
+			Sea $n$ un número real positivo y $G$ un grupo finito tal que $\asn(G)=n$.
+			Debemos probar que $[G:F(G)]$ está acotado en términos de $n$,
+			siendo $n=\asn(G)=\frac{(\nu_{p_{1}}+...+\nu_{p_{k}})}{k}$.  
+			
+			\textcompwordmark{}
+			
+			\item[Paso 1.  ]  Probamos que el número $k$ de sumandos que aparece
+			en $\asn(G)$ está acotado en términos de $n$.   
+			
+			\textcompwordmark{}
+			
+			Si fuera falso,  $k>n$ y existen primos $p_{1},...,p_{n},...,p_{k}$
+			con $\nu_{p_{i}}(G)>1,\,i=1,...,n$.   Además,  si $i>n$, $\nu_{p_{i}}\geq1+p_{i}>1+n$
+			y por tanto
+			
+			\textcompwordmark
+			\[
+			n=\frac{\nu_{p_{1}}+...+\nu_{p_{n}}+\nu_{p_{n+1}}+...+\nu_{p_{k}}}{k}\geq\frac{n+(1+n)(k-n)}{k}=n+1-\frac{n^{2}}{k},
+			\]
+			
+			\textcompwordmark\\
+			de donde $k\leq n^{2}$,  contradicción.
+			
+			\textcompwordmark{}
+			
+			\item[Paso 2.]  Existe una función de variable real $g$,  tal que
+			$\nu_{p}(G)\leq g(n)$ para todo primo $p$.  
+			
+			\textcompwordmark{}
+			
+			Esto es consecuencia de ser cada $\nu_{p_{i}}(G)\leq nk$ y ser $k$
+			acotado en términos de $n$ por el paso anterior.  
+			
+			\textcompwordmark{}
+			
+			\item[Paso 3.]  Si $\sylow$,  $G/\core(\N GP)$ es un subgrupo de
+			$\sum_{g(n)}$.  
+			
+			\textcompwordmark{}
+			
+			Considerando la acción de $G$ sobre $\Omega=\Syl_{p}(G)$ por conjugación
+			y teniendo en cuenta que $\left|\Omega\right|=\nu_{p}(G)\leq g(n)$
+			por el apartado anterior,  tenemos el resultado sin más que observar
+			que el núcleo de la acción es $\core(\N GP)$.   
+			
+			\textcompwordmark{}
+			
+			\item[Paso 4.  ]  Si $\sylow$ y denotamos por $N_{p}=\core_{G}(\N GP)$,
+			entonces $G/\bigcap N_{p}$ es isomorfo con un subgrupo de un producto
+			directo de $k$ copias de $\sum_{g(n)}$ con $k$ acotado en términos
+			de $n$.  
+			
+			\textcompwordmark{}
+			
+			Si $H,K\normal G$,  $\rho:G\rightarrow G/H\x G/K$ dada por $\rho(\,(H\cap K)g\,)=(Hg,Kg)$
+			es homomorfismo de grupos con $Ker\rho=H\cap K$ de donde se tiene
+			el isomorfismo entre $G/H\cap K\cong G/H\x G/K$.   Ahora es suficiente
+			aplicar el Paso 3 junto con el Paso 1.  
+			
+			\textcompwordmark{}
+			
+			\item[Paso 5.  ]  $\bigcap N_{p}(G)$ está contenido en el Fitting
+			de $G$,  $F(G)$.  
+			
+			\textcompwordmark{}
+			
+			Claramente, $\bigcap N_{p}(G)$ es normal en $G$ y además es nilpotente
+			pues es la intercesión de subgrupos con un $p$-subgrupo de Sylow
+			normal,  así $\bigcap N_{p}\subseteq F(G)$.  
+			
+			\textcompwordmark{}
+			
+			\item[Paso 6.  ]  Paso final.  Por el Paso 5,  $[G:F(G)]\leq[G:\bigcap N_{p}]$
+			y $[G/\bigcap N_{p}]$ está acotado en términos de $n=\asn(G)$ por
+			el Paso 4.  
+		\end{proof}
+		
+		\chapter{Grupos con dos números de Sylow}
+		
+		\textcompwordmark{}
+		
+		Presentamos ahora otra condición suficiente para la resolubilidad
+		de un grupo.
+		
+		\textcompwordmark{}
+		
+		Si $G$ es un grupo nilpotente todo subgrupo de Sylow es normal,  de
+		donde solo tiene un subgrupo de Sylow para cada primo divisor de su
+		orden.   La condición suficiente para la resolubilidad dada en el
+		anterior capítulo puede verse motivada por la idea de que si $G$
+		es resoluble entonces $\asn(G)$ es pequeño en tanto que $\asn(G)=1$
+		para grupos nilpotentes.  Por otro lado,  la condición suficiente
+		presentada en este capítulo se vasa en que la cantidad de $p$-subgrupos
+		de Sylow de un grupo resoluble varía poco al cambiar el primo $p$,
+		pues si $G$ es nilpotente tiene un único $p$-subgrupo de Sylow
+		con $p$ un primo cualquiera.   Con este objetivo damos la siguiente
+		definición.  
+		
+		\textcompwordmark{}
+		\begin{defn}
+			Dado $G$ grupo finito,  denotamos por $sn(G)=\{\nu_{p}(G)\,\mid\,p\in\pi(G)\}$
+			donde $\pi(G)$ denota al conjunto de primos divisores del orden de
+			$G$.   
+		\end{defn}
+		
+		\textcompwordmark{}
+		\begin{thm}
+			Si $G$ es un grupo finito y $sn(G)$ consta de dos únicos números,
+			entonces $G$ es producto de dos Halls nilpotentes,  en particular
+			$G$ es resoluble.   
+		\end{thm}
+		
+		\textcompwordmark{}
+		
+		Este teorema fue conjeturado por J.  Zhang en \cite{Zhang} y probado
+		por F.  Luca en \cite{Luca}.   Sin embargo,  la prueba de Luca hace
+		uso de un resultado de Zhang el cual es falso según demuestra N.  Chiguira
+		en \cite{Chiguira}; la demostración aquí presentada ha sido extraída
+		del articulo \cite{dos-numeros-de-sylow} y hace uso de la caracterización
+		de subgrupos de Hall nilpotentes vista en el Capítulo $7$.  
+		
+		\textcompwordmark{}
+		
+		La demostración del teorema requiere ciertos resultados acerca de
+		grupos simples,  es por ello por lo que los enunciaremos sin dar su
+		demostración.  
+		
+		\textcompwordmark{}
+		\begin{lem}
+			Sea $G$ un grupo finito.   Si $sn(G)=\{1,b\}$ entonces $G$ tiene
+			un $\pi(b)$-subgrupo de Hall nilpotente normal $N$ tal que $G/N$
+			es nilpotente.  
+			
+			\textcompwordmark{}
+		\end{lem}
+		
+		\begin{lem}
+			\label{lem:PSL}Sea $q$ un primo tal que $(q^{2}-1)_{\{2,3\}}=24$
+			y sea $G=PSL(2,q)$.   Entonces $\left|G\right|_{\{2,3\}}=12$ y el
+			normalizador de un $2$-subgrupo de Sylow de $G$ es isomorfo a $A_{4}$.
+			Además,  el índice de dicho normalizador es $q+1$.  
+			
+			\textcompwordmark{}
+		\end{lem}
+		
+		\begin{lem}
+			\label{lem:2^G_2(q)} Sea $G=^{2}G_{2}(q)$ con $q=3^{2n+1}$.   Entonces
+			
+			\textcompwordmark{}
+			
+			\item[(i)] El orden de $G$ es $q^{3}(q-1)(q^{3}+1)$.  
+			
+			\item[(ii)] El orden del normalizador de un $2$-subgrupo de Sylow
+			es $168$.  
+			
+			\item[(iii)] El indice de el normalizador de un $3$-subgrupo de
+			Sylow  es $q^{3}+1$.  
+		\end{lem}
+		
+		\textcompwordmark{}
+		\begin{lem}
+			\label{lem:le divide}Sea $p$ un primo y $H$ un factor de composición
+			de un grupo finito $G$.   Entonces $\nu_{p}(H)$ divide $\nu_{p}(G)$.
+			
+		\end{lem}
+		
+		\textcompwordmark{}
+		\begin{thm}
+			[Wielandt-Kegel] Si $G$ es un grupo finito producto de dos subgrupos
+			nilpotentes,  entonces $G$ es resoluble.  
+			
+			\textcompwordmark{}
+		\end{thm}
+		
+		Probamos a continuación el resultado principal del articulo.  
+		
+		\textcompwordmark{}
+		\begin{thm}
+			Sea $G$ un grupo finito con $sn(G)=\{a,b\}$.   Suponer que $a,b>1$.
+			Entonces $(a,b)=1$ y $G$ es producto de dos subgrupos de Hall
+			nilpotentes,  uno para el conjunto de primos $p$ tal que $\numeros=a$
+			y otro para el conjunto de primos $q$ tal que $\numeros[q]=b$.   En
+			particular,  $G$ es resoluble.   
+		\end{thm}
+		
+		\begin{proof}
+			Sean $\tau=\{p_{1},...,p_{r}\}$ el conjunto de primos divisores del
+			orden de $G$ tal que $\numeros[p_{i}]=a$ y $\rho=\{q_{1},...,q_{s}\}$
+			el conjunto de primos tal que $\numeros[q_{i}]=b$.   Tenemos que
+			$\pi(G)=\tau\cup\rho$ donde la unión es disjunta.   Sabemos que $p_{i}$
+			no divide a $a$,  así como ningún $q_{i}$ divide a $b$.   Así $\pi(a)\subseteq\tau$,
+			$\pi(b)\subseteq\rho$ de donde $a,b$ son coprimos.   Veamos ahora que
+			$G$ tiene un $\tau$-Hall nilpotente.   Hemos de probar
+			
+			\textcompwordmark{}
+			
+			\item[(i)] Dados $p,q\in\pi$ primos distintos,  $q$ no divide $\nu_{p}(G)$.
+			
+			
+			\item[(ii)] Si $\{2,3\}$$\subseteq\pi$,  entonces $G$ no posee
+			ningún factor isomorfo con $PSL(2,q)$ con $(q^{2}-1)_{\{2,3\}}=24$.
+			
+			
+			\item[(iii)] Si $\{2,7\}\subseteq\pi$,  entonces $G$ no posee factores
+			de composición isomorfos con $^{2}G_{2}(3^{2n+1})$ con $n\not\equiv1(m\acute{o}d\,7)$.
+			
+			
+			\textcompwordmark{}
+			
+			Sabemos que (i) es cierto,  veamos los otros casos.
+			
+			\textcompwordmark{}
+			
+			Probaremos primero el caso (ii). Suponemos que $\{2,3\}\subseteq\pi$ y
+			razonamos por reducción al absurdo si $G$ tiene algún factor de composición
+			isomorfo a $H=PSL(2,q)$ con $(q^{2}-1)_{\{2,3\}}=24$.   Por el Lema
+			\ref{lem:PSL},  el normalizador de un $2$-subgrupo de Sylow de $G$
+			tiene orden $12$,  al igual que $\left|H\right|_{\{2,3\}}$,  de
+			donde $\left|H\right|_{\{2,3\}'}=\numeros[2][H]$,  el cual divide
+			por el Lema \ref{lem:le divide} a $\numeros[2]=a$; así $a$ es impar.
+			
+			
+			\textcompwordmark{}
+			
+			Análogamente,  por los lemas \ref{lem:PSL} y \ref{lem:le divide}
+			obtenemos que $\numeros[q][H]=q+1$ divide a $\numeros[q]$.   Dado
+			que $q+1$ es par y $(a,b)=1$,  $q+1$ debe dividir a $b$,  el cual
+			resulta ser par; además,  dado que $\numeros[2]$ es la $\{2,3\}'$
+			parte de $H$,  y $(a,b)=1$ deducimos que $b$ es un $\{2,3\}$-número.
+			Así
+			
+			\textcompwordmark
+			\[
+			24=(q^{2}-1)_{\{2,3\}}=(q-1)_{\{2,3\}}(q+1),
+			\]
+			
+			\textcompwordmark\\
+			deduciéndose que $q=5$,  o bien $q=11$.  
+			
+			\textcompwordmark\\
+			En el caso $q=5$,  tenemos $PSL(2,5)=60=2^{2}\text{·}3\text{·}5$.
+			Aplicando resultados básicos de Sylow obtenemos que $\numeros[3][H]=2\text{·}5$
+			ya que $5,2^{2}\text{·}5\not\equiv1(m\acute{o}d\,3)$ y $5$ debe
+			dividir pues en otro caso representado sobre $\Omega=\Syl_{3}(H)$
+			el $\Ker$ de la acción es no trivial; ahora $\numeros[3][H]$ divide
+			a $b$ por ser par,  mientras que,  $\numeros[2][H]=5$ divide a $\numeros[2]=a$,
+			lo cual es contradictorio con ser $5$ divisor común de $a,b$,  coprimos.
+			
+			
+			\textcompwordmark\\
+			Consideramos ahora el caso $q=11$,  $\PSL(2,11)=2^{4}\text{·}3\text{·}5^{2}\text{·}11$.
+			De forma similar a la anterior,  $\numeros[5][H]=2\text{·}3\text{·}11$
+			y $11$ divide a $b$.   Por otro lado,  $\numeros[2][H]=5\text{·}11$
+			divide a $\numeros[2]=a$,  contradicción.   
+			
+			\textcompwordmark{}
+			
+			Probaremos ahora (iii).  Suponemos que $\{2,7\}subseteq$$\tau$ y razonamos
+			por reducción al absurdo si $G$ tiene un factor de composición isomorfo
+			a $H=^{2}G_{2}(3^{2n+1})$ con $n\geq1$ y $n\not\equiv3(m\acute{o}d\,7)$.
+			Por el Lema \ref{lem:2^G_2(q)} tenemos que $\numeros[2][H]=\left|H\right|_{\{2,7\}'}/3$
+			(notar que $\left|H\right|_{\{2,7\}}=56$).   Usando el Lema \ref{lem:le divide}
+			tenemos que $\left|H\right|_{\{2,7\}'}/3$ divide a $\numeros[2]=a$,
+			el cual es de nuevo impar.  
+			
+			\textcompwordmark{}
+			
+			Usando los lemas \ref{lem:2^G_2(q)} y \ref{lem:le divide} tenemos
+			que $\numeros[3][H]=q^{3}+1$ divide $\numeros[3]=b$ (notar que $q^{3}+1$
+			es par).   Con todo lo anterior $(q^{3}+1,\left|H\right|_{\{2,7\}'}/3)=1$
+			y $q^{3}+1$ es un $\{2,7\}$-número que divide a $\left|H\right|$,
+			y por tanto $q^{3}+1$ divide a $56$,  absurdo ($q=3^{2n+1}\geq9$).
+			
+			
+			\textcompwordmark{}
+			
+			Concluimos así la existencia de un $\tau$-Hall nilpotente $H_{\tau}$,
+			y dada la similitud en la construcción de $\tau$ y $\rho$,  concluimos
+			la existencia de un $\rho$-Hall nilpotente $H_{\rho}$ de forma que	
+			$G=H_{\tau}H_{\rho}$ y por Teorema de Wielandt-Kegel $G$ es resoluble.
+			
+		\end{proof}
+		\textcompwordmark{}
+		
+		Observamos que si $G$ es un grupo finito con $|G|=p^{a}q^{b}$ entonces
+		$G$ tiene,  a lo sumo,  dos números de Sylow,  de donde $G$ es resoluble
+		por el teorema anterior. Tenemos así que este resultado es una generalización
+		del Teorema de Burnside.  
+		
+%		\bibliographystyle{plain}
+%		\bibliography{"bibliografia tfg.bib"}
+	\printbibliography		
+	\end{document}
