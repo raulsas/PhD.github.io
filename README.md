@@ -6,11 +6,6 @@
 
 [raul.sastriques@uv.es](mailto: raul.sastriques@uv.es)
 
-### CV
-
-[CV english.pdf](https://github.com/raulsas/PhD.github.io/blob/main/Curriculums/CV%20English.pdf)
-[CV español.pdf](https://github.com/raulsas/PhD.github.io/blob/main/Curriculums/CV.pdf))
-
 
 ### Articles
 
