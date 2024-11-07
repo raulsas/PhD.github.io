@@ -1,5 +1,6 @@
 # Raúl Sastriques Guardiola
-Currículum CVN
+
+[Currículum CVN](https://github.com/raulsas/PhD.github.io/blob/main/Curr%C3%ADculum%20CVN%2011-2024.pdf)
 
 ## Contact
 
