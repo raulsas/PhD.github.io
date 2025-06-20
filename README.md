@@ -11,9 +11,9 @@
 
 ### Articles
 
-[A Criterion for Decomposabilty in QYBE ](https://academic.oup.com/imrn/advance-article/doi/10.1093/imrn/rnab357/6474504?guestAccessKey=3a3f55ba-643b-4fda-a0ea-294dd8dea8a2)
+[A Criterion for Decomposabilty in QYBE ](https://doi.org/10.1093/imrn/rnab357), International Mathematics Research Notices, Volume 2023, Issue 5, March 2023, Pages 3808–3813.
 
-On Indecomposable IYB-groups and their prime, Aceptada en Journal of Pure and Applied Algebra (JPAA)
+[On indecomposable IYB-groups and their primes](https://doi.org/10.1016/j.jpaa.2025.107986), Journal of Pure and Applied Algebra, Volume 229, Issue 6, June 2025, 107986.
 
 ### PhD Thesis
 [Tesis Doctoral.pdf](https://github.com/raulsas/PhD.github.io/blob/main/Tesis%20Doctoral/Tesis%20Doctoral.pdf)&nbsp;&nbsp;&nbsp;&nbsp;[Tesis Doctoral.tex](https://github.com/raulsas/PhD.github.io/blob/main/Tesis%20Doctoral/Tesis%20Doctoral.tex)
